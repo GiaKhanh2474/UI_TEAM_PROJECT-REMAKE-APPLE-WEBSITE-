@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac - Mua MacBook Pro, MacBook Air và iMac mới nhất - Apple (VN)</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/mac-refined.css">
+</head>
+<body>
+
+    <!-- Apple Navbar & Cart Dropdown (Đồng bộ toàn website) -->
+    <nav class="apple-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="img/icon_apple.png" alt="Apple" class="nav-logo-img">
+            </a>
+            <a href="mac.html" class="active">Mac</a>
+            <a href="ipad.html">iPad</a>
+            <a href="iphone.html">iPhone</a>
+            <a href="watch.html">Watch</a>
+            <a href="#" id="cart-icon">Giỏ hàng <span id="cart-count">0</span></a>
+        </div>
+        <div class="cart-dropdown" id="cart-dropdown-box">
+            <div class="cart-title">Giỏ hàng của bạn</div>
+            <div class="cart-items-wrapper" id="cart-items-wrapper"></div>
+            <div class="cart-summary">
+                <span>Tổng cộng:</span>
+                <span id="cart-total-amount">0đ</span>
+            </div>
+            <button class="cta-button checkout-btn" onclick="location.href='cart.html'">Xem giỏ hàng</button>
+        </div>
+    </nav>
+
+    <!-- 1. Ribbon Thông báo Tài chính -->
+    <div class="promo-banner">
+        <div class="promo-container">
+            <span>Thanh toán hàng tháng thật dễ dàng. Bao gồm lựa chọn lãi suất 0% thông qua các đối tác tín dụng.</span>
+            <a href="#" class="promo-link">Tìm hiểu thêm &gt;</a>
+        </div>
+    </div>
+
+    <!-- 2. Danh mục sản phẩm nhanh (Mac Sub-navigation) -->
+    <main class="mac-main">
+        <div class="page-header">
+            <h1 class="main-title">Mac</h1>
+            <div class="subnav-scroll">
+                <div class="subnav-container">
+                    <a href="macbuy.html" class="subnav-item"><img src="img/icon_macair.png" alt="MacBook Air"><span>MacBook Air</span></a>
+                    <a href="macbuy.html" class="subnav-item"><img src="img/icon_macpro.png" alt="MacBook Pro"><span>MacBook Pro</span></a>
+                    <a href="macbuy.html" class="subnav-item"><img src="img/icon_imac.png" alt="iMac"><span>iMac</span></a>
+                    <a href="macbuy.html" class="subnav-item"><img src="img/icon_macmini.png" alt="Mac mini"><span>Mac mini</span></a>
+                    <a href="macbuy.html" class="subnav-item"><img src="img/icon_macstudio.png" alt="Mac Studio"><span>Mac Studio</span></a>
+                    <a href="#" class="subnav-item"><img src="img/icon_mac_compare.png" alt="So sánh"><span>So sánh Mac</span></a>
+                    <a href="#" class="subnav-item"><img src="img/icon_mac_displays.png" alt="Màn hình"><span>Màn hình</span></a>
+                    <a href="#" class="subnav-item"><img src="img/icon_mac_accessories.png" alt="Phụ kiện"><span>Phụ kiện</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Section: Khám phá dòng sản phẩm Mac (Slider ẩn thanh trượt + Nút tròn điều hướng căn phải) -->
+        <section class="section-padding">
+            <div class="section-header-flex">
+                <h2 class="section-title">Khám phá dòng sản phẩm.</h2>
+                <a href="macbuy.html" class="global-link font-medium">So sánh tất cả phiên bản Mac &gt;</a>
+            </div>
+            
+            <div class="carousel-container-relative">
+                <div class="carousel-wrapper" id="mac-carousel">
+                    
+                    <!-- Card 1: MacBook Air M5 -->
+                    <div class="product-card">
+                        <div class="card-image-bg">
+                            <img src="img/macair.jpg" alt="MacBook Air M5" onerror="this.src='https://placehold.co/372x395?text=MacBook+Air+M5'">
+                        </div>
+                        <div class="card-info">
+                            <div class="color-dots">
+                                <span class="dot" style="background: #2E3641;"></span>
+                                <span class="dot" style="background: #F2F3F5;"></span>
+                                <span class="dot" style="background: #E3E4E6;"></span>
+                            </div>
+                            <h3>MacBook Air</h3>
+                            <p class="desc">Siêu mỏng nhẹ, xử lý mượt mà mọi tác vụ AI. Nay mạnh mẽ vượt bậc với chip M5.</p>
+                            <p class="price">Từ 27.999.000đ hoặc 1.140.000đ/th. trong 24 tháng</p>
+                            <div class="card-actions">
+                                <button class="cta-button" onclick="location.href='macbuy.html'">Tìm hiểu thêm</button>
+                                <a href="macbuy.html" class="global-link">Mua &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: MacBook Pro M5 -->
+                    <div class="product-card">
+                        <div class="card-image-bg">
+                            <img src="img/macpro.jpg" alt="MacBook Pro M5" onerror="this.src='https://placehold.co/372x395?text=MacBook+Pro+M5'">
+                        </div>
+                        <div class="card-info">
+                            <div class="color-dots">
+                                <span class="dot" style="background: #1C1C1E;"></span>
+                                <span class="dot" style="background: #D2D2D7;"></span>
+                            </div>
+                            <h3>MacBook Pro</h3>
+                            <p class="desc">Quái vật đồ họa cho công việc Pro chuyên sâu. Sức mạnh tối thượng từ M5, M5 Pro và M5 Max.</p>
+                            <p class="price">Từ 39.999.000đ hoặc 1.630.000đ/th. trong 24 tháng</p>
+                            <div class="card-actions">
+                                <button class="cta-button" onclick="location.href='macbuy.html'">Tìm hiểu thêm</button>
+                                <a href="macbuy.html" class="global-link">Mua &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: iMac M4 -->
+                    <div class="product-card">
+                        <div class="card-image-bg">
+                            <img src="img/imac.png" alt="iMac M4" onerror="this.src='https://placehold.co/372x395?text=iMac+M4'">
+                        </div>
+                        <div class="card-info">
+                            <div class="color-dots">
+                                <span class="dot" style="background: #A3D5E7;"></span>
+                                <span class="dot" style="background: #C4ECC3;"></span>
+                                <span class="dot" style="background: #F7D59A;"></span>
+                            </div>
+                            <h3>iMac 24"</h3>
+                            <p class="desc">Thiết kế tất cả trong một (All-in-One) siêu mỏng. Bừng sáng không gian của bạn với chip M4.</p>
+                            <p class="price">Từ 36.999.000đ hoặc 1.507.000đ/th. trong 24 tháng</p>
+                            <div class="card-actions">
+                                <button class="cta-button" onclick="location.href='macbuy.html'">Tìm hiểu thêm</button>
+                                <a href="macbuy.html" class="global-link">Mua &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Mac mini M4 -->
+                    <div class="product-card">
+                        <div class="card-image-bg">
+                            <img src="img/macmini.png" alt="Mac mini M4" onerror="this.src='https://placehold.co/372x395?text=Mac+mini+M4'">
+                        </div>
+                        <div class="card-info">
+                            <div class="color-dots">
+                                <span class="dot" style="background: #E3E4E6;"></span>
+                            </div>
+                            <h3>Mac mini</h3>
+                            <p class="desc">Kích thước nhỏ gọn không tưởng. Hiệu năng thay đổi cuộc chơi lớn với kiến trúc M4 mới.</p>
+                            <p class="price">Từ 14.999.000đ hoặc 611.000đ/th. trong 24 tháng</p>
+                            <div class="card-actions">
+                                <button class="cta-button" onclick="location.href='macbuy.html'">Tìm hiểu thêm</button>
+                                <a href="macbuy.html" class="global-link">Mua &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Cụm nút mũi tên hình tròn nằm bên phải phía dưới Carousel -->
+                <div class="slider-nav-control">
+                    <button class="nav-arrow-btn" id="btn-mac-prev" disabled aria-label="Slide trái">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15.5 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="nav-arrow-btn" id="btn-mac-next" aria-label="Slide phải">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M8.5 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Section: Ngắm nhìn cận cảnh ( Guided Tour dạng điện ảnh căn trái ) -->
+        <section class="section-padding">
+            <h2 class="section-title mb-40">Ngắm nhìn cận cảnh.</h2>
+            <div class="video-banner" style="background-image: url('img/mac_guided_tour.jpg'); background-color: #f5f5f7;">
+                <div class="video-banner-content">
+                    <h3 class="video-banner-text">Chuyển Tìm Hiểu Về<br>MacBook Pro, MacBook Air<br>và iMac mới</h3>
+                    <button class="video-play-btn" onclick="alert('Tính năng phát phim đang tải...')">Xem phim</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Section: Hệ sinh thái và thiết kế Pro -->
+        <section class="section-padding">
+            <div class="section-header-flex">
+                <h2 class="section-title">Phụ kiện thiết yếu cho Mac.</h2>
+                <a href="#" class="global-link font-medium">Tất cả phụ kiện Mac &gt;</a>
+            </div>
+            <div class="dual-grid">
+                <img src="https://placehold.co/890x500?text=Magic+Keyboard" alt="Magic Keyboard" style="border-radius:24px; width: 49%; height: auto;">
+                <img src="https://placehold.co/890x500?text=Studio+Display" alt="Studio Display" style="border-radius:24px; width: 49%; height: auto;">
+            </div>
+        </section>
+    </main>
+
+    <!-- Chân trang Apple -->
+    <footer class="apple-footer">
+        <div class="footer-content">
+            <p>Xem thêm các cách để mua sắm: Tìm một <span class="global-link">Apple Store</span> hoặc <span class="global-link">nhà bán lẻ</span> gần bạn. Hoặc gọi 1800-1192.</p>
+            <div class="footer-links">
+                <p>Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.</p>
+                <a href="#">Chính sách bảo mật</a> | <a href="#">Điều khoản sử dụng</a> | <a href="#">Bản đồ trang web</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('mac-carousel');
+            const prevBtn = document.getElementById('btn-mac-prev');
+            const nextBtn = document.getElementById('btn-mac-next');
+
+            if (carousel && prevBtn && nextBtn) {
+                const getScrollStep = () => {
+                    const firstCard = carousel.querySelector('.product-card');
+                    return firstCard ? firstCard.offsetWidth + 24 : 344;
+                };
+
+                nextBtn.addEventListener('click', () => {
+                    carousel.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    carousel.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+                });
+
+                const updateButtonStatus = () => {
+                    const currentScroll = carousel.scrollLeft;
+                    const maxScrollWidth = carousel.scrollWidth - carousel.clientWidth;
+                    prevBtn.disabled = currentScroll <= 2;
+                    nextBtn.disabled = currentScroll >= maxScrollWidth - 2;
+                };
+
+                carousel.addEventListener('scroll', updateButtonStatus);
+                window.addEventListener('resize', updateButtonStatus);
+                setTimeout(updateButtonStatus, 300);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - Apple (VN)</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cart-page.css">
+</head>
+<body>
+
+    <!-- Apple Navbar & Cart Dropdown (Đoạn này đã đồng bộ màu sắc và logo mới) -->
+    <nav class="apple-nav">
+        <div class="nav-container">
+            <style>
+        /* Tối ưu định dạng cho hình ảnh logo mới trên thanh navbar */
+        .nav-logo-img {
+            height: 18px; /* Độ cao tiêu chuẩn của Apple trên thanh thực tế */
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: opacity 0.3s ease;
+        }
+        .nav-logo:hover .nav-logo-img {
+            opacity: 0.7; /* Hiệu ứng mờ nhẹ cao cấp khi di chuột qua */
+        }
+    </style>
+            <a href="index.html" class="nav-logo">
+                <img src="img/icon_apple.png" alt="Apple" class="nav-logo-img">
+            </a>
+            <a href="mac.html">Mac</a>
+            <a href="ipad.html">iPad</a>
+            <a href="iphone.html" class="active">iPhone</a>
+            <a href="watch.html">Watch</a>
+            <a href="#" id="cart-icon">Giỏ hàng <span id="cart-count">0</span></a>
+        </div>
+        <div class="cart-dropdown" id="cart-dropdown-box">
+            <div class="cart-title">Giỏ hàng của bạn</div>
+            <div class="cart-items-wrapper" id="cart-items-wrapper-nav"></div>
+            <div class="cart-summary">
+                <span>Tổng cộng:</span>
+                <span id="cart-total-amount-nav">0đ</span>
+            </div>
+            <button class="cta-button checkout-btn" onclick="location.href='cart.html'">Xem giỏ hàng</button>
+        </div>
+    </nav>
+
+    <!-- Khung chính quản lý giỏ hàng -->
+    <main class="cart-page-container">
+        
+        <!-- Thông báo pháp lý hàng trực tuyến của Apple -->
+        <div class="return-notice">
+            <p>Xin lưu ý rằng chúng tôi không chấp nhận đổi trả đối với các đơn hàng trực tuyến.</p>
+        </div>
+
+        <!-- Trạng thái 1: Khi giỏ hàng có hàng -->
+        <div id="cart-active-state">
+            <header class="cart-header-summary">
+                <h1 id="main-cart-heading">Tổng giá trị giỏ hàng của bạn là 0đ.</h1>
+                <p>Vận chuyển miễn phí đối với mọi đơn hàng.</p>
+                <button class="apple-pay-btn" onclick="processCheckout()">Thanh Toán</button>
+            </header>
+
+            <!-- Khối danh sách sản phẩm -->
+            <div class="cart-items-list" id="main-cart-items-container">
+                <!-- Vật phẩm giỏ hàng tự động được nạp vào đây thông qua JS bên dưới -->
+            </div>
+
+            <!-- Khối tổng kết hóa đơn chi tiết ở hạ tầng đáy -->
+            <div class="cart-billing-summary">
+                <div class="billing-row">
+                    <span>Tổng phụ</span>
+                    <span id="summary-subtotal">0đ</span>
+                </div>
+                <div class="billing-row">
+                    <span>Vận chuyển</span>
+                    <span>MIỄN PHÍ</span>
+                </div>
+                <hr class="billing-divider">
+                <div class="billing-row total-row">
+                    <h2>Thanh toán toàn bộ</h2>
+                    <h2 id="summary-final-total">0đ</h2>
+                </div>
+                <div class="billing-row installment-row">
+                    <div>
+                        <strong>Thanh Toán Hàng Tháng</strong>
+                        <p class="text-gray">Thanh toán phí dịch vụ thực 1.67% cho 24 tháng</p>
+                    </div>
+                    <div class="text-right">
+                        <strong id="summary-installment-total">0đ/tháng*</strong>
+                        <p class="prepay-note">Số tiền trả trước cần thanh toán hôm nay: <span id="summary-prepay">0đ</span><br><small class="text-gray">Bao gồm thuế GTGT</small></p>
+                    </div>
+                </div>
+                <div class="billing-action-wrapper">
+                    <button class="apple-pay-btn large-pay-btn" onclick="processCheckout()">Thanh Toán</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trạng thái 2: Khi giỏ hàng trống rỗng -->
+        <div id="cart-empty-state" style="display: none;">
+            <div class="empty-cart-message">
+                <h2>Giỏ hàng của bạn đang trống.</h2>
+                <p>Khám phá các sản phẩm mới nhất của chúng tôi để thêm vào túi hàng.</p>
+                <button class="cta-button" onclick="window.location.href='iphone.html'" style="margin-top: 20px; padding: 12px 24px;">Tiếp tục mua sắm</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Success Order Modal Alert (Hộp thông báo đặt hàng thành công chuẩn iOS) -->
+    <div class="success-alert-overlay" id="checkoutSuccessModal">
+        <div class="success-alert-box">
+            <div class="success-icon-circle">✓</div>
+            <h2>Đặt Hàng Thành Công!</h2>
+            <p>Cảm ơn bạn đã mua sắm tại Apple Store. Đơn hàng của bạn đang được xử lý và chuẩn bị vận chuyển miễn phí.</p>
+            <button class="alert-confirm-btn" onclick="closeSuccessModal()">Xác nhận</button>
+        </div>
+    </div>
+
+    <!-- Chân trang -->
+    <footer class="apple-footer">
+        <div class="footer-content">
+            <p>Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.</p>
+            <div class="footer-links">
+                <a href="#">Chính sách bảo mật</a> | <a href="#">Điều khoản sử dụng</a> | <a href="#">Bản đồ trang web</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic Engine Script quản lý Giỏ hàng nâng cao -->
+    <script src="js/cart.js"></script>
+    <script>
+        // Đồng bộ đọc dữ liệu từ LocalStorage
+        let activeCart = JSON.parse(localStorage.getItem('apple_store_cart')) || [];
+
+        function renderCartPage() {
+            const activeState = document.getElementById('cart-active-state');
+            const emptyState = document.getElementById('cart-empty-state');
+            const itemsContainer = document.getElementById('main-cart-items-container');
+            
+            if (typeof updateUI === "function") updateUI();
+
+            if (activeCart.length === 0) {
+                activeState.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            activeState.style.display = 'block';
+            emptyState.style.display = 'none';
+
+            let grandTotal = activeCart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            document.getElementById('main-cart-heading').innerText = `Tổng giá trị giỏ hàng của bạn là ${grandTotal.toLocaleString('vi-VN')}đ.`;
+            document.getElementById('summary-subtotal').innerText = grandTotal.toLocaleString('vi-VN') + 'đ';
+            document.getElementById('summary-final-total').innerText = grandTotal.toLocaleString('vi-VN') + 'đ';
+            
+            let monthlyInstallment = Math.round(grandTotal / 24.5);
+            let downPayment = Math.round(grandTotal * 0.20);
+            document.getElementById('summary-installment-total').innerText = monthlyInstallment.toLocaleString('vi-VN') + 'đ/tháng*';
+            document.getElementById('summary-prepay').innerText = downPayment.toLocaleString('vi-VN') + 'đ';
+
+            // Render danh sách hàng hóa
+            itemsContainer.innerHTML = activeCart.map((item, index) => {
+                let itemTotal = item.price * item.quantity;
+                let itemMonthly = Math.round(item.price / 24.5);
+                
+                // ==========================================================================
+                // KHU VỰC FIX LỖI: Tự động gán đúng hình ảnh dựa trên tên gọi của sản phẩm
+                // ==========================================================================
+                let itemImg = "img/ip17pro.jpg"; // Ảnh mặc định dự phòng
+                
+                if (item.name.includes("TechWoven")) {
+                    itemImg = "img/techcase.png"; // Thay bằng đường dẫn ảnh thật của bạn nếu có
+                } else if (item.name.includes("Dây Đeo")) {
+                    itemImg = "img/chain.png";
+                } else if (item.name.includes("Silicon")) {
+                    itemImg = "img/sicase.png";
+                } else if (item.name.includes("Air")) {
+                    itemImg = "img/ipair.jpg";
+                } else if (item.name.includes("17 Pro")) {
+                    itemImg = "img/ip17pro.jpg";
+                } else if (item.name.includes("17e")) {
+                    itemImg = "img/ip17e.png";
+                } else if (item.name.includes("17")) {
+                    itemImg = "img/ip17.png";
+                } else if (item.name.includes("16")) {
+                    itemImg = "img/ip16.png";
+                }
+                // ==========================================================================
+
+                return `
+                    <div class="cart-item-row">
+                        <div class="item-row-left">
+                            <!-- Đã fix: src đã nhận biến itemImg quét động thay vì gán chết ảnh Pro -->
+                            <img src="${itemImg}" alt="${item.name}" class="cart-item-img" onerror="this.src='https://placehold.co/120x120'">
+                            <div class="item-core-details">
+                                <h2>${item.name}</h2>
+                                <p class="text-gray text-small">Thanh toán phí dịch vụ thực 1.67% trong 24 tháng sau khi thanh toán lần đầu 20%.</p>
+                                <div class="shipping-eta-block">
+                                    <span>📦 Đặt hàng trước 3:00 chiều. Giao hàng đến: <span class="blue-link">Thành Phố Hồ Chí Minh</span></span>
+                                    <strong class="eta-date">Th 2 20/07/2026 — Miễn Phí</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row-right">
+                            <div class="qty-select-wrapper">
+                                <select class="apple-qty-select" onchange="modifyQuantity(${index}, this.value)">
+                                    ${[1, 2, 3, 4, 5].map(v => `<option value="${v}" ${item.quantity == v ? 'selected' : ''}>${v}</option>`).join('')}
+                                </select>
+                            </div>
+                            <div class="item-price-block">
+                                <strong class="item-final-price">${itemTotal.toLocaleString('vi-VN')}đ</strong>
+                                <small class="text-gray">${itemMonthly.toLocaleString('vi-VN')}đ/tháng*</small>
+                                <button class="apple-delete-link" onclick="executeDelete(${index})">Xóa</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ẩn khối mời mua thêm AppleCare nếu vật phẩm đó là phụ kiện bao da/dây đeo -->
+                    ${!item.name.includes("MagSafe") && !item.name.includes("Dây Đeo") && !item.name.includes("AppleCare+") ? `
+                    <div class="cart-care-attach-banner">
+                        <div class="care-banner-left">
+                            <span class="apple-red-icon"></span>
+                            <div>
+                                <strong>Thêm AppleCare+ cho ${item.name.split(' ')[0]} cho mức giá 5.499.000đ</strong>
+                                <ul class="care-bullet-points">
+                                    <li>Nay đã có dịch vụ sửa chữa không hạn chế cho trường hợp hư hỏng do sự cố bất ngờ.</li>
+                                    <li>Dịch vụ sửa chữa được Apple chứng nhận sử dụng linh kiện Apple chính hãng.</li>
+                                    <li>Dịch vụ Thay Thế Cấp Tốc không áp dụng cho trường hợp vượt quá phí thay màn hình.</li>
+                                    <li>Ưu tiên tiếp cận các chuyên gia Apple.</li>
+                                </ul>
+                                <a href="#" class="blue-link text-small">Tìm hiểu thêm &gt;</a>
+                            </div>
+                        </div>
+                        <button class="apple-add-care-btn" onclick="addCareToItem(${index})">Thêm</button>
+                    </div>
+                    ` : ''}
+                `;
+            }).join('');
+        }
+
+        function modifyQuantity(index, newQty) {
+            activeCart[index].quantity = parseInt(newQty);
+            syncStorage();
+        }
+
+        function executeDelete(index) {
+            activeCart.splice(index, 1);
+            syncStorage();
+        }
+
+        function addCareToItem(index) {
+            if(!activeCart[index].name.includes("AppleCare+")) {
+                activeCart[index].name += " + Gói bảo hành AppleCare+";
+                activeCart[index].price += 5499000;
+                syncStorage();
+            }
+        }
+
+        function syncStorage() {
+            localStorage.setItem('apple_store_cart', JSON.stringify(activeCart));
+            renderCartPage();
+            const badge = document.getElementById('cart-count');
+            if(badge) {
+                badge.innerText = activeCart.reduce((sum, i) => sum + i.quantity, 0);
+            }
+        }
+
+        function processCheckout() {
+            document.getElementById('checkoutSuccessModal').classList.add('active');
+            activeCart = [];
+            localStorage.setItem('apple_store_cart', JSON.stringify(activeCart));
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('checkoutSuccessModal').classList.remove('active');
+            renderCartPage();
+        }
+
+        document.addEventListener('DOMContentLoaded', renderCartPage);
+    </script>
+</body>
+</html>

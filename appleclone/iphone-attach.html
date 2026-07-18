@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắm sửa phụ kiện cho iPhone của bạn - Apple (VN)</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/iphone-attach.css">
+</head>
+<body>
+
+    <!-- Apple Navbar & Cart Dropdown (Đã đồng bộ ảnh logo và màu sắc hệ thống) -->
+<nav class="apple-nav">
+    <div class="nav-container">
+        <style>
+        /* Tối ưu định dạng cho hình ảnh logo mới trên thanh navbar */
+        .nav-logo-img {
+            height: 18px; /* Độ cao tiêu chuẩn của Apple trên thanh thực tế */
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: opacity 0.3s ease;
+        }
+        .nav-logo:hover .nav-logo-img {
+            opacity: 0.7; /* Hiệu ứng mờ nhẹ cao cấp khi di chuột qua */
+        }
+    </style>
+        <!-- Đường dẫn hình ảnh logo hình quả táo đồng bộ -->
+        <a href="index.html" class="nav-logo">
+            <img src="img/icon_apple.png" alt="Apple" class="nav-logo-img">
+        </a>
+        <a href="mac.html">Mac</a>
+        <a href="ipad.html">iPad</a>
+        <a href="iphone.html">iPhone</a>
+        <a href="watch.html">Watch</a>
+        <a href="#" id="cart-icon">Giỏ hàng <span id="cart-count">0</span></a>
+    </div>
+    
+    <!-- Hộp nội dung giỏ hàng thả xuống nhanh trên thanh Menu -->
+    <div class="cart-dropdown" id="cart-dropdown-box">
+        <div class="cart-title">Giỏ hàng của bạn</div>
+        <div class="cart-items-wrapper" id="cart-items-wrapper"></div>
+        <div class="cart-summary">
+            <span>Tổng cộng:</span>
+            <span id="cart-total-amount">0đ</span>
+        </div>
+        <!-- Điều hướng người dùng thẳng tiến vào trang quản lý giỏ hàng lớn -->
+        <button class="cta-button checkout-btn" onclick="location.href='cart.html'">Xem giỏ hàng</button>
+    </div>
+</nav>
+
+    <!-- Sub-navigation Bar (Thanh điều hướng phụ hiển thị tên dòng máy) -->
+    <div class="attach-subnav">
+        <div class="subnav-inner">
+            <h2 id="product-family-title">iPhone 17 Pro</h2>
+            <div class="subnav-links">
+                <a href="#" class="active">Tổng Overview</a>
+                <a href="#">Thông Số Kỹ Thuật</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. Confirmation Panel Box (Khối xác nhận đã thêm vào giỏ hàng thành công) -->
+    <div class="attach-main-wrapper">
+        <div class="confirmation-panel">
+            <div class="panel-left">
+                <!-- Hiển thị ảnh Mockup máy tương ứng -->
+                <img src="img/ip17pro.jpg" alt="iPhone Converted" class="device-thumb-img" onerror="this.src='https://placehold.co/100x100'">
+                <h1 id="confirmed-product-name">iPhone 17 Pro 1TB Xanh Đậm</h1>
+            </div>
+            <div class="panel-right">
+                <!-- Nút bấm này đã được gán link điều hướng trực tiếp sang cart.html ở khối script phía dưới -->
+                <button class="view-cart-action-btn" id="trigger-cart-view">Xem Giỏ Hàng</button>
+            </div>
+        </div>
+
+        <!-- 2. Section gợi ý phụ kiện thông minh (Cross-sell Section) -->
+        <section class="accessory-section">
+            <h2 class="section-main-heading">Phong cách. Trong tích tắc.</h2>
+            <p class="section-sub-heading">Thêm ốp lưng MagSafe, ví hoặc cả hai. Phối và kết hợp để biến iPhone thành của bạn.</p>
+
+            <div class="carousel-container-relative">
+                <div class="accessory-carousel" id="accessory-slider">
+                    
+                    <!-- Card Phụ kiện 1 -->
+                    <div class="accessory-card">
+                        <div class="accessory-img-holder">
+                            <img src="img/techcase.png" alt="Ốp Lưng TechWoven MagSafe">
+                        </div>
+                        <div class="accessory-details">
+                            <h3>Ốp Lưng TechWoven MagSafe cho iPhone 17 Pro</h3>
+                            <p class="accessory-desc">Được thiết kế bởi Apple, ốp lưng này là một cách tinh tế để cá nhân hóa và bảo vệ iPhone 17 Pro. <span class="more-link">Hiển thị thêm</span></p>
+                            <p class="accessory-price">1.699.000đ</p>
+                            <button class="add-accessory-btn" onclick="addToCart('Ốp Lưng TechWoven MagSafe (iPhone 17 Pro)', 1699000)">Thêm vào túi</button>
+                        </div>
+                    </div>
+
+                    <!-- Card Phụ kiện 2 -->
+                    <div class="accessory-card">
+                        <div class="accessory-img-holder">
+                            <img src="img/chain.png" alt="Dây Đeo Chéo">
+                        </div>
+                        <div class="accessory-details">
+                            <h3>Dây Đeo Chéo</h3>
+                            <p class="accessory-desc">Dây đeo này được thiết kế để gắn vào một số ốp lưng của Apple để đeo iPhone thuận tiện, giữ... <span class="more-link">Hiển thị thêm</span></p>
+                            <p class="color-label-tag">Màu - Xanh Dương</p>
+                            <p class="accessory-price">899.000đ</p>
+                            <button class="add-accessory-btn" onclick="addToCart('Dây Đeo Chéo (Xanh Dương)', 899000)">Thêm vào túi</button>
+                        </div>
+                    </div>
+
+                    <!-- Card Phụ kiện 3 -->
+                    <div class="accessory-card">
+                        <div class="accessory-img-holder">
+                            <img src="img/sicase.png" alt="Ốp Lưng Silicon MagSafe">
+                        </div>
+                        <div class="accessory-details">
+                            <h3>Ốp Lưng Silicon MagSafe cho iPhone 17 Pro</h3>
+                            <p class="accessory-desc">Được chính Apple thiết kế để tôn lên vẻ đẹp cho iPhone 17 Pro và chứa 45% silicon tái chế, cảm giác cầm... <span class="more-link">Hiển thị thêm</span></p>
+                            <p class="accessory-price">1.399.000đ</p>
+                            <button class="add-accessory-btn" onclick="addToCart('Ốp Lưng Silicon MagSafe (iPhone 17 Pro)', 1399000)">Thêm vào túi</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Nút mũi tên chuyển dịch slider tròn đặt bên phải -->
+                <div class="slider-nav-control">
+                    <button class="nav-arrow-btn" id="btn-attach-prev" disabled>
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15.5 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="nav-arrow-btn" id="btn-attach-next">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M8.5 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Đọc dữ liệu từ bộ nhớ localStorage để hiển thị đúng sản phẩm người dùng vừa cấu hình ở trang trước
+            const latestConfig = JSON.parse(localStorage.getItem('latest_configured_iphone'));
+            if (latestConfig) {
+                document.getElementById('confirmed-product-name').innerText = latestConfig.name;
+                
+                // Phân tích đổi tên chuỗi họ máy trên thanh Subnav phụ
+                if(latestConfig.name.includes("Max")) {
+                    document.getElementById('product-family-title').innerText = "iPhone 17 Pro Max";
+                } else if(latestConfig.name.includes("Air")) {
+                    document.getElementById('product-family-title').innerText = "iPhone Air";
+                } else {
+                    document.getElementById('product-family-title').innerText = "iPhone 17 Pro";
+                }
+            }
+
+            // 2. ĐÃ ĐỔI: Chức năng nút "Xem Giỏ Hàng" chuyển hướng trực tiếp sang trang cart.html lớn
+            document.getElementById('trigger-cart-view').addEventListener('click', () => {
+                window.location.href = 'cart.html';
+            });
+
+            // 3. Xử lý hoạt họa trượt mượt danh sách phụ kiện gợi ý bằng nút tròn
+            const slider = document.getElementById('accessory-slider');
+            const prev = document.getElementById('btn-attach-prev');
+            const next = document.getElementById('btn-attach-next');
+
+            if (slider && prev && next) {
+                const getStepWidth = () => {
+                    const card = slider.querySelector('.accessory-card');
+                    return card ? card.offsetWidth + 24 : 350;
+                };
+
+                next.addEventListener('click', () => slider.scrollBy({ left: getStepWidth(), behavior: 'smooth' }));
+                prev.addEventListener('click', () => slider.scrollBy({ left: -getStepWidth(), behavior: 'smooth' }));
+
+                const checkEdges = () => {
+                    prev.disabled = slider.scrollLeft <= 2;
+                    next.disabled = slider.scrollLeft >= (slider.scrollWidth - slider.clientWidth) - 2;
+                };
+
+                slider.addEventListener('scroll', checkEdges);
+                window.addEventListener('resize', checkEdges);
+                setTimeout(checkEdges, 300);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+/* ==========================================================================
+   CSS định hình cấu trúc giao diện trang Mac - Quy chuẩn Apple Store 2026
+   ========================================================================== */
+
+.mac-main {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* Ribbon thông báo */
+.promo-banner {
+    width: 100%;
+    background-color: #f5f5f7;
+    border-bottom: 1px solid #d2d2d7;
+    padding: 14px 22px;
+    text-align: center;
+}
+
+.promo-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1d1d1f;
+}
+
+.promo-link {
+    color: #0066cc;
+    text-decoration: none;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+.promo-link:hover {
+    text-decoration: underline;
+}
+
+/* Thanh danh mục nhanh Subnav */
+.page-header {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.main-title {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1d1d1f;
+}
+
+.subnav-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+}
+
+.subnav-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.subnav-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    min-width: max-content;
+}
+
+.subnav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1d1d1f;
+    transition: opacity 0.2s;
+}
+
+.subnav-item:hover {
+    opacity: 0.7;
+    color: #0066cc;
+}
+
+.subnav-item img {
+    height: 54px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.subnav-item span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Các Section chung */
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.global-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.global-link:hover {
+    text-decoration: underline;
+}
+
+.font-medium {
+    font-size: 21px;
+}
+
+/* --- ẨN HOÀN TOÀN THANH TRƯỢT CAROUSEL --- */
+.carousel-wrapper {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+    display: none !important; /* Chrome/Safari */
+}
+
+.product-card {
+    min-width: 320px;
+    max-width: 320px;
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f5f5f7;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-image-bg {
+    background: #fbfbfd;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+}
+
+.card-image-bg img {
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card-info {
+    padding: 30px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.color-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.15);
+}
+
+.card-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-info .desc {
+    font-size: 14px;
+    color: #86868b;
+    margin-bottom: 16px;
+    min-height: 56px;
+    line-height: 1.4;
+}
+
+.card-info .price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Cụm nút mũi tên hình tròn căn phải */
+.carousel-container-relative {
+    position: relative;
+    width: 100%;
+}
+
+.slider-nav-control {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+    padding-right: 4px;
+}
+
+.nav-arrow-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e8e8ed;
+    border: none;
+    color: #1d1d1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-arrow-btn:hover:not(:disabled) {
+    background-color: #d2d2d7;
+}
+
+.nav-arrow-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Banner Điện ảnh Guided Tour giống iPhone */
+.video-banner {
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 28px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8%;
+}
+
+.video-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+.video-banner-text {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1d1d1f;
+}
+
+.video-play-btn {
+    background: #161617;
+    color: white;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.video-play-btn:hover {
+    background: #000000;
+}
+
+.dual-grid {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .main-title { font-size: 48px; }
+    .section-title { font-size: 32px; }
+    .slider-nav-control, .video-banner-text { display: none; }
+    .video-banner { justify-content: center; padding-left: 0; height: 350px; }
+    .dual-grid { flex-direction: column; }
+    .dual-grid img { width: 100% !important; }
+}

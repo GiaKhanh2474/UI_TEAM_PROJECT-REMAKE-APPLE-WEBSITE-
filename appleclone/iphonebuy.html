@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mua iPhone 17 Pro và iPhone 17 Pro Max - Apple (VN)</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/iphone-buy.css">
+</head>
+<body>
+
+    <!-- Apple Navbar & Cart Dropdown (Đã đồng bộ ảnh logo và màu sắc hệ thống) -->
+<nav class="apple-nav">
+    <div class="nav-container">
+        <style>
+        /* Tối ưu định dạng cho hình ảnh logo mới trên thanh navbar */
+        .nav-logo-img {
+            height: 18px; /* Độ cao tiêu chuẩn của Apple trên thanh thực tế */
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: opacity 0.3s ease;
+        }
+        .nav-logo:hover .nav-logo-img {
+            opacity: 0.7; /* Hiệu ứng mờ nhẹ cao cấp khi di chuột qua */
+        }
+    </style>
+        <!-- Đường dẫn hình ảnh logo hình quả táo đồng bộ -->
+        <a href="index.html" class="nav-logo">
+            <img src="img/icon_apple.png" alt="Apple" class="nav-logo-img">
+        </a>
+        <a href="mac.html">Mac</a>
+        <a href="ipad.html">iPad</a>
+        <a href="iphone.html">iPhone</a>
+        <a href="watch.html">Watch</a>
+        <a href="#" id="cart-icon">Giỏ hàng <span id="cart-count">0</span></a>
+    </div>
+    
+    <!-- Hộp nội dung giỏ hàng thả xuống nhanh trên thanh Menu -->
+    <div class="cart-dropdown" id="cart-dropdown-box">
+        <div class="cart-title">Giỏ hàng của bạn</div>
+        <div class="cart-items-wrapper" id="cart-items-wrapper"></div>
+        <div class="cart-summary">
+            <span>Tổng cộng:</span>
+            <span id="cart-total-amount">0đ</span>
+        </div>
+        <!-- Điều hướng người dùng thẳng tiến vào trang quản lý giỏ hàng lớn -->
+        <button class="cta-button checkout-btn" onclick="location.href='cart.html'">Xem giỏ hàng</button>
+    </div>
+</nav>
+
+    <!-- Sticky Top Bar (Thanh phụ hiển thị giá biến động theo tùy chọn) -->
+    <div class="sticky-product-bar">
+        <div class="bar-container">
+            <h2 id="sticky-title">iPhone 17 Pro</h2>
+            <div class="bar-right">
+                <div class="price-display">
+                    <span id="dynamic-price">Từ 34.999.000đ</span>
+                    <small id="dynamic-installment">hoặc 1.425.000đ/tháng trong 24 th.<sup>∆</sup></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Store Layout Container -->
+    <main class="store-container">
+        
+        <!-- Cột Trái: Trình diễn Thư viện Hình ảnh Thiết bị (Sticky) -->
+        <div class="gallery-column">
+            <div class="gallery-sticky-wrapper">
+                <div class="carousel-container">
+                    <img id="product-view-img" src="img/ip1banner.png" alt="iPhone 17 Pro Showcase">
+                </div>
+                <div class="gallery-controls">
+                    <button class="gallery-btn" onclick="changeImage(-1)">❮</button>
+                    <span id="gallery-index">1 / 2</span>
+                    <button class="gallery-btn" onclick="changeImage(1)">❯</button>
+                </div>
+                
+                <div class="promo-box-intelligence">
+                    <img src="img/applei.png" alt="Intelligence Logo">
+                    <p>Apple Intelligence. Trả góp theo tháng với phí dịch vụ thực 1.67%, sau khi thanh toán lần đầu 20%.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cột Phải: Bảng điều khiển Chọn Cấu hình Chi tiết -->
+        <div class="options-column">
+            
+            <!-- 1. Lựa chọn Phiên bản Mẫu máy -->
+            <div class="option-group">
+                <h3 class="group-title">Phiên Bản. <span class="text-gray">Mẫu nào phù hợp nhất với bạn?</span></h3>
+                <div class="selector-cards">
+                    <div class="selector-card active" onclick="selectModel('iPhone 17 Pro', 34999000, '6.3 inch')">
+                        <div class="card-left">
+                            <strong>iPhone 17 Pro</strong>
+                            <span class="sub-detail">Màn hình 6,3 inch<sup>2</sup></span>
+                        </div>
+                        <div class="card-right">
+                            <span class="card-price">Từ 34.999.000đ</span>
+                            <span class="card-installment">1.425.000đ/th.</span>
+                        </div>
+                    </div>
+                    <div class="selector-card" onclick="selectModel('iPhone 17 Pro Max', 37999000, '6.9 inch')">
+                        <div class="card-left">
+                            <strong>iPhone 17 Pro Max</strong>
+                            <span class="sub-detail">Màn hình 6,9 inch<sup>2</sup></span>
+                        </div>
+                        <div class="card-right">
+                            <span class="card-price">Từ 37.999.000đ</span>
+                            <span class="card-installment">1.547.000đ/th.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Lựa chọn Màu sắc Titan -->
+            <div class="option-group">
+                <h3 class="group-title">Màu. <span class="text-gray">Chọn màu bạn yêu thích.</span></h3>
+                <p class="selected-label">Màu sắc: <span id="color-label" style="font-weight: 600;">Bạc</span></p>
+                <div class="color-swatches">
+                    <span class="swatch-dot active" style="background: #f2f1ed;" onclick="selectColor('Bạc')"></span>
+                    <span class="swatch-dot" style="background: #e3a857;" onclick="selectColor('Cam Vũ Trụ')"></span>
+                    <span class="swatch-dot" style="background: #232d3d;" onclick="selectColor('Xanh Đậm')"></span>
+                </div>
+            </div>
+
+            <!-- 3. Lựa chọn Dung lượng Lưu trữ -->
+            <div class="option-group">
+                <h3 class="group-title">Dung lượng lưu trữ. <span class="text-gray">Bạn cần bao nhiêu dung lượng?</span></h3>
+                <div class="selector-cards grid-2-col">
+                    <div class="selector-card active" onclick="selectStorage('256GB', 0)">
+                        <strong>256 GB<sup>1</sup></strong>
+                        <span class="sub-detail text-center">Bao gồm trong giá cơ bản</span>
+                    </div>
+                    <div class="selector-card" onclick="selectStorage('512GB', 6500000)">
+                        <strong>512 GB<sup>1</sup></strong>
+                        <span class="sub-detail text-center">+ 6.500.000đ</span>
+                    </div>
+                    <div class="selector-card" onclick="selectStorage('1TB', 13000000)">
+                        <strong>1 TB<sup>1</sup></strong>
+                        <span class="sub-detail text-center">+ 13.000.000đ</span>
+                    </div>
+                    <div class="selector-card" onclick="selectStorage('2TB', 29000000)">
+                        <strong>2 TB<sup>1</sup></strong>
+                        <span class="sub-detail text-center">+ 29.000.000đ</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Lựa chọn Gói Bảo hành AppleCare+ -->
+            <div class="option-group">
+                <h3 class="group-title">Gói bảo hành AppleCare+. <span class="text-gray">Bảo vệ iPhone mới của bạn.</span></h3>
+                <div class="selector-cards">
+                    <div class="selector-card" onclick="selectCare('Có AppleCare+', 4999000)">
+                        <div class="card-left">
+                            <strong>Thêm gói AppleCare+</strong>
+                            <span class="sub-detail">Sửa chữa không giới hạn sự cố bất ngờ<sup>※</sup></span>
+                        </div>
+                        <div class="card-right">
+                            <span>+ 4.999.000đ</span>
+                        </div>
+                    </div>
+                    <div class="selector-card active" onclick="selectCare('Không có AppleCare+', 0)">
+                        <div class="card-left">
+                            <strong>Không bổ sung bảo hành</strong>
+                            <span class="sub-detail">Chỉ sử dụng bảo hành mặc định 1 năm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Khối Tổng kết & Thực hiện Thêm vào Giỏ hàng -->
+            <div class="summary-action-box">
+                <div class="summary-title-section">
+                    <h4 id="summary-product-name">iPhone 17 Pro 256GB Mẫu Bạc</h4>
+                    <p id="summary-total-price">34.999.000đ</p>
+                </div>
+                <div class="shipping-info">
+                    <span class="shipping-icon">🚚</span>
+                    <p>Vận chuyển miễn phí • Chi tiết giao hàng hiển thị khi thanh toán.</p>
+                </div>
+                <!-- Nút Hành động Mua kết nối trực tiếp cơ sở dữ liệu JS LocalStorage -->
+                <button class="action-buy-btn" onclick="executePurchase()">Tiếp tục (Thêm vào giỏ hàng)</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 6. Section: Trong hộp có gì -->
+    <section class="box-content-section">
+        <h2>Trong hộp có gì</h2>
+        <div class="box-grid">
+            <div class="box-item">
+                <div class="box-img-wrapper"><img src="img/ip17proi.png" alt="iPhone"></div>
+                <p>iPhone 17 Pro</p>
+            </div>
+            <div class="box-item">
+                <div class="box-img-wrapper"><img src="img/cable.png" alt="Cáp sạc"></div>
+                <p>Cáp Sạc USB‑C</p>
+            </div>
+        </div>
+        <p class="env-note">Là một phần trong nỗ lực của chúng tôi nhằm đạt đến <a href="#">trạng thái trung hòa carbon vào năm 2030</a>, sản phẩm không đi kèm bộ tiếp hợp nguồn hoặc EarPods.</p>
+    </section>
+
+    <!-- 7. Section: FAQ (Câu Hỏi Thường Gặp) -->
+    <section class="faq-section">
+        <h2>Câu Hỏi Thường Gặp</h2>
+        <div class="faq-accordion">
+            <details class="faq-item">
+                <summary>Tại sao tôi nên mua iPhone không có SIM trên apple.com? <span>+</span></summary>
+                <div class="faq-content"><p>Khi bạn mua iPhone không có SIM từ apple.com, thiết bị sẽ hoàn toàn không bị khóa mạng. Bạn có tự do lựa chọn hoặc chuyển đổi bất kỳ nhà mạng nào tương thích bất cứ lúc nào.</p></div>
+            </details>
+            <details class="faq-item">
+                <summary>iPhone của tôi có hoạt động trên toàn thế giới không? <span>+</span></summary>
+                <div class="faq-content"><p>Có, tất cả các mẫu iPhone bán ra đều là phiên bản quốc tế và hỗ trợ mạng 5G cũng như các băng tần LTE toàn cầu phổ biến từ nhiều nhà mạng khác nhau.</p></div>
+            </details>
+            <details class="faq-item">
+                <summary>Việc chuyển dữ liệu và thiết lập iPhone mới có dễ không? <span>+</span></summary>
+                <div class="faq-content"><p>Cực kỳ dễ dàng. Bạn chỉ cần đặt iPhone cũ cạnh iPhone mới, sử dụng tính năng Bắt Đầu Nhanh (Quick Start) để đồng bộ mọi tài liệu và hình ảnh hoàn toàn tự động.</p></div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Footer Apple Việt Nam (Đồng bộ dữ liệu pháp lý doanh nghiệp) -->
+    <footer class="apple-footer">
+        <div class="footer-content">
+            <p class="legal-text">◊ Ưu đãi Apple TV chỉ được áp dụng cho thuê bao mới và thuê bao đã từng sử dụng đủ điều kiện. 179.000đ/tháng sau dùng thử. Gói dịch vụ tự động gia hạn.</p>
+            <p class="legal-text">1. Dung lượng khả dụng nhỏ hơn và có thể thay đổi do nhiều yếu tố. Hệ điều hành tiêu chuẩn chiếm dụng từ 12GB đến 24GB dung lượng.</p>
+            <div class="footer-links">
+                <p>Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.</p>
+                <div class="legal-nav">
+                    <a href="#">Chính Sách Quyền Riêng Tư</a> | <a href="#">Điều Khoản Sử Dụng</a> | <a href="#">Bán Hàng và Hoàn Tiền</a>
+                </div>
+            </div>
+            <div class="corporate-details">
+                <p>Công Ty TNHH Apple Việt Nam • ĐKKD số 0313510827 • Địa chỉ: Phòng 901, Ngôi Nhà Đức Tại Tp. Hồ Chí Minh, số 33, đường Lê Duẩn, Quận 1, Việt Nam.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Khởi chạy Script điều khiển logic cấu hình động -->
+    <script src="js/cart.js"></script>
+    <script>
+    // Hệ thống biến trạng thái cấu hình máy (Giữ nguyên)
+    let currentModel = "iPhone 17 Pro";
+    let baseModelPrice = 34999000;
+    let currentScreen = "6.3 inch";
+    let currentColor = "Bạc";
+    let currentStorage = "256GB";
+    let storageUpgradePrice = 0;
+    let currentCare = "Không có AppleCare+";
+    let careUpgradePrice = 0;
+
+    // ==========================================================================
+    // KHU VỰC FIX LỖI: Đồng bộ chính xác 2 ảnh cục bộ của bạn vào đây
+    // ==========================================================================
+    let galleryImages = [
+        "img/ip1banner.png",  // Vị trí số 0 (Mặc định hiển thị đầu tiên)
+        "img/ipbanner.png"    // Vị trí số 1
+    ];
+    let currentImgIndex = 0;
+
+    // Hàm điều khiển thay đổi hình ảnh khi bấm nút mũi tên ❮ và ❯
+    function changeImage(dir) {
+        // Tính toán chỉ số index vòng lặp mượt không bị âm hoặc vượt quá độ dài mảng
+        currentImgIndex = (currentImgIndex + dir + galleryImages.length) % galleryImages.length;
+        
+        // Gán đường dẫn thực tế từ mảng vào thuộc tính src của thẻ img
+        document.getElementById('product-view-img').src = galleryImages[currentImgIndex];
+        
+        // Cập nhật lại ký số hiển thị (Ví dụ: 1 / 2 hoặc 2 / 2)
+        document.getElementById('gallery-index').innerText = `${currentImgIndex + 1} / ${galleryImages.length}`;
+    }
+    // ==========================================================================
+
+    function updateDynamicPrice() {
+        let total = baseModelPrice + storageUpgradePrice + careUpgradePrice;
+        let installment = Math.round(total / 24.5);
+
+        document.getElementById('dynamic-price').innerText = total.toLocaleString('vi-VN') + 'đ';
+        document.getElementById('dynamic-installment').innerText = `hoặc ${installment.toLocaleString('vi-VN')}đ/tháng trong 24 tháng`;
+        document.getElementById('summary-total-price').innerText = total.toLocaleString('vi-VN') + 'đ';
+        document.getElementById('summary-product-name').innerText = `${currentModel} ${currentStorage} (${currentColor}) - ${currentCare}`;
+    }
+
+    function selectModel(modelName, price, screenSize) {
+        currentModel = modelName;
+        baseModelPrice = price;
+        currentScreen = screenSize;
+        document.getElementById('sticky-title').innerText = modelName;
+        
+        let cards = event.currentTarget.parentNode.children;
+        for(let c of cards) c.classList.remove('active');
+        event.currentTarget.classList.add('active');
+        updateDynamicPrice();
+    }
+
+    function selectColor(colorName) {
+        currentColor = colorName;
+        document.getElementById('color-label').innerText = colorName;
+        let dots = event.currentTarget.parentNode.children;
+        for(let d of dots) d.classList.remove('active');
+        event.currentTarget.classList.add('active');
+        updateDynamicPrice();
+    }
+
+    function selectStorage(size, extraPrice) {
+        currentStorage = size;
+        storageUpgradePrice = extraPrice;
+        let cards = event.currentTarget.parentNode.children;
+        for(let c of cards) c.classList.remove('active');
+        event.currentTarget.classList.add('active');
+        updateDynamicPrice();
+    }
+
+    function selectCare(careName, extraPrice) {
+        currentCare = careName;
+        careUpgradePrice = extraPrice;
+        let cards = event.currentTarget.parentNode.children;
+        for(let c of cards) c.classList.remove('active');
+        event.currentTarget.classList.add('active');
+        updateDynamicPrice();
+    }
+
+    function executePurchase() {
+        let finalName = `${currentModel} ${currentStorage} (${currentColor})`;
+        let finalPrice = baseModelPrice + storageUpgradePrice + careUpgradePrice;
+        
+        localStorage.setItem('latest_configured_iphone', JSON.stringify({
+            name: finalName,
+            price: finalPrice
+        }));
+
+        addToCart(finalName, finalPrice);
+        window.location.href = 'iphone-attach.html';
+    }
+</script>
+</body>
+</html>
