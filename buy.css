@@ -1,0 +1,352 @@
+/* ============================================
+   Mua iPad Air – Buy / Configurator Page
+   ============================================ */
+
+.breadcrumb-bar {
+  background: #f5f5f7;
+  border-bottom: 1px solid var(--divider);
+  padding: 10px 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.breadcrumb-bar a:hover { text-decoration: underline; color: var(--text-primary); }
+.breadcrumb-bar .sep { margin: 0 6px; color: #c7c7cc; }
+
+/* ---------- Page header ---------- */
+.buy-header {
+  padding: 28px 0 8px;
+  border-bottom: 1px solid var(--divider);
+}
+.buy-header h1 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+}
+.buy-header .buy-price-line {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.buy-header .buy-price-line .avail {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.buy-header .buy-price-line .avail::before {
+  content: "";
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #2fb350;
+  display: inline-block;
+}
+.buy-header .view-configs { font-size: 13px; color: var(--blue); }
+.buy-header .view-configs:hover { text-decoration: underline; }
+
+/* ---------- Layout ---------- */
+.buy-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 0;
+  align-items: start;
+}
+.buy-gallery {
+  position: sticky;
+  top: 44px;
+  padding: 40px 40px 40px 0;
+}
+.buy-config {
+  padding: 40px 0 40px 40px;
+  border-left: 1px solid var(--divider);
+}
+@media (max-width: 900px) {
+  .buy-layout { grid-template-columns: 1fr; }
+  .buy-gallery { position: static; padding: 24px 0; }
+  .buy-config { padding: 24px 0; border-left: none; border-top: 1px solid var(--divider); }
+}
+
+/* ---------- Gallery ---------- */
+.gallery-frame {
+  position: relative;
+  background: #f5f5f7;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  overflow: hidden;
+}
+.gallery-frame img {
+  max-width: 78%;
+  max-height: 380px;
+  transition: opacity .3s ease, filter .3s ease;
+}
+.gallery-frame img.grayscale-approx { filter: grayscale(0.85) brightness(1.05); }
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--divider);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 16px;
+  color: var(--text-primary);
+}
+.gallery-arrow.prev { left: 14px; }
+.gallery-arrow.next { right: 14px; }
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+.gallery-dots .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #d2d2d7;
+  cursor: pointer;
+}
+.gallery-dots .dot.active { background: var(--text-primary); }
+
+/* ---------- Config groups ---------- */
+.config-group {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--divider);
+}
+.config-group:first-child { padding-top: 0; }
+.config-group .config-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.config-group .config-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+.config-group .config-title .config-sub-inline {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* Card-style radio options (size, storage, connectivity, applecare) */
+.option-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.option-card {
+  border: 1px solid #d2d2d7;
+  border-radius: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+  position: relative;
+}
+.option-card:hover { border-color: #86868b; }
+.option-card.selected {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+.option-card .opt-name { font-weight: 600; font-size: 14px; }
+.option-card .opt-detail { color: var(--text-secondary); margin-top: 2px; }
+.option-card .opt-price { color: var(--text-secondary); margin-top: 4px; }
+.option-card input { position: absolute; opacity: 0; pointer-events: none; }
+
+/* Color swatches */
+.color-swatch-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.swatch-btn {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  padding: 2px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+}
+.swatch-btn.selected { border-color: var(--blue); }
+.color-swatch-row .swatch-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-left: 6px;
+}
+
+/* Select dropdown style groups (Pencil, Keyboard, Trade-in) */
+.select-cards { display: flex; flex-direction: column; gap: 10px; }
+.select-card {
+  border: 1px solid #d2d2d7;
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+.select-card.selected { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue); }
+.select-card .sc-name { font-weight: 500; }
+.select-card .sc-price { color: var(--text-secondary); font-size: 13px; }
+.select-card input { position: absolute; opacity: 0; pointer-events: none; }
+
+/* Engraving text input */
+.engrave-box {
+  border: 1px solid #d2d2d7;
+  border-radius: 12px;
+  padding: 14px;
+}
+.engrave-box input[type="text"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--divider);
+  padding: 8px 0;
+  font-size: 14px;
+  font-family: var(--font);
+  outline: none;
+  margin-bottom: 8px;
+}
+.engrave-box .engrave-hint { font-size: 12px; color: var(--text-secondary); }
+
+/* Price summary + CTA */
+.buy-summary {
+  padding-top: 24px;
+}
+.buy-summary .summary-total {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.buy-summary .summary-price {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  font-family: var(--font-display);
+}
+.buy-summary .btn-addbag {
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+/* ---------- In the box ---------- */
+.inbox-section { text-align: center; }
+.inbox-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 60px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.inbox-item { text-align: center; }
+.inbox-item img { height: 160px; object-fit: contain; margin: 0 auto; }
+.inbox-item .inbox-label { font-size: 12px; color: var(--text-secondary); margin-top: 12px; }
+
+/* ---------- Promo banner ---------- */
+.promo-banner {
+  background: linear-gradient(120deg, #7bd6c4 0%, #6fc7e0 50%, #7bb8ea 100%);
+  padding: 60px 0;
+  color: #04222a;
+}
+.promo-banner .promo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.promo-banner .promo-text { max-width: 380px; }
+.promo-banner h2 { font-size: 26px; font-weight: 600; margin-bottom: 8px; }
+.promo-banner p { font-size: 14px; opacity: 0.85; }
+.promo-banner img { max-width: 340px; }
+@media (max-width: 734px) {
+  .promo-banner .promo-inner { flex-direction: column; text-align: center; }
+}
+
+/* ---------- Compare table ---------- */
+.compare-table-section { text-align: center; }
+.compare-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+.compare-table .ct-col {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.compare-table .ct-header img { height: 150px; object-fit: contain; margin: 0 auto; }
+.compare-table .ct-name { font-weight: 600; font-size: 17px; margin-top: 10px; }
+.compare-table .ct-tag { font-size: 12px; color: var(--text-secondary); min-height: 32px; }
+.compare-table .ct-row {
+  border-top: 1px solid var(--divider);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.compare-table .ct-row img { height: 32px; }
+.compare-table .ct-row .ct-row-title { font-size: 12px; font-weight: 600; }
+.compare-table .ct-row .ct-row-sub { font-size: 11px; color: var(--text-secondary); }
+@media (max-width: 900px) {
+  .compare-table { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .compare-table { grid-template-columns: 1fr; }
+}
+
+/* ---------- FAQ ---------- */
+.faq-section { max-width: 760px; margin: 0 auto; text-align: left; }
+.faq-section h2 { text-align: center; margin-bottom: 30px; }
+.faq-item {
+  border-bottom: 1px solid var(--divider);
+}
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 18px 4px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary);
+}
+.faq-question .chev {
+  transition: transform .25s ease;
+  color: var(--text-secondary);
+}
+.faq-item.open .faq-question .chev { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.faq-item.open .faq-answer { max-height: 300px; }
+.faq-answer p { padding: 0 4px 18px; margin: 0; }

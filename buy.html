@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mua iPad Air</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="buy.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="container-wide">
+    <a href="home.html" class="nav-logo" aria-label="Apple">
+      <svg viewBox="0 0 14 44" xmlns="http://www.w3.org/2000/svg"><path d="M13.0729 17.6516C13.0067 16.5322 13.5195 15.4697 14.2665 14.6572C13.6866 13.8106 12.6636 13.2331 11.5773 13.2001C10.3979 13.0757 9.28213 13.8878 8.66413 13.8878C8.03413 13.8878 7.11413 13.2141 6.15413 13.2331C4.89413 13.2711 3.75413 13.9711 3.16413 15.0621C1.86413 17.3021 2.83413 20.6221 4.09413 22.4521C4.71413 23.3421 5.44413 24.3421 6.40413 24.3061C7.33413 24.2681 7.68413 23.7071 8.80413 23.7071C9.91413 23.7071 10.2441 24.3061 11.2241 24.2841C12.2341 24.2681 12.8641 23.3801 13.4641 22.4821C13.9141 21.8341 14.2641 21.1191 14.5041 20.3671C13.5541 19.9661 13.0741 18.8901 13.0729 17.6516Z"/><path d="M11.0179 11.9761C11.5479 11.3341 11.8079 10.5081 11.7379 9.67407C10.9179 9.75907 10.1479 10.1451 9.60793 10.7601C9.08793 11.3541 8.79793 12.1651 8.85793 13.0011C9.68793 13.0091 10.4979 12.6191 11.0179 11.9761Z"/></svg>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Cửa Hàng</a></li>
+        <li><a href="#">Mac</a></li>
+        <li><a href="index.html">iPad</a></li>
+        <li><a href="#">iPhone</a></li>
+        <li><a href="#">Watch</a></li>
+        <li><a href="#">Vision</a></li>
+        <li><a href="#">AirPods</a></li>
+        <li><a href="#">TV &amp; Nhà</a></li>
+        <li><a href="#">Giải Trí</a></li>
+        <li><a href="#">Phụ Kiện</a></li>
+        <li><a href="#">Hỗ Trợ</a></li>
+      </ul>
+    </nav>
+    <div class="nav-icons">
+      <svg viewBox="0 0 17 17" fill="none" stroke="#1d1d1f" stroke-width="1.1"><circle cx="7" cy="7" r="6"/><line x1="16" y1="16" x2="11.5" y2="11.5"/></svg>
+      <svg viewBox="0 0 14 18" fill="none" stroke="#1d1d1f" stroke-width="1.1"><path d="M1 6.5c0-2 1.5-3.5 3.5-3.5h5c2 0 3.5 1.5 3.5 3.5v9a1 1 0 01-1 1H2a1 1 0 01-1-1v-9z"/><path d="M4.5 6V4a2.5 2.5 0 015 0v2"/></svg>
+      <button class="nav-toggle" aria-label="Menu">
+        <svg viewBox="0 0 18 18" fill="none" stroke="#1d1d1f" stroke-width="1.2"><line x1="1" y1="4" x2="17" y2="4"/><line x1="1" y1="14" x2="17" y2="14"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ BREADCRUMB ============ -->
+<div class="breadcrumb-bar">
+  <div class="container-wide">
+    <a href="index.html">iPad Air</a><span class="sep">›</span><span>Mua</span>
+  </div>
+</div>
+
+<!-- ============ PAGE HEADER ============ -->
+<div class="buy-header">
+  <div class="container-wide">
+    <h1>Mua iPad Air</h1>
+    <div class="buy-price-line">
+      <span id="headerPrice">Từ 16.999.000₫</span>
+      <span class="avail">Có sẵn để giao hàng</span>
+      <a class="view-configs" href="index.html#tim-hieu">Xem tất cả các cấu hình ›</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MAIN CONFIGURATOR ============ -->
+<div class="container-wide">
+  <div class="buy-layout">
+
+    <!-- ---------- Gallery ---------- -->
+    <div class="buy-gallery">
+      <div class="gallery-frame">
+        <button class="gallery-arrow prev" aria-label="Trước">‹</button>
+        <img id="galleryImage" src="assets/ipad-color-blue.png" alt="iPad Air">
+        <button class="gallery-arrow next" aria-label="Sau">›</button>
+      </div>
+      <div class="gallery-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <p style="text-align:center;font-size:13px;color:var(--text-secondary);margin-top:14px;">
+        iPad Air màu <strong id="colorLabel">Xanh Dương</strong>
+      </p>
+    </div>
+
+    <!-- ---------- Configurator form ---------- -->
+    <div class="buy-config">
+
+      <!-- Size -->
+      <div class="config-group">
+        <div class="config-title">Phiên bản. <span class="config-sub-inline">Chọn kích cỡ bạn muốn.</span></div>
+        <div class="option-cards">
+          <label class="option-card selected" data-role="size" data-value="11">
+            <input type="radio" name="size" checked>
+            <div class="opt-name">Phiên bản 11 inch</div>
+            <div class="opt-detail">Từ 16.999.000₫</div>
+          </label>
+          <label class="option-card" data-role="size" data-value="13">
+            <input type="radio" name="size">
+            <div class="opt-name">Phiên bản 13 inch</div>
+            <div class="opt-detail">Từ 22.499.000₫</div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Color -->
+      <div class="config-group">
+        <div class="config-title">Màu. <span class="config-sub-inline">Chọn màu bạn yêu thích.</span></div>
+        <div class="color-swatch-row">
+          <span class="swatch-btn selected" data-role="color" data-value="blue" style="background-image:url('assets/buy/swatch-blue.png');background-color:#7c8fa3;" title="Xanh Dương"></span>
+          <span class="swatch-btn" data-role="color" data-value="purple" style="background-image:url('assets/buy/swatch-purple.png');background-color:#c9bfe0;" title="Tím"></span>
+          <span class="swatch-btn" data-role="color" data-value="starlight" style="background-image:url('assets/buy/swatch-starlight.png');background-color:#f0ecdf;" title="Ánh Sao"></span>
+          <span class="swatch-btn" data-role="color" data-value="spacegray" style="background-image:url('assets/buy/swatch-spacegray.png');background-color:#6e6e73;" title="Xám Không Gian"></span>
+        </div>
+      </div>
+
+      <!-- Storage -->
+      <div class="config-group">
+        <div class="config-title">Dung lượng lưu trữ. <span class="config-sub-inline">Chọn dung lượng bạn cần.</span></div>
+        <div class="option-cards">
+          <label class="option-card selected" data-role="storage" data-value="128">
+            <input type="radio" name="storage" checked>
+            <div class="opt-name">128GB</div>
+            <div class="opt-price">16.999.000₫</div>
+          </label>
+          <label class="option-card" data-role="storage" data-value="256">
+            <input type="radio" name="storage">
+            <div class="opt-name">256GB</div>
+            <div class="opt-price">20.999.000₫</div>
+          </label>
+          <label class="option-card" data-role="storage" data-value="512">
+            <input type="radio" name="storage">
+            <div class="opt-name">512GB</div>
+            <div class="opt-price">25.499.000₫</div>
+          </label>
+          <label class="option-card" data-role="storage" data-value="1024">
+            <input type="radio" name="storage">
+            <div class="opt-name">1TB</div>
+            <div class="opt-price">29.499.000₫</div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Connectivity -->
+      <div class="config-group">
+        <div class="config-title">Kết Nối. <span class="config-sub-inline">Chọn cách bạn duy trì kết nối.</span></div>
+        <div class="option-cards">
+          <label class="option-card selected" data-role="connectivity" data-value="wifi">
+            <input type="radio" name="connectivity" checked>
+            <div class="opt-name">Wi‑Fi</div>
+            <div class="opt-detail">Không cộng thêm</div>
+          </label>
+          <label class="option-card" data-role="connectivity" data-value="cellular">
+            <input type="radio" name="connectivity">
+            <div class="opt-name">Wi‑Fi + Cellular</div>
+            <div class="opt-detail">+ 4.500.000₫</div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Engraving -->
+      <div class="config-group">
+        <div class="config-title">Khắc. <span class="config-sub-inline">Tạo dấu ấn riêng cho iPad Air của bạn miễn phí.</span></div>
+        <div class="engrave-box">
+          <input type="text" maxlength="30" placeholder="Nhập tên hoặc lời nhắn (không bắt buộc)">
+          <div class="engrave-hint">Miễn phí khắc chữ. Tối đa 30 ký tự.</div>
+        </div>
+      </div>
+
+      <!-- Apple Pencil -->
+      <div class="config-group">
+        <div class="config-title">Apple Pencil. <span class="config-sub-inline">Chọn tùy chọn đáp ứng nhu cầu của bạn.</span></div>
+        <div class="select-cards">
+          <label class="select-card selected" data-role="pencil" data-value="none">
+            <input type="radio" name="pencil" checked>
+            <span class="sc-name">Không mua Apple Pencil</span>
+            <span class="sc-price">0₫</span>
+          </label>
+          <label class="select-card" data-role="pencil" data-value="pro">
+            <input type="radio" name="pencil">
+            <span class="sc-name">Apple Pencil Pro</span>
+            <span class="sc-price">+ 3.190.000₫</span>
+          </label>
+          <label class="select-card" data-role="pencil" data-value="usbc">
+            <input type="radio" name="pencil">
+            <span class="sc-name">Apple Pencil (USB‑C)</span>
+            <span class="sc-price">+ 1.990.000₫</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Keyboard -->
+      <div class="config-group">
+        <div class="config-title">Bàn phím. <span class="config-sub-inline">Tận hưởng trải nghiệm gõ phím tuyệt vời và khả năng bảo vệ tiện ích.</span></div>
+        <div class="select-cards">
+          <label class="select-card selected" data-role="keyboard" data-value="none">
+            <input type="radio" name="keyboard" checked>
+            <span class="sc-name">Không mua bàn phím</span>
+            <span class="sc-price">0₫</span>
+          </label>
+          <label class="select-card" data-role="keyboard" data-value="magic">
+            <input type="radio" name="keyboard">
+            <span class="sc-name">Magic Keyboard</span>
+            <span class="sc-price">+ 7.990.000₫</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Trade In -->
+      <div class="config-group">
+        <div class="config-title">Apple Trade In. <span class="config-sub-inline">Nhận 900.000₫–22.300.000₫ để mua iPad mới?</span></div>
+        <div class="select-cards">
+          <label class="select-card selected" data-role="tradein" data-value="none">
+            <input type="radio" name="tradein" checked>
+            <span class="sc-name">Không thu cũ đổi mới</span>
+          </label>
+          <label class="select-card" data-role="tradein" data-value="ipad">
+            <input type="radio" name="tradein">
+            <span class="sc-name">Thu cũ iPad của tôi</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- AppleCare+ -->
+      <div class="config-group">
+        <div class="config-title">Gói bảo hành AppleCare+. <span class="config-sub-inline">Hãy bảo vệ iPad Air, Apple Pencil và bàn phím của bạn.</span></div>
+        <div class="select-cards">
+          <label class="select-card selected" data-role="applecare" data-value="none">
+            <input type="radio" name="applecare" checked>
+            <span class="sc-name">Không mua AppleCare+</span>
+            <span class="sc-price">0₫</span>
+          </label>
+          <label class="select-card" data-role="applecare" data-value="applecare">
+            <input type="radio" name="applecare">
+            <span class="sc-name">AppleCare+</span>
+            <span class="sc-price">+ 2.990.000₫</span>
+          </label>
+          <label class="select-card" data-role="applecare" data-value="theft">
+            <input type="radio" name="applecare">
+            <span class="sc-name">AppleCare+ Theft and Loss</span>
+            <span class="sc-price">+ 4.290.000₫</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Summary + CTA -->
+      <div class="buy-summary">
+        <div class="summary-total">Tổng cộng</div>
+        <div class="summary-price" id="summaryPrice">16.999.000₫</div>
+        <button class="btn btn-addbag" id="addToBagBtn">Thêm vào giỏ hàng</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============ TRONG HỘP CÓ GÌ ============ -->
+<section class="section inbox-section">
+  <div class="container">
+    <h2 class="headline small" style="font-size:24px;">Trong hộp có gì</h2>
+    <div class="inbox-grid">
+      <div class="inbox-item">
+        <img src="assets/buy/inbox-ipadair.png" alt="iPad Air">
+        <div class="inbox-label">iPad Air</div>
+      </div>
+      <div class="inbox-item">
+        <img src="assets/buy/inbox-usbc-cable.png" alt="Cáp sạc USB-C">
+        <div class="inbox-label">Cáp sạc USB‑C</div>
+      </div>
+      <div class="inbox-item">
+        <img src="assets/buy/inbox-power-adapter.png" alt="Bộ tiếp hợp nguồn USB-C 20W">
+        <div class="inbox-label">Bộ tiếp hợp nguồn USB‑C 20W</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROMO BANNER ============ -->
+<section class="promo-banner">
+  <div class="container-wide promo-inner">
+    <div class="promo-text">
+      <h2>Ra mắt iPad mới với nhiều ưu đãi hơn trước.</h2>
+      <p>Thỏa sức khám phá với vô vàn dịch vụ đi kèm khi bạn mua iPad Air.</p>
+    </div>
+    <img src="assets/buy/promo-apps-banner.png" alt="Apple TV, Apple Music, Apple Arcade, Apple Fitness+">
+  </div>
+</section>
+
+<!-- ============ SO SÁNH ============ -->
+<section class="section compare-table-section">
+  <div class="container-wide">
+    <h2 class="headline small">So sánh các phiên bản iPad</h2>
+    <div class="compare-table">
+
+      <div class="ct-col">
+        <div class="ct-header">
+          <img src="assets/buy/compare-thumb-ipadpro.png" alt="iPad Pro">
+          <div class="ct-name">iPad Pro</div>
+          <div class="ct-tag">Trải nghiệm iPad cực đỉnh với chip hàng đầu</div>
+        </div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-chip-m5.png" alt="Chip M5"><div class="ct-row-title">Chip M5</div><div class="ct-row-sub">Apple Intelligence</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-camera-pro.png" alt="Camera"><div class="ct-row-title">Camera sau 12MP</div><div class="ct-row-sub">Camera LiDAR</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-frontcam-2.png" alt="Camera trước"><div class="ct-row-title">Camera trước 12MP</div><div class="ct-row-sub">Ultra Wide</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-pencilpro-2.png" alt="Apple Pencil Pro"><div class="ct-row-title">Apple Pencil Pro</div><div class="ct-row-sub">Hỗ trợ</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-magickeyboard-m4.png" alt="Magic Keyboard"><div class="ct-row-title">Magic Keyboard</div><div class="ct-row-sub">Bán riêng</div></div>
+      </div>
+
+      <div class="ct-col">
+        <div class="ct-header">
+          <img src="assets/buy/compare-thumb-ipadair.png" alt="iPad Air">
+          <div class="ct-name">iPad Air</div>
+          <div class="ct-tag">Hiệu năng mạnh mẽ hơn trong thiết kế mỏng nhẹ</div>
+        </div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-chip-m4.png" alt="Chip M4"><div class="ct-row-title">Chip M4</div><div class="ct-row-sub">Apple Intelligence</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-camera-air.png" alt="Camera"><div class="ct-row-title">Camera sau 12MP</div><div class="ct-row-sub">Wide</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-frontcam-1.png" alt="Camera trước"><div class="ct-row-title">Camera trước 12MP</div><div class="ct-row-sub">Ultra Wide</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-pencilpro-1.png" alt="Apple Pencil Pro"><div class="ct-row-title">Apple Pencil Pro</div><div class="ct-row-sub">Hỗ trợ</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-magickeyboard-air.png" alt="Magic Keyboard"><div class="ct-row-title">Magic Keyboard</div><div class="ct-row-sub">Bán riêng</div></div>
+      </div>
+
+      <div class="ct-col">
+        <div class="ct-header">
+          <img src="assets/buy/compare-thumb-ipad.png" alt="iPad">
+          <div class="ct-name">iPad</div>
+          <div class="ct-tag">Cực nhiều tính năng với mức giá dễ tiếp cận</div>
+        </div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-chip-a16.png" alt="Chip A16"><div class="ct-row-title">Chip A16</div><div class="ct-row-sub">Apple Intelligence</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-camera-ipad.png" alt="Camera"><div class="ct-row-title">Camera sau 12MP</div><div class="ct-row-sub">Wide</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-frontcam-0.png" alt="Camera trước"><div class="ct-row-title">Camera trước 12MP</div><div class="ct-row-sub">Ultra Wide</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-pencil.png" alt="Apple Pencil"><div class="ct-row-title">Apple Pencil (USB‑C)</div><div class="ct-row-sub">Hỗ trợ</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-keyboard-folio.png" alt="Magic Keyboard Folio"><div class="ct-row-title">Magic Keyboard Folio</div><div class="ct-row-sub">Bán riêng</div></div>
+      </div>
+
+      <div class="ct-col">
+        <div class="ct-header">
+          <img src="assets/buy/compare-thumb-ipadmini.png" alt="iPad mini">
+          <div class="ct-name">iPad mini</div>
+          <div class="ct-tag">Nhỏ gọn, tiện lợi, mạnh mẽ hơn bao giờ hết</div>
+        </div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-chip-a17pro.png" alt="Chip A17 Pro"><div class="ct-row-title">Chip A17 Pro</div><div class="ct-row-sub">Apple Intelligence</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-camera-mini.png" alt="Camera"><div class="ct-row-title">Camera sau 12MP</div><div class="ct-row-sub">Wide</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-frontcam-top.png" alt="Camera trước"><div class="ct-row-title">Camera trước 12MP</div><div class="ct-row-sub">Landscape</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-pencilpro-0.png" alt="Apple Pencil Pro"><div class="ct-row-title">Apple Pencil Pro</div><div class="ct-row-sub">Hỗ trợ</div></div>
+        <div class="ct-row"><img src="assets/buy/icon-compare-keyboard-bt.png" alt="Bàn phím Bluetooth"><div class="ct-row-title">Bàn phím Bluetooth</div><div class="ct-row-sub">Bán riêng</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section grey">
+  <div class="container faq-section">
+    <h2 class="headline small" style="font-size:24px;">Câu Hỏi Thường Gặp</h2>
+
+    <div class="faq-item open">
+      <button class="faq-question">Apple Pencil nào tương thích với iPad Air? <span class="chev">⌄</span></button>
+      <div class="faq-answer"><p>iPad Air (thế hệ mới nhất) tương thích với Apple Pencil Pro và Apple Pencil (USB‑C). Apple Pencil Pro hỗ trợ thêm các cử chỉ như Squeeze, Barrel Roll và haptic feedback.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Bàn phím nào tương thích với iPad Air? <span class="chev">⌄</span></button>
+      <div class="faq-answer"><p>iPad Air tương thích với Magic Keyboard được thiết kế riêng cho từng kích cỡ 11 inch và 13 inch, mang lại trải nghiệm gõ phím thoải mái cùng trackpad tích hợp.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">AppleCare+ bảo hành những gì? <span class="chev">⌄</span></button>
+      <div class="faq-answer"><p>AppleCare+ cung cấp bảo hành phần cứng mở rộng, hỗ trợ kỹ thuật ưu tiên, và bảo hiểm cho các sự cố hư hỏng do vô ý với mức phí dịch vụ áp dụng. Gói Theft and Loss còn bảo hiểm khi mất hoặc bị trộm thiết bị.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Tôi có thể trả góp khi mua iPad Air không? <span class="chev">⌄</span></button>
+      <div class="faq-answer"><p>Có. Bạn có thể chọn hình thức trả góp 0% lãi suất qua thẻ tín dụng của các ngân hàng liên kết khi thanh toán, chia nhỏ khoản thanh toán theo nhiều kỳ hạn khác nhau.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container-wide">
+    <div class="footer-top">
+      Một số tính năng có thể chưa khả dụng ở tất cả khu vực hoặc ngôn ngữ. Xem thêm thông tin về tính năng.
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Mua sắm và tìm hiểu</h4>
+        <ul>
+          <li><a href="#">Cửa Hàng</a></li>
+          <li><a href="#">Mac</a></li>
+          <li><a href="index.html">iPad</a></li>
+          <li><a href="#">iPhone</a></li>
+          <li><a href="#">Watch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dịch vụ Apple</h4>
+        <ul>
+          <li><a href="#">Apple Music</a></li>
+          <li><a href="#">Apple TV+</a></li>
+          <li><a href="#">iCloud</a></li>
+          <li><a href="#">Apple One</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Tài khoản Apple</h4>
+        <ul>
+          <li><a href="#">Quản lý tài khoản</a></li>
+          <li><a href="#">Tài khoản Apple cho gia đình</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Cửa Hàng Apple</h4>
+        <ul>
+          <li><a href="#">Tìm cửa hàng</a></li>
+          <li><a href="#">Genius Bar</a></li>
+          <li><a href="#">Trả góp 0%</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Giá trị Apple</h4>
+        <ul>
+          <li><a href="#">Trợ năng</a></li>
+          <li><a href="#">Môi trường</a></li>
+          <li><a href="#">Quyền riêng tư</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.</p>
+      <p><a href="#">Chính sách bảo mật</a> | <a href="#">Điều khoản sử dụng</a> | <a href="#">Bán hàng và Hoàn trả</a> | <a href="#">Sơ đồ trang</a></p>
+      <p style="margin-top:12px;">Trang web này là bản sao (clone) được tạo cho mục đích học tập/thực hành, không phải trang chính thức của Apple. Giá bán chỉ mang tính minh họa.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="buy.js"></script>
+</body>
+</html>

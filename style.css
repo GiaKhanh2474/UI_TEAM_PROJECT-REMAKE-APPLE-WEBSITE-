@@ -1,0 +1,517 @@
+/* ============================================
+   iPad Air – Landing Page Clone
+   ============================================ */
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFProDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFProDisplay-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFProDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('fonts/SFProText-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('fonts/SFProText-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --blue: #0071e3;
+  --blue-dark: #0058b0;
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --bg-white: #ffffff;
+  --bg-grey: #f5f5f7;
+  --bg-black: #000000;
+  --divider: rgba(0,0,0,0.08);
+  --max-width: 1024px;
+  --wide-width: 1260px;
+  /* -apple-system / BlinkMacSystemFont resolve to the native SF Pro on macOS, iOS
+     and iPadOS. The self-hosted "SF Pro Display" / "SF Pro Text" (@font-face above)
+     guarantee the same look — full Vietnamese diacritics included — on every other
+     platform (Windows, Linux, Android). */
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text-primary);
+  background: var(--bg-white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.container-wide {
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ---------- Typography helpers ---------- */
+.eyebrow {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0 0 4px;
+}
+.eyebrow.blue { color: var(--blue); }
+
+h1, h2, h3 { margin: 0; font-family: var(--font-display); }
+
+.headline {
+  font-size: 56px;
+  line-height: 1.07143;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.005em;
+}
+.headline.small { font-size: 40px; line-height: 1.1; }
+
+.subhead {
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 6px;
+}
+
+.body-text {
+  font-size: 17px;
+  line-height: 1.47059;
+  color: var(--text-secondary);
+}
+
+.cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.link-arrow {
+  color: var(--blue);
+  font-size: 21px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.link-arrow::after { content: " \203A"; }
+.link-arrow:hover { text-decoration: underline; }
+
+.btn {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 980px;
+  font-size: 17px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.btn:hover { background: var(--blue-dark); }
+
+/* ---------- Nav ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--divider);
+}
+.navbar .container-wide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+}
+.nav-logo svg { height: 18px; display: block; fill: var(--text-primary); }
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.nav-links li a:hover { color: var(--text-primary); }
+.nav-icons { display: flex; gap: 20px; align-items: center; }
+.nav-icons svg { width: 16px; height: 16px; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+.nav-toggle svg { width: 18px; height: 18px; }
+
+@media (max-width: 834px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  padding: 40px 0 0;
+  background: linear-gradient(180deg, #fff 0%, #eef2fb 55%, #fff 100%);
+}
+.hero .eyebrow-logo { height: 26px; margin: 0 auto 14px; }
+.hero h1.hero-title {
+  font-size: 80px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  background: linear-gradient(100deg, #7b5cff 0%, #4fa8ff 45%, #6ee7d0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero .subhead { font-size: 28px; color: var(--text-primary); margin-top: 8px; }
+.hero .cta-row { margin-top: 18px; }
+.hero-image-wrap {
+  margin-top: 10px;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-image-wrap img { width: 100%; }
+
+/* ---------- Generic section ---------- */
+.section {
+  padding: 90px 0;
+  text-align: center;
+  overflow: hidden;
+}
+.section.grey { background: var(--bg-grey); }
+.section.dark { background: #000; color: #fff; }
+.section.dark .subhead { color: #a1a1a6; }
+.section .eyebrow + .headline { margin-top: 0; }
+.section-copy { max-width: 700px; margin: 0 auto; }
+
+.section-media {
+  margin-top: 40px;
+}
+.section-media img { margin: 0 auto; }
+
+/* ---------- Highlights ---------- */
+.highlights-media {
+  margin-top: 30px;
+  border-radius: 28px;
+  overflow: hidden;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+.highlights-media img { width: 100%; }
+
+/* ---------- Profile / thin design ---------- */
+.profile-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.profile-grid img.thin { max-height: 520px; }
+.profile-grid img.side { max-width: 420px; }
+
+/* ---------- Overview app icons strip ---------- */
+.overview-strip { background: #f5f5f7; padding: 60px 0; }
+.overview-strip img { max-width: 640px; margin: 0 auto; }
+
+/* ---------- Feature block (image + specs row) ---------- */
+.feature-media-frame {
+  margin-top: 40px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f5f5f7;
+}
+.feature-media-frame img { width: 100%; }
+
+.spec-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+.spec-row .spec-num {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.spec-row .spec-label {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+@media (max-width: 734px) {
+  .spec-row { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ---------- iPadOS fan of apps ---------- */
+.fan-media { max-width: 900px; margin: 40px auto 0; }
+
+/* ---------- Apple Intelligence ---------- */
+.ai-title {
+  font-size: 56px;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(100deg,#7b5cff,#4fa8ff 40%,#6ee7d0 70%,#ffd36e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 50px auto 0;
+}
+.ai-grid img { border-radius: 18px; width: 100%; }
+.ai-grid .full { grid-column: 1 / -1; }
+@media (max-width: 734px) {
+  .ai-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Two sizes / colors ---------- */
+.sizes-media { max-width: 620px; margin: 40px auto 0; }
+.color-specs {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.color-specs .spec-item { max-width: 160px; }
+.color-specs .spec-item img { height: 56px; margin: 0 auto 10px; }
+.color-specs .spec-item .spec-title { font-weight: 600; font-size: 14px; }
+.color-specs .spec-item .spec-sub { font-size: 12px; color: var(--text-secondary); }
+
+/* ---------- Connectivity ---------- */
+.connect-section {
+  background: #000;
+  color: #fff;
+  padding: 90px 0;
+}
+.connect-section .subhead { color: #a1a1a6; }
+.connect-grid {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 50px auto 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.connect-grid img { max-width: 560px; flex: 1 1 500px; border-radius: 18px; }
+.connect-specs { flex: 1 1 260px; text-align: left; max-width: 280px; }
+.connect-specs .spec-line {
+  display: flex; justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding: 14px 0; font-size: 15px;
+}
+.connect-specs .spec-line:last-child { border-bottom: 1px solid rgba(255,255,255,0.2); }
+.connect-specs .spec-line span:first-child { color: #a1a1a6; }
+
+/* ---------- Pencil Pro ---------- */
+.pencil-section {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 90px 0 0;
+  text-align: center;
+  position: relative;
+}
+.pencil-section .subhead { color: #a1a1a6; }
+.pencil-art { width: 100%; margin-top: 20px; }
+
+/* ---------- Magic Keyboard ---------- */
+.keyboard-media { max-width: 900px; margin: 40px auto 0; }
+
+/* ---------- Camera ---------- */
+.camera-section { background: #f5f5f7; }
+.camera-media { max-width: 900px; margin: 40px auto 0; border-radius: 20px; overflow: hidden; }
+
+/* ---------- Why Apple icon row ---------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 24px;
+  max-width: 1000px;
+  margin: 50px auto 0;
+  text-align: left;
+}
+.why-item { display: flex; gap: 16px; align-items: flex-start; }
+.why-item img { height: 44px; width: auto; flex-shrink: 0; }
+.why-item .why-title { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+.why-item .why-sub { font-size: 13px; color: var(--text-secondary); line-height: 1.4; }
+@media (max-width: 734px) {
+  .why-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .why-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Compare cards ---------- */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 50px auto 0;
+  text-align: left;
+}
+.compare-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px 20px 28px;
+  border: 1px solid var(--divider);
+}
+.compare-card .compare-eyebrow { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;}
+.compare-card .compare-name { font-size: 21px; font-weight: 600; margin-bottom: 12px; }
+.compare-card img { border-radius: 12px; margin-bottom: 16px; width: 100%; height: 140px; object-fit: cover; }
+.compare-card .compare-price { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; }
+.compare-card .link-arrow { font-size: 15px; }
+@media (max-width: 900px) {
+  .compare-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .compare-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Environment ---------- */
+.env-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+.env-item img { height: 48px; margin: 0 auto 14px; }
+.env-item .env-title { font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+.env-item .env-sub { font-size: 13px; color: var(--text-secondary); }
+@media (max-width: 734px) {
+  .env-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--bg-grey);
+  border-top: 1px solid var(--divider);
+  padding: 40px 0 24px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+.footer .footer-top {
+  border-bottom: 1px solid var(--divider);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--divider);
+}
+.footer-cols h4 { font-size: 12px; color: var(--text-primary); margin-bottom: 10px; }
+.footer-cols ul { list-style: none; margin: 0; padding: 0; }
+.footer-cols li { margin-bottom: 8px; }
+.footer-cols a:hover { text-decoration: underline; }
+@media (max-width: 734px) {
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+}
+.footer-legal { padding-top: 16px; line-height: 1.6; }
+.footer-legal a:hover { text-decoration: underline; }
+
+/* ---------- Reveal animation ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Color picker (interactive JS demo) ---------- */
+.color-picker {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+.color-dot {
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.color-dot:hover { transform: scale(1.12); }
+.color-dot.active { border-color: var(--text-primary); }
+.color-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 734px) {
+  .headline { font-size: 36px; }
+  .hero h1.hero-title { font-size: 46px; }
+  .hero .subhead { font-size: 20px; }
+  .ai-title { font-size: 36px; }
+  .section { padding: 60px 0; }
+  .connect-grid { flex-direction: column; }
+  .connect-specs { max-width: 100%; }
+}
