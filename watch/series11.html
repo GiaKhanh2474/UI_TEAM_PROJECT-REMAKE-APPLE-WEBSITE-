@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới thiệu Apple Watch Series 11</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/series11.css" />
+  </head>
+  <body>
+    <nav class="apple-nav">
+      <div class="nav-container">
+        <a href="../home.html" class="nav-logo">
+              <img src="asset/icon/icon_apple.png" alt="Apple" class="nav-logo-img">
+        </a>
+        <a href="../mac/index.html">Mac</a>
+        <a href="../index.html">iPad</a>
+        <a href="../iphone/iphone.html">iPhone</a>
+        <a href="watch.html">Watch</a>
+        <a href="#" id="cart-icon">
+          Giỏ hàng <span id="cart-count">0</span>
+        </a>
+      </div>
+
+      <div class="cart-dropdown" id="cart-dropdown-box">
+        <div class="cart-title">Giỏ hàng của bạn</div>
+        <div class="cart-items-wrapper" id="cart-items-wrapper"></div>
+        <div class="cart-summary">
+          <span>Tổng cộng:</span>
+          <span id="cart-total-amount">0đ</span>
+        </div>
+        <button class="cta-button checkout-btn" onclick="location.href='cart.html'">
+          Xem giỏ hàng
+        </button>
+      </div>
+    </nav>
+
+    <main class="page-shell">
+      <section class="viewer-section">
+        <h2 class="section-title">Ngắm nhìn cận cảnh hơn.</h2>
+
+        <div class="product-viewer">
+          <div class="viewer-stage" id="heroStage">
+            <img src="asset/img/11.png" alt="Apple Watch Series 11" id="watchImage">
+          </div>
+
+          <aside class="viewer-controls">
+            <button class="control-item active" data-gradient="linear-gradient(135deg, #f0d4d5, #ffeff1)">
+              <span class="swatch rose"></span>
+              Vàng hồng
+            </button>
+            <button class="control-item" data-gradient="linear-gradient(135deg, #cfd4da, #f7f8fb)">
+              <span class="swatch silver"></span>
+              Bạc
+            </button>
+            <button class="control-item" data-gradient="linear-gradient(135deg, #22242a, #4f5666)">
+              <span class="swatch space-gray"></span>
+              Xám không gian
+            </button>
+            <button class="cta-button viewer-buy-btn" onclick="addToCart('Apple Watch Series 11', 10999000)">Thêm vào giỏ hàng</button>
+            <a href="buy-series11.html" class="global-link">Cấu hình &amp; Mua &gt;</a>
+            <a href="watch.html" class="global-link">&lt; Quay lại trang Watch</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="feature-block health-feature">
+        <div class="media-col media-image">
+        <img src="asset/img/nhiptim.jpg" alt="Nhịp tim">
+        </div>
+        <div class="copy-col">
+          <p class="eyebrow">Sức khỏe</p>
+          <h3>Hiểu cơ thể bạn từ tận đáy lòng.</h3>
+          <p>
+            Càng nhiều thông tin, bạn càng chủ động hơn trong việc chăm sóc bản thân.
+            Từ ứng dụng ECG đến ứng dụng Vitals và nhiều tính năng khác, Apple Watch Series 11
+            là một thiết bị theo dõi sức khỏe mạnh mẽ, mang đến bức tranh toàn diện hơn về cơ thể bạn.
+          </p>
+        </div>
+      </section>
+
+      <section class="feature-block fitness-feature">
+        <div class="copy-col">
+          <p class="eyebrow">Thể thao</p>
+          <h3>Vượt trội ở mọi thước đo.</h3>
+          <p>
+            Dù bạn đang luyện tập cho một cuộc chạy marathon hay bơi từng vòng hồ,
+            Apple Watch Series 11 đưa việc theo dõi vận động lên một tầm cao mới.
+          </p>
+        </div>
+        <div class="media-col split-media">
+          <div class="media-image">
+          <img src="asset/img/chaybo.jpg" alt="Chạy bộ">
+          </div>
+          <div class="icon-row">
+            <div class="icon-card">
+              <span class="icon-placeholder">🏃</span>
+              <span>Ứng dụng Vận động được làm mới.</span>
+            </div>
+            <div class="icon-card">
+              <span class="icon-placeholder">⭕</span>
+              <span>Vượt qua các vòng Activity của chính bạn.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-block go-feature">
+        <div class="media-col media-image">
+        <img src="asset/img/tinhan.jpg" alt="Tin nhắn">
+        </div>
+        <div class="copy-col">
+          <p class="eyebrow">Di chuyển linh hoạt</p>
+          <h3>Bước nhảy vọt kết nối 5G.</h3>
+          <p>
+            Với gói cước di động, bạn có thể gọi điện, nhắn tin, thanh toán, nghe nhạc trực tuyến
+            và nhiều hơn nữa — ngay cả khi iPhone không ở gần bạn.
+          </p>
+        </div>
+      </section>
+
+      <section class="feature-block safety-feature">
+        <div class="copy-col">
+          <p class="eyebrow">An toàn</p>
+          <h3>Một điểm tựa thực sự.</h3>
+          <p>
+            Một chiếc smartwatch được trang bị hàng loạt tính năng an toàn tiên phong.
+            Series 11 được thiết kế để gọi trợ giúp ngay khi bạn cần nhất.
+          </p>
+        </div>
+        <div class="media-col media-image">
+        <img src="asset/img/medical.jpg" alt="Medical">
+        </div>
+        <div class="safety-icons">
+          <div class="icon-card">
+            <span class="icon-placeholder">🆘</span>
+            <span>SOS khẩn cấp</span>
+          </div>
+          <div class="icon-card">
+            <span class="icon-placeholder">🤕</span>
+            <span>Phát hiện té ngã</span>
+          </div>
+          <div class="icon-card">
+            <span class="icon-placeholder">🚗</span>
+            <span>Phát hiện va chạm</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="cart.js"></script>
+    <script src="watch.js"></script>
+    <script src="series11.js"></script>
+    <script src="buy-series11.js"></script>
+  </body>
+</html>

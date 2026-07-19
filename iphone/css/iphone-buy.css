@@ -1,0 +1,363 @@
+/* Layout hệ thống cấu hình mua hàng Apple Store chuyên nghiệp */
+
+.sticky-product-bar {
+    position: sticky;
+    top: 44px;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid #d2d2d7;
+    z-index: 999;
+}
+
+.bar-container {
+    max-width: 1260px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 22px;
+}
+
+.bar-container h2 {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.bar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.price-display {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.price-display span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.price-display small {
+    font-size: 11px;
+    color: #86868b;
+}
+
+/* Store Cấu trúc hai cột chính */
+.store-container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 40px 22px;
+    display: flex;
+    gap: 40px;
+}
+
+.gallery-column {
+    width: 55%;
+}
+
+.gallery-sticky-wrapper {
+    position: sticky;
+    top: 140px;
+}
+
+.carousel-container {
+    width: 100%;
+    background-color: #fbfbfd;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #1d1d1f;
+}
+
+.gallery-btn {
+    background: #e8e8ed;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.promo-box-intelligence {
+    margin-top: 30px;
+    padding: 16px;
+    background: #f5f5f7;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #1d1d1f;
+    line-height: 1.4;
+}
+
+/* Cột lựa chọn các thẻ cấu hình */
+.options-column {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.group-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.selector-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.selector-cards.grid-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.selector-card {
+    background: #ffffff;
+    border: 1px solid #86868b;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.selector-card:hover {
+    border-color: #1d1d1f;
+}
+
+.selector-card.active {
+    border-color: #0071e3;
+    border-width: 2px;
+    background-color: #fbfbfd;
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card-left strong, .selector-card strong {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.sub-detail {
+    font-size: 12px;
+    color: #86868b;
+}
+
+.card-right {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 14px;
+}
+
+.card-price {
+    font-weight: 600;
+}
+
+.card-installment {
+    font-size: 12px;
+    color: #86868b;
+}
+
+/* Màu sắc Swatches */
+.selected-label {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.color-swatches {
+    display: flex;
+    gap: 12px;
+}
+
+.swatch-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    outline: 1px solid #d2d2d7;
+}
+
+.swatch-dot.active {
+    border-color: #ffffff;
+    outline: 2px solid #0071e3;
+}
+
+/* Khối Hành động Cuối cùng */
+.summary-action-box {
+    background: #f5f5f7;
+    border-radius: 18px;
+    padding: 24px;
+    margin-top: 20px;
+}
+
+.summary-title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.summary-title-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 70%;
+}
+
+.summary-title-section p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.shipping-info {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    color: #6e6e73;
+    margin-bottom: 20px;
+}
+
+.action-buy-btn {
+    width: 100%;
+    background: #0071e3;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.action-buy-btn:hover {
+    background: #0077ed;
+}
+
+/* Thành phần bổ sung hạ tầng */
+.box-content-section, .faq-section {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 60px 22px;
+    border-top: 1px solid #d2d2d7;
+}
+
+.box-content-section h2, .faq-section h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.box-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.box-item {
+    text-align: center;
+    font-size: 14px;
+}
+
+.box-img-wrapper {
+    background: #f5f5f7;
+    padding: 30px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.env-note {
+    font-size: 12px;
+    color: #6e6e73;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.env-note a { color: #0066cc; text-decoration: none; }
+
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #d2d2d7;
+    padding: 20px 0;
+}
+
+.faq-item summary {
+    font-size: 17px;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-content {
+    padding-top: 15px;
+    font-size: 14px;
+    color: #6e6e73;
+    line-height: 1.6;
+}
+
+.legal-text {
+    font-size: 11px;
+    color: #6e6e73;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Responsive di động */
+@media (max-width: 992px) {
+    .store-container { flex-direction: column; }
+    .gallery-column, .options-column { width: 100%; }
+    .gallery-sticky-wrapper { position: relative; top: 0; }
+}

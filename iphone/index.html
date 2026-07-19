@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple (Việt Nam) - Bản cải tiến Hiện đại</title>
+    <!-- Kế thừa hệ thống màu sắc, thanh điều hướng và giỏ hàng dropdown chung -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- CSS chuyên biệt cho các khối Banner và Slider Trang chủ -->
+    <link rel="stylesheet" href="css/home-refined.css">
+    <style>
+        /* Tối ưu định dạng cho hình ảnh logo mới trên thanh navbar */
+        .nav-logo-img {
+            height: 18px; /* Độ cao tiêu chuẩn của Apple trên thanh thực tế */
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: opacity 0.3s ease;
+        }
+        .nav-logo:hover .nav-logo-img {
+            opacity: 0.7; /* Hiệu ứng mờ nhẹ cao cấp khi di chuột qua */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Apple Navbar & Cart Dropdown (Đồng bộ toàn hệ thống) -->
+    <nav class="apple-nav">
+        <div class="nav-container">
+            <!-- Đã thay thế từ văn bản  sang thẻ img chứa logo hình ảnh icon_apple.png -->
+            <a href="../home.html" class="nav-logo" style="display: flex; align-items: center; height: 100%;">
+                <img src="img/icon_apple.png" alt="Apple" class="nav-logo-img">
+            </a>
+            <a href="../mac/index.html">Mac</a>
+            <a href="../index.html">iPad</a>
+            <a href="iphone.html">iPhone</a>
+            <a href="../watch/watch.html">Watch</a>
+            <a href="#" id="cart-icon">Giỏ hàng <span id="cart-count">0</span></a>
+        </div>
+        <div class="cart-dropdown" id="cart-dropdown-box">
+            <div class="cart-title">Giỏ hàng của bạn</div>
+            <div class="cart-items-wrapper" id="cart-items-wrapper"></div>
+            <div class="cart-summary">
+                <span>Tổng cộng:</span>
+                <span id="cart-total-amount">0đ</span>
+            </div>
+            <button class="cta-button checkout-btn" onclick="location.href='cart.html'">Xem giỏ hàng</button>
+        </div>
+    </nav>
+
+    <!-- 1. Finance Financial Ribbon Banner -->
+    <div class="finance-ribbon">
+        <p>Thanh toán hàng tháng thật dễ dàng. Bao gồm lựa chọn lãi suất 0%. <a href="#" class="accent-link">Tìm hiểu thêm &gt;</a></p>
+    </div>
+
+    <!-- 2. Khối Hero Banners Lớn (Full Width) -->
+    <main class="home-container">
+        
+        <!-- Hero: iPhone -->
+        <section class="large-hero item-iphone" style="background-image: url('https://placehold.co/1920x692');">
+            <div class="hero-content dark-text">
+                <h2 class="brand-title">iPhone</h2>
+                <p class="brand-subtitle">Gặp gỡ thế hệ iPhone mới nhất.</p>
+                <div class="hero-actions">
+                    <button class="cta-button" onclick="location.href='iphone.html'">Tìm hiểu thêm</button>
+                    <button class="cta-outline" onclick="addToCart('iPhone New Gen', 22999000)">Mua sắm iPhone</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero: MacBook Air M5 -->
+        <section class="large-hero item-macbook-air" style="background-image: url('https://placehold.co/1920x692');">
+            <div class="hero-content dark-text">
+                <h2 class="brand-title">MacBook Air</h2>
+                <p class="brand-subtitle">Nay siêu mạnh mẽ với M5.</p>
+                <div class="hero-actions">
+                    <button class="cta-button" onclick="location.href='mac.html'">Tìm hiểu thêm</button>
+                    <button class="cta-outline" onclick="addToCart('MacBook Air M5', 27999000)">Mua</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero: Sản phẩm Công nghệ mới M4 -->
+        <section class="large-hero item-tech-m4" style="background-image: url('https://placehold.co/1920x692');">
+            <div class="hero-content dark-text">
+                <div class="svg-placeholder-logo">
+                    <img src="https://placehold.co/201x66" alt="Apple Product Logo">
+                </div>
+                <p class="brand-subtitle">Nay siêu mạnh mẽ với M4.</p>
+                <div class="hero-actions">
+                    <button class="cta-button">Tìm hiểu thêm</button>
+                    <button class="cta-outline" onclick="addToCart('Apple Device M4', 19999000)">Mua</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Lưới Sản phẩm Phụ (2-Column Grid Layout) -->
+        <section class="home-grid">
+            
+            <!-- Grid 1: MacBook Pro M5 -->
+            <div class="grid-cell cell-dark" style="background-image: url('https://placehold.co/1262x580');">
+                <div class="cell-content">
+                    <h3>MacBook Pro</h3>
+                    <p>Nay với M5, M5 Pro và M5 Max.</p>
+                    <div class="cell-actions">
+                        <button class="cta-button" onclick="location.href='mac.html'">Tìm hiểu thêm</button>
+                        <button class="cta-outline-light" onclick="addToCart('MacBook Pro M5', 39999000)">Mua</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid 2: AirPods Pro 3 -->
+            <div class="grid-cell cell-dark align-bottom" style="background-image: url('https://placehold.co/1262x580');">
+                <div class="cell-content">
+                    <h3>AirPods Pro 3</h3>
+                    <p>Chủ Động Khử Tiếng Ồn tai bạn chưa từng nghe.</p>
+                    <div class="cell-actions">
+                        <button class="cta-button button-light">Tìm hiểu thêm</button>
+                        <button class="cta-outline-light" onclick="addToCart('AirPods Pro 3', 6290000)">Mua</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid 3: Apple Watch Health -->
+            <div class="grid-cell cell-light" style="background-image: url('https://placehold.co/1262x580');">
+                <div class="cell-content">
+                    <img src="https://placehold.co/296x49" alt="Apple Watch Logo" class="cell-logo">
+                    <p class="dark-text">Siêu công cụ chăm sóc sức khỏe của bạn.</p>
+                    <div class="cell-actions">
+                        <button class="cta-button" onclick="location.href='watch.html'">Tìm hiểu thêm</button>
+                        <button class="cta-outline" onclick="addToCart('Apple Watch Health', 11999000)">Mua</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid 4: iPad Pro -->
+            <div class="grid-cell cell-dark" style="background-image: url('https://placehold.co/1262x580');">
+                <div class="cell-content">
+                    <h3>iPad Pro</h3>
+                    <p>Hiệu năng AI tiên tiến và năng lực thay đổi cuộc chơi.</p>
+                    <div class="cell-actions">
+                        <button class="cta-button" onclick="location.href='ipad.html'">Tìm hiểu thêm</button>
+                        <button class="cta-outline-light" onclick="addToCart('iPad Pro AI', 28999000)">Mua</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid 5: Thay thế thiết bị phụ trợ -->
+            <div class="grid-cell cell-dark" style="background-image: url('https://placehold.co/1262x580');">
+                <div class="cell-content">
+                    <img src="https://placehold.co/279x49" alt="Device Logo" class="cell-logo">
+                    <p>Tay chơi cự phách.</p>
+                    <div class="cell-actions">
+                        <button class="cta-button">Tìm hiểu thêm</button>
+                        <button class="cta-outline-light">Mua</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid 6: MacBook Neo -->
+            <div class="grid-cell cell-light" style="background-image: url('https://placehold.co/1262x580');">
+                <div class="cell-content">
+                    <h3>MacBook Neo</h3>
+                    <p class="dark-text">Mac tuyệt vời. Giá bất ngờ.</p>
+                    <div class="cell-actions">
+                        <button class="cta-button" onclick="location.href='mac.html'">Tìm hiểu thêm</button>
+                        <button class="cta-outline" onclick="addToCart('MacBook Neo', 21999000)">Mua</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Khối Sân khấu Phim Apple TV+ Slider (Horizontal Scroll) -->
+        <section class="tv-showcase-section">
+            <div class="tv-carousel">
+                <div class="tv-card" style="background-image: url('https://placehold.co/1250x668');">
+                    <div class="tv-overlay">
+                        <button class="tv-btn">Xem ngay</button>
+                        <p class="tv-meta"><strong>Hài</strong> • Gia đình vẫn vậy. Kế hoạch thì mới toanh.</p>
+                    </div>
+                </div>
+                <div class="tv-card" style="background-image: url('https://placehold.co/1250x668');">
+                    <div class="tv-overlay">
+                        <button class="tv-btn">Xem ngay</button>
+                        <p class="tv-meta"><strong>Tâm lý</strong> • Hạnh phúc chỉ là một trạng thái của tâm trí.</p>
+                    </div>
+                </div>
+                <div class="tv-card" style="background-image: url('https://placehold.co/1250x668');">
+                    <div class="tv-overlay">
+                        <button class="tv-btn">Xem ngay</button>
+                        <p class="tv-meta"><strong>Giật gân</strong> • Tò mò sẽ rước họa vào thân.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Bộ điều hướng dấu chấm tròn (Indicators) -->
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+    </main>
+
+    <!-- 5. Chân trang Apple Pháp lý (Multi-column Footer) -->
+    <footer class="advanced-footer">
+        <div class="footer-inner">
+            <div class="footer-notes">
+                <p>Apple TV+ yêu cầu đăng ký thuê bao.</p>
+                <p>Một số tính năng có thể thay đổi. Một số tính năng, ứng dụng và dịch vụ chỉ khả dụng ở một số khu vực hoặc ngôn ngữ.</p>
+            </div>
+            
+            <div class="footer-directory">
+                <div class="directory-column">
+                    <h4>Mua Sắm Và Tìm Hiểu</h4>
+                    <ul>
+                        <li><a href="#">Cửa Hàng</a></li>
+                        <li><a href="../mac/index.html">Mac</a></li>
+                        <li><a href="../index.html">iPad</a></li>
+                        <li><a href="iphone.html">iPhone</a></li>
+                        <li><a href="../watch/watch.html">Watch</a></li>
+                        <li><a href="#">AirPods</a></li>
+                        <li><a href="#">TV & Nhà</a></li>
+                        <li><a href="#">Phụ kiện</a></li>
+                    </ul>
+                </div>
+                <div class="directory-column">
+                    <h4>Tài Khoản</h4>
+                    <ul>
+                        <li><a href="#">Quản Lý Apple ID</a></li>
+                        <li><a href="#">Tài Khoản Apple Store</a></li>
+                        <li><a href="#">iCloud.com</a></li>
+                    </ul>
+                    <h4 style="margin-top: 20px;">Giải Trí</h4>
+                    <ul>
+                        <li><a href="#">Apple TV+</a></li>
+                        <li><a href="#">Apple Music</a></li>
+                        <li><a href="#">Apple Podcasts</a></li>
+                    </ul>
+                </div>
+                <div class="directory-column">
+                    <h4>Apple Store</h4>
+                    <ul>
+                        <li><a href="#">Ứng dụng Apple Store</a></li>
+                        <li><a href="#">Genius Bar</a></li>
+                        <li><a href="#">Today at Apple</a></li>
+                        <li><a href="#">Trại Hè Apple</a></li>
+                        <li><a href="#">Thanh lý & Tái chế</a></li>
+                    </ul>
+                </div>
+                <div class="directory-column">
+                    <h4>Doanh Nghiệp & Giáo Dục</h4>
+                    <ul>
+                        <li><a href="#">Apple và Doanh Nghiệp</a></li>
+                        <li><a href="#">Mua sắm cho trường Đại học</a></li>
+                    </ul>
+                </div>
+                <div class="directory-column">
+                    <h4>Giá Trị Cốt Lõi Về Apple</h4>
+                    <ul>
+                        <li><a href="#">Môi trường</a></li>
+                        <li><a href="#">Quyền riêng tư</a></li>
+                        <li><a href="#">Tính trợ năng</a></li>
+                        <li><a href="#">Nhà đầu tư</a></li>
+                        <li><a href="#">Liên hệ Apple</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-legal">
+                <div class="legal-top">
+                    <span>Xem thêm cách để mua hàng: Tìm một <a href="#" class="accent-link">Apple Store</a> hoặc <a href="#" class="accent-link">nhà bán lẻ</a> gần bạn. Hoặc gọi 1800 1192.</span>
+                </div>
+                <hr class="footer-divider">
+                <div class="legal-bottom">
+                    <p class="copyright">Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.</p>
+                    <div class="legal-links">
+                        <a href="#">Chính sách bảo mật</a>
+                        <a href="#">Điều khoản sử dụng</a>
+                        <a href="#">Bản đồ trang web</a>
+                    </div>
+                </div>
+                <div class="corporate-info">
+                    <p>Công Ty TNHH Apple Việt Nam • ĐKKD số 0313510827 do Sở KH&ĐT TP. Hồ Chí Minh cấp ngày 28/10/2015</p>
+                    <p>Địa chỉ: Phòng 901, Ngôi Nhà Đức Tại TP. Hồ Chí Minh, số 33, đường Lê Duẩn, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh, Việt Nam</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+/* Style định hình giao diện trang kiểm tra hóa đơn và thanh toán hóa đơn Apple */
+
+.cart-page-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 40px 22px;
+}
+
+/* Thanh thông báo đổi trả hàng trực tuyến */
+.return-notice {
+    text-align: center;
+    font-size: 14px;
+    color: #1d1d1f;
+    background-color: #fafafa;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.cart-header-summary {
+    text-align: center;
+    border-bottom: 1px solid #d2d2d7;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.cart-header-summary h1 {
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: #1d1d1f;
+    margin-bottom: 10px;
+}
+
+.cart-header-summary p {
+    font-size: 17px;
+    color: #1d1d1f;
+    margin-bottom: 24px;
+}
+
+.apple-pay-btn {
+    background-color: #0071e3;
+    color: #ffffff;
+    border: none;
+    padding: 12px 64px;
+    font-size: 17px;
+    font-weight: 400;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.apple-pay-btn:hover {
+    background-color: #0077ed;
+}
+
+/* Thiết kế hàng hóa trong giỏ hàng (Product Row) */
+.cart-item-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.item-row-left {
+    display: flex;
+    gap: 30px;
+    width: 70%;
+}
+
+.cart-item-img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.item-core-details h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+}
+
+.text-small {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.text-gray {
+    color: #6e6e73;
+}
+
+.shipping-eta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 24px;
+    font-size: 13px;
+}
+
+.blue-link {
+    color: #0066cc;
+    text-decoration: none;
+    cursor: pointer;
+}
+.blue-link:hover {
+    text-decoration: underline;
+}
+
+.eta-date {
+    color: #1d1d1f;
+    font-weight: 500;
+}
+
+.item-row-right {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    align-items: flex-start;
+}
+
+/* Định dạng bộ chỉnh sửa số lượng */
+.apple-qty-select {
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.item-price-block {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 4px;
+}
+
+.item-final-price {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1d1d1f;
+}
+
+.apple-delete-link {
+    background: none;
+    border: none;
+    color: #0066cc;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: right;
+    margin-top: 15px;
+}
+.apple-delete-link:hover {
+    text-decoration: underline;
+}
+
+/* Khối liên kết biểu ngữ đính kèm AppleCare+ */
+.cart-care-attach-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d2d2d7;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.care-banner-left {
+    display: flex;
+    gap: 16px;
+    width: 80%;
+}
+
+.apple-red-icon {
+    color: #e30000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.care-bullet-points {
+    list-style: none;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    color: #1d1d1f;
+}
+
+.care-bullet-points li::before {
+    content: "•";
+    color: #86868b;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.apple-add-care-btn {
+    background: transparent;
+    color: #0066cc;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.apple-add-care-btn:hover {
+    text-decoration: underline;
+}
+
+/* Khối tổng kết hóa đơn hạ tầng */
+.cart-billing-summary {
+    max-width: 630px;
+    margin: 60px 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.billing-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #1d1d1f;
+}
+
+.billing-divider {
+    border: 0;
+    border-top: 1px solid #d2d2d7;
+    margin: 10px 0;
+}
+
+.total-row h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.installment-row {
+    margin-top: 12px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.prepay-note {
+    font-size: 12px;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.billing-action-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.large-pay-btn {
+    width: 50%;
+    padding: 16px;
+}
+
+/* --- Hộp thông báo đặt hàng thành công chuẩn phong cách iOS (Modal Alert) --- */
+.success-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10010;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.success-alert-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.success-alert-box {
+    background: rgba(255, 255, 255, 0.95);
+    width: 320px;
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    animation: alertPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes alertPop {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.success-icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #34c759;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 0 auto 16px auto;
+}
+
+.success-alert-box h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.success-alert-box p {
+    font-size: 13px;
+    color: #1d1d1f;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.alert-confirm-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-top: 1px solid #d2d2d7;
+    color: #0071e3;
+    font-size: 17px;
+    font-weight: 600;
+    padding-top: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.empty-cart-message {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.empty-cart-message h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Tối ưu hóa Responsive hiển thị di động */
+@media (max-width: 768px) {
+    .cart-item-row { flex-direction: column; gap: 20px; }
+    .item-row-left, .item-row-right { width: 100%; }
+    .large-pay-btn { width: 100%; }
+}

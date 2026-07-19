@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+<div style="position:fixed;top:0;left:0;right:0;z-index:99999;background:rgba(255,255,255,0.85);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08);padding:0 24px;height:44px;display:flex;align-items:center;gap:26px;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',Arial,sans-serif;">
+  <a href="../home.html" style="display:flex;align-items:center;text-decoration:none;" aria-label="Apple">
+    <svg viewBox="0 0 14 44" width="14" height="16" xmlns="http://www.w3.org/2000/svg" fill="#1d1d1f"><path d="M13.0729 17.6516C13.0067 16.5322 13.5195 15.4697 14.2665 14.6572C13.6866 13.8106 12.6636 13.2331 11.5773 13.2001C10.3979 13.0757 9.28213 13.8878 8.66413 13.8878C8.03413 13.8878 7.11413 13.2141 6.15413 13.2331C4.89413 13.2711 3.75413 13.9711 3.16413 15.0621C1.86413 17.3021 2.83413 20.6221 4.09413 22.4521C4.71413 23.3421 5.44413 24.3421 6.40413 24.3061C7.33413 24.2681 7.68413 23.7071 8.80413 23.7071C9.91413 23.7071 10.2441 24.3061 11.2241 24.2841C12.2341 24.2681 12.8641 23.3801 13.4641 22.4821C13.9141 21.8341 14.2641 21.1191 14.5041 20.3671C13.5541 19.9661 13.0741 18.8901 13.0729 17.6516Z"/><path d="M11.0179 11.9761C11.5479 11.3341 11.8079 10.5081 11.7379 9.67407C10.9179 9.75907 10.1479 10.1451 9.60793 10.7601C9.08793 11.3541 8.79793 12.1651 8.85793 13.0011C9.68793 13.0091 10.4979 12.6191 11.0179 11.9761Z"/></svg>
+  </a>
+  <a href="../mac/index.html" style="color:#1d1d1f;text-decoration:none;font-size:12px;">Mac</a>
+  <a href="../index.html" style="color:#1d1d1f;text-decoration:none;font-size:12px;">iPad</a>
+  <a href="../iphone/iphone.html" style="color:#1d1d1f;text-decoration:none;font-size:12px;">iPhone</a>
+  <a href="../watch/watch.html" style="color:#1d1d1f;text-decoration:none;font-size:12px;">Watch</a>
+  <a href="../discover-mac/index.html" style="color:#1d1d1f;text-decoration:none;font-size:12px;">Khám Phá Mac</a>
+  <a href="../contact/index.html" style="color:#1d1d1f;text-decoration:none;font-size:12px;margin-left:auto;">Liên Hệ</a>
+</div>
+<div style="height:44px;"></div>
+
+  <div class="contact">
+    <div class="main">
+      <div class="lh">
+        <div class="li-n-h-apple">Liên Hệ Apple</div>
+      </div>
+      <div class="lh2">
+        <div class="th-c-m-c-v-b-n-h-ng-v-s-n-ph-m">
+          Thắc Mắc Về Bán Hàng Và Sản Phẩm
+          <br />
+        </div>
+      </div>
+      <div class="lh3">
+        <div
+          class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m"
+        >
+          <span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span"
+            >
+              Cửa Hàng Trực Tuyến Của Apple
+              <br />
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span2"
+            >
+              Apple.com
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span3"
+            >
+              là nơi thuận tiện để bạn mua các sản phẩm và phụ kiện của Apple từ
+              chính Apple và các nhà sản xuất khác. Bạn có thể mua trực tuyến hoặc
+              gọi đến số 1800-1192.
+              <br />
+              <br />
+              Bạn có thể xem thông tin về đơn hàng đã đặt trên Cửa Hàng Trực Tuyến
+              Của Apple qua trang 
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span2"
+            >
+              Trạng Thái Đơn Hàng
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span3"
+            >
+              . Nếu muốn, bạn cũng có thể kiểm tra trạng thái hoặc thay đổi đơn
+              hàng bằng cách gọi điện thoại đến số 1800-1192.
+              <br />
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span"
+            >
+              <br />
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span4"
+            >
+              Truy cập trang 
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span5"
+            >
+              Trợ Giúp
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span4"
+            >
+               trên Cửa Hàng Trực Tuyến Của Apple để biết thêm chi tiết về cách
+              mua hàng, giao nhận, kiểm tra trạng thái đơn hàng, trả hàng và nhiều
+              thông tin khác.
+              <br />
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span5"
+            >
+              <br />
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span6"
+            >
+              Tìm Trung Tâm
+              <br />
+              Đào Tạo Ủy Quyền
+              <br />
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span4"
+            >
+              Sử dụng công cụ 
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span5"
+            >
+              Tìm Trung Tâm Đào Tạo
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span4"
+            >
+               của chúng tôi để tìm Trung Tâm Đào Tạo Ủy Quyền của Apple trên toàn
+              thế giới.
+              <br />
+              <br />
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span6"
+            >
+              Tìm kiếm nguồn tài chính cho cá nhân, doanh nghiệp hoặc trường học
+              của bạn.
+              <br />
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span4"
+            >
+              Dịch vụ Tài chính Apple cung cấp các giải pháp tài chính cho sản
+              phẩm Apple dành cho người tiêu dùng, các tổ chức giáo dục và doanh
+              nghiệp. Hãy liên hệ với đại diện Apple để tìm hiểu thêm.
+              <br />
+              <br />
+            </span>
+            <span
+              class="c-a-h-ng-tr-c-tuy-n-c-a-apple-apple-com-l-n-i-thu-n-ti-n-b-n-mua-c-c-s-n-ph-m-v-ph-ki-n-c-a-apple-t-ch-nh-apple-v-c-c-nh-s-n-xu-t-kh-c-b-n-c-th-mua-tr-c-tuy-n-ho-c-g-i-n-s-1800-1192-b-n-c-th-xem-th-ng-tin-v-n-h-ng-t-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-qua-trang-tr-ng-th-i-n-h-ng-n-u-mu-n-b-n-c-ng-c-th-ki-m-tra-tr-ng-th-i-ho-c-thay-i-n-h-ng-b-ng-c-ch-g-i-i-n-tho-i-n-s-1800-1192-truy-c-p-trang-tr-gi-p-tr-n-c-a-h-ng-tr-c-tuy-n-c-a-apple-bi-t-th-m-chi-ti-t-v-c-ch-mua-h-ng-giao-nh-n-ki-m-tra-tr-ng-th-i-n-h-ng-tr-h-ng-v-nhi-u-th-ng-tin-kh-c-t-m-trung-t-m-o-t-o-y-quy-n-s-d-ng-c-ng-c-t-m-trung-t-m-o-t-o-c-a-ch-ng-t-i-t-m-trung-t-m-o-t-o-y-quy-n-c-a-apple-tr-n-to-n-th-gi-i-t-m-ki-m-ngu-n-t-i-ch-nh-cho-c-nh-n-doanh-nghi-p-ho-c-tr-ng-h-c-c-a-b-n-d-ch-v-t-i-ch-nh-apple-cung-c-p-c-c-gi-i-ph-p-t-i-ch-nh-cho-s-n-ph-m-apple-d-nh-cho-ng-i-ti-u-d-ng-c-c-t-ch-c-gi-o-d-c-v-doanh-nghi-p-h-y-li-n-h-v-i-i-di-n-apple-t-m-hi-u-th-m-span6"
+            >
+              <br />
+            </span>
+          </span>
+        </div>
+        <div
+          class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i"
+        >
+          <span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span"
+            >
+              Cách Mua Cho Ngành Giáo Dục
+              <br />
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span2"
+            >
+              Nếu bạn là học sinh, sinh viên hay giáo viên, hãy truy cập trang 
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span3"
+            >
+              Cửa Hàng Apple Cho Giáo Dục
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span2"
+            >
+               hoặc gọi đến số 1800-1192.
+              <br />
+              <br />
+              Nếu bạn đang mua hàng thay mặt một tổ chức giáo dục, hãy tìm một 
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span3"
+            >
+              Đại Lý Ủy Quyền Của Apple
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span2"
+            >
+              , họ có thể cung cấp dịch vụ và hỗ trợ liên tục theo nhu cầu của
+              trường bạn.
+              <br />
+              <br />
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span4"
+            >
+              Tìm Đại Lý Ủy Quyền
+              <br />
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span2"
+            >
+              Sử dụng công cụ 
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span3"
+            >
+              Tìm Đại Lý
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span2"
+            >
+               của chúng tôi để tìm Đại Lý Ủy Quyền của Apple tại Việt Nam.
+              <br />
+              <br />
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span3"
+            >
+              Đại Lý Ủy Quyền của Apple
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span2"
+            >
+               cung cấp những kiến thức chuyên ngành, dịch vụ đa nền tảng và các
+              giải pháp trên máy Mac cho nhiều tổ chức khác nhau.
+              <br />
+              <br />
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span4"
+            >
+              Tìm các nhà cung cấp đào tạo được ủy quyền
+              <br />
+            </span>
+            <span
+              class="c-ch-mua-cho-ng-nh-gi-o-d-c-n-u-b-n-l-h-c-sinh-sinh-vi-n-hay-gi-o-vi-n-h-y-truy-c-p-trang-c-a-h-ng-apple-cho-gi-o-d-c-ho-c-g-i-n-s-1800-1192-n-u-b-n-ang-mua-h-ng-thay-m-t-m-t-t-ch-c-gi-o-d-c-h-y-t-m-m-t-i-l-y-quy-n-c-a-apple-h-c-th-cung-c-p-d-ch-v-v-h-tr-li-n-t-c-theo-nhu-c-u-c-a-tr-ng-b-n-t-m-i-l-y-quy-n-s-d-ng-c-ng-c-t-m-i-l-c-a-ch-ng-t-i-t-m-i-l-y-quy-n-c-a-apple-t-i-vi-t-nam-i-l-y-quy-n-c-a-apple-cung-c-p-nh-ng-ki-n-th-c-chuy-n-ng-nh-d-ch-v-a-n-n-t-ng-v-c-c-gi-i-ph-p-tr-n-m-y-mac-cho-nhi-u-t-ch-c-kh-c-nhau-t-m-c-c-nh-cung-c-p-o-t-o-c-y-quy-n-h-y-truy-c-p-trang-web-o-t-o-c-a-apple-bi-t-th-ng-tin-v-c-c-kh-a-h-c-hi-n-c-v-c-c-nh-cung-c-p-o-t-o-c-apple-y-quy-n-tr-n-to-n-th-gi-i-span2"
+            >
+              Hãy truy cập trang web Đào tạo của Apple để biết thông tin về các
+              khóa học hiện có và các nhà cung cấp đào tạo được Apple ủy quyền
+              trên toàn thế giới.
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="lh4">
+        <div class="h-tr-s-n-ph-m-v-d-ch-v">Hỗ trợ sản phẩm và dịch vụ</div>
+      </div>
+      <div class="lh5">
+        <div
+          class="nh-n-tr-gi-p-t-b-ph-n-h-tr-c-a-apple-c-n-d-ch-v-ho-c-h-tr-h-y-cung-c-p-cho-ch-ng-t-i-m-t-v-i-chi-ti-t-v-ch-ng-t-i-s-a-ra-gi-i-ph-p-t-t-nh-t-li-n-h-qua-i-n-tho-i-tr-chuy-n-tr-c-tuy-n-ho-c-t-m-c-u-tr-l-i-tr-c-tuy-n-b-t-u-th-m-nhi-u-c-ch-c-h-tr-k-t-n-i-v-i-ng-i-phi-n-d-ch-th-ng-qua-sign-time-li-n-h-v-i-nh-m-ng-di-ng-t-l-ch-s-a-ch-a-thi-t-b-c-a-b-n-t-i-trung-t-m-c-apple-ch-ng-nh-n"
+        >
+          <span>
+            <span
+              class="nh-n-tr-gi-p-t-b-ph-n-h-tr-c-a-apple-c-n-d-ch-v-ho-c-h-tr-h-y-cung-c-p-cho-ch-ng-t-i-m-t-v-i-chi-ti-t-v-ch-ng-t-i-s-a-ra-gi-i-ph-p-t-t-nh-t-li-n-h-qua-i-n-tho-i-tr-chuy-n-tr-c-tuy-n-ho-c-t-m-c-u-tr-l-i-tr-c-tuy-n-b-t-u-th-m-nhi-u-c-ch-c-h-tr-k-t-n-i-v-i-ng-i-phi-n-d-ch-th-ng-qua-sign-time-li-n-h-v-i-nh-m-ng-di-ng-t-l-ch-s-a-ch-a-thi-t-b-c-a-b-n-t-i-trung-t-m-c-apple-ch-ng-nh-n-span"
+            >
+              Nhận trợ giúp từ bộ phận hỗ trợ của Apple
+              <br />
+            </span>
+            <span
+              class="nh-n-tr-gi-p-t-b-ph-n-h-tr-c-a-apple-c-n-d-ch-v-ho-c-h-tr-h-y-cung-c-p-cho-ch-ng-t-i-m-t-v-i-chi-ti-t-v-ch-ng-t-i-s-a-ra-gi-i-ph-p-t-t-nh-t-li-n-h-qua-i-n-tho-i-tr-chuy-n-tr-c-tuy-n-ho-c-t-m-c-u-tr-l-i-tr-c-tuy-n-b-t-u-th-m-nhi-u-c-ch-c-h-tr-k-t-n-i-v-i-ng-i-phi-n-d-ch-th-ng-qua-sign-time-li-n-h-v-i-nh-m-ng-di-ng-t-l-ch-s-a-ch-a-thi-t-b-c-a-b-n-t-i-trung-t-m-c-apple-ch-ng-nh-n-span2"
+            >
+              Cần dịch vụ hoặc hỗ trợ? Hãy cung cấp cho chúng tôi một vài chi tiết
+              và chúng tôi sẽ đưa ra giải pháp tốt nhất. Liên hệ qua điện thoại,
+              trò chuyện trực tuyến hoặc tìm câu trả lời trực tuyến.
+              <br />
+              Bắt đầu
+              <br />
+              Thêm nhiều cách để được hỗ trợ:
+              <br />
+            </span>
+            <ul
+              class="nh-n-tr-gi-p-t-b-ph-n-h-tr-c-a-apple-c-n-d-ch-v-ho-c-h-tr-h-y-cung-c-p-cho-ch-ng-t-i-m-t-v-i-chi-ti-t-v-ch-ng-t-i-s-a-ra-gi-i-ph-p-t-t-nh-t-li-n-h-qua-i-n-tho-i-tr-chuy-n-tr-c-tuy-n-ho-c-t-m-c-u-tr-l-i-tr-c-tuy-n-b-t-u-th-m-nhi-u-c-ch-c-h-tr-k-t-n-i-v-i-ng-i-phi-n-d-ch-th-ng-qua-sign-time-li-n-h-v-i-nh-m-ng-di-ng-t-l-ch-s-a-ch-a-thi-t-b-c-a-b-n-t-i-trung-t-m-c-apple-ch-ng-nh-n-span3"
+            >
+              <li>Kết nối với người phiên dịch thông qua SignTime.</li>
+              <li>Liên hệ với nhà mạng di động</li>
+              <li>
+                Đặt lịch sửa chữa thiết bị của bạn tại trung tâm được Apple chứng
+                nhận.
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div
+          class="s-n-ph-m-apple-b-m-t-ho-c-b-nh-c-p-s-d-ng-ng-d-ng-find-my-ho-c-i-cloud-com-find-gi-p-nh-v-i-phone-i-pad-apple-watch-ho-c-mac-b-m-t-n-u-b-n-kh-ng-t-m-th-y-thi-t-b-c-a-m-nh-ho-c-nghi-ng-thi-t-b-b-nh-c-p-b-n-c-th-kh-a-thi-t-b-b-o-v-th-ng-tin-c-a-m-nh-h-p-ph-p-i-v-i-c-c-c-u-h-i-ph-p-l-vui-l-ng-truy-c-p-apple-com-legal-contact-v-ch-n-t-menu-th-xu-ng-b-o-c-o-c-c-s-n-ph-m-gi-m-o-ho-c-h-ng-nh-i-b-nghi-ng-ho-c-c-c-h-nh-th-c-vi-ph-m-s-h-u-tr-tu-kh-c-c-a-apple-h-y-ch-n-h-ng-gi-h-ng-nh-i-t-menu-th-xu-ng"
+        >
+          <span>
+            <span
+              class="s-n-ph-m-apple-b-m-t-ho-c-b-nh-c-p-s-d-ng-ng-d-ng-find-my-ho-c-i-cloud-com-find-gi-p-nh-v-i-phone-i-pad-apple-watch-ho-c-mac-b-m-t-n-u-b-n-kh-ng-t-m-th-y-thi-t-b-c-a-m-nh-ho-c-nghi-ng-thi-t-b-b-nh-c-p-b-n-c-th-kh-a-thi-t-b-b-o-v-th-ng-tin-c-a-m-nh-h-p-ph-p-i-v-i-c-c-c-u-h-i-ph-p-l-vui-l-ng-truy-c-p-apple-com-legal-contact-v-ch-n-t-menu-th-xu-ng-b-o-c-o-c-c-s-n-ph-m-gi-m-o-ho-c-h-ng-nh-i-b-nghi-ng-ho-c-c-c-h-nh-th-c-vi-ph-m-s-h-u-tr-tu-kh-c-c-a-apple-h-y-ch-n-h-ng-gi-h-ng-nh-i-t-menu-th-xu-ng-span"
+            >
+              Sản phẩm Apple bị mất hoặc bị đánh cắp
+              <br />
+            </span>
+            <span
+              class="s-n-ph-m-apple-b-m-t-ho-c-b-nh-c-p-s-d-ng-ng-d-ng-find-my-ho-c-i-cloud-com-find-gi-p-nh-v-i-phone-i-pad-apple-watch-ho-c-mac-b-m-t-n-u-b-n-kh-ng-t-m-th-y-thi-t-b-c-a-m-nh-ho-c-nghi-ng-thi-t-b-b-nh-c-p-b-n-c-th-kh-a-thi-t-b-b-o-v-th-ng-tin-c-a-m-nh-h-p-ph-p-i-v-i-c-c-c-u-h-i-ph-p-l-vui-l-ng-truy-c-p-apple-com-legal-contact-v-ch-n-t-menu-th-xu-ng-b-o-c-o-c-c-s-n-ph-m-gi-m-o-ho-c-h-ng-nh-i-b-nghi-ng-ho-c-c-c-h-nh-th-c-vi-ph-m-s-h-u-tr-tu-kh-c-c-a-apple-h-y-ch-n-h-ng-gi-h-ng-nh-i-t-menu-th-xu-ng-span2"
+            >
+              Sử dụng ứng dụng Find My hoặc iCloud.com/find để giúp định vị
+              iPhone, iPad, Apple Watch hoặc Mac bị mất. Nếu bạn không tìm thấy
+              thiết bị của mình hoặc nghi ngờ thiết bị bị đánh cắp, bạn có thể
+              khóa thiết bị để bảo vệ thông tin của mình.
+              <br />
+            </span>
+            <span
+              class="s-n-ph-m-apple-b-m-t-ho-c-b-nh-c-p-s-d-ng-ng-d-ng-find-my-ho-c-i-cloud-com-find-gi-p-nh-v-i-phone-i-pad-apple-watch-ho-c-mac-b-m-t-n-u-b-n-kh-ng-t-m-th-y-thi-t-b-c-a-m-nh-ho-c-nghi-ng-thi-t-b-b-nh-c-p-b-n-c-th-kh-a-thi-t-b-b-o-v-th-ng-tin-c-a-m-nh-h-p-ph-p-i-v-i-c-c-c-u-h-i-ph-p-l-vui-l-ng-truy-c-p-apple-com-legal-contact-v-ch-n-t-menu-th-xu-ng-b-o-c-o-c-c-s-n-ph-m-gi-m-o-ho-c-h-ng-nh-i-b-nghi-ng-ho-c-c-c-h-nh-th-c-vi-ph-m-s-h-u-tr-tu-kh-c-c-a-apple-h-y-ch-n-h-ng-gi-h-ng-nh-i-t-menu-th-xu-ng-span"
+            >
+              Hợp pháp
+              <br />
+            </span>
+            <span
+              class="s-n-ph-m-apple-b-m-t-ho-c-b-nh-c-p-s-d-ng-ng-d-ng-find-my-ho-c-i-cloud-com-find-gi-p-nh-v-i-phone-i-pad-apple-watch-ho-c-mac-b-m-t-n-u-b-n-kh-ng-t-m-th-y-thi-t-b-c-a-m-nh-ho-c-nghi-ng-thi-t-b-b-nh-c-p-b-n-c-th-kh-a-thi-t-b-b-o-v-th-ng-tin-c-a-m-nh-h-p-ph-p-i-v-i-c-c-c-u-h-i-ph-p-l-vui-l-ng-truy-c-p-apple-com-legal-contact-v-ch-n-t-menu-th-xu-ng-b-o-c-o-c-c-s-n-ph-m-gi-m-o-ho-c-h-ng-nh-i-b-nghi-ng-ho-c-c-c-h-nh-th-c-vi-ph-m-s-h-u-tr-tu-kh-c-c-a-apple-h-y-ch-n-h-ng-gi-h-ng-nh-i-t-menu-th-xu-ng-span2"
+            >
+              Đối với các câu hỏi pháp lý, vui lòng truy cập
+              apple.com/legal/contact và chọn từ menu thả xuống. Để báo cáo các
+              sản phẩm giả mạo hoặc hàng nhái bị nghi ngờ, hoặc các hình thức vi
+              phạm sở hữu trí tuệ khác của Apple, hãy chọn Hàng giả &amp; Hàng
+              nhái từ menu thả xuống.
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="frame-1">
+        <div class="lh6">
+          <div
+            class="a-ch-c-ng-ty-c-ng-ty-tnhh-apple-vi-t-nam-ph-ng-901-ng-i-nh-c-t-i-tp-h-ch-minh-s-33-ng-l-du-n-ph-ng-s-i-g-n-th-nh-ph-h-ch-minh-vi-t-nam"
+          >
+            <span>
+              <span
+                class="a-ch-c-ng-ty-c-ng-ty-tnhh-apple-vi-t-nam-ph-ng-901-ng-i-nh-c-t-i-tp-h-ch-minh-s-33-ng-l-du-n-ph-ng-s-i-g-n-th-nh-ph-h-ch-minh-vi-t-nam-span"
+              >
+                Địa Chỉ Công Ty
+                <br />
+                <br />
+              </span>
+              <span
+                class="a-ch-c-ng-ty-c-ng-ty-tnhh-apple-vi-t-nam-ph-ng-901-ng-i-nh-c-t-i-tp-h-ch-minh-s-33-ng-l-du-n-ph-ng-s-i-g-n-th-nh-ph-h-ch-minh-vi-t-nam-span2"
+              >
+                Công Ty TNHH Apple Việt Nam,
+                <br />
+                Phòng 901, Ngôi Nhà Đức Tại Tp. Hồ Chí Minh,
+                <br />
+                số 33, đường Lê Duẩn, Phường Sài Gòn,
+                <br />
+                Thành Phố Hồ Chí Minh, Việt Nam
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="lh7">
+          <div class="th-ng-tin-th-ng-c-y-u-c-u">
+            Thông Tin Thường Được Yêu Cầu
+          </div>
+        </div>
+        <div class="lh8">
+          <div
+            class="ph-n-h-i-h-y-cho-ch-ng-t-i-bi-t-v-ch-t-l-ng-c-ng-vi-c-c-a-ch-ng-t-i-ch-n-t-y-ch-n-ph-n-h-i-ph-h-p-ch-ng-t-i-c-t-t-c-ph-n-h-i-nh-ng-kh-ng-ph-i-l-c-n-o-c-ng-c-kh-n-ng-h-i-p"
+          >
+            <span>
+              <span
+                class="ph-n-h-i-h-y-cho-ch-ng-t-i-bi-t-v-ch-t-l-ng-c-ng-vi-c-c-a-ch-ng-t-i-ch-n-t-y-ch-n-ph-n-h-i-ph-h-p-ch-ng-t-i-c-t-t-c-ph-n-h-i-nh-ng-kh-ng-ph-i-l-c-n-o-c-ng-c-kh-n-ng-h-i-p-span"
+              >
+                Phản Hồi
+                <br />
+              </span>
+              <span
+                class="ph-n-h-i-h-y-cho-ch-ng-t-i-bi-t-v-ch-t-l-ng-c-ng-vi-c-c-a-ch-ng-t-i-ch-n-t-y-ch-n-ph-n-h-i-ph-h-p-ch-ng-t-i-c-t-t-c-ph-n-h-i-nh-ng-kh-ng-ph-i-l-c-n-o-c-ng-c-kh-n-ng-h-i-p-span2"
+              >
+                Hãy cho chúng tôi biết về chất lượng công việc của chúng tôi. Chọn
+                tùy chọn phản hồi phù hợp (chúng tôi đọc tất cả phản hồi nhưng
+                không phải lúc nào cũng có khả năng hồi đáp):
+                <br />
+                <br />
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="lh9">
+          <div class="ph-n-h-i-v-s-n-ph-m">Phản Hồi Về Sản Phẩm</div>
+          <div class="ph-n-h-i-v-trang-web">Phản Hồi Về Trang Web</div>
+          <div class="ph-n-h-i-v-nh-ph-t-tri-n">Phản Hồi Về Nhà Phát Triển</div>
+        </div>
+      </div>
+      <div class="lh10">
+        <div
+          class="h-tr-v-t-i-kho-n-apple-t-m-hi-u-th-m-v-ng-k-v-l-i-ch-c-a-t-i-kho-n-apple-t-m-hi-u-th-m-tr-ng-th-i-s-a-ch-a-apple-care-nh-n-th-ng-tin-nhanh-ch-ng-v-d-d-ng-v-tr-ng-th-i-c-a-m-t-ho-c-t-t-c-c-c-y-u-c-u-s-a-ch-a-c-a-b-n-t-m-hi-u-th-m"
+        >
+          <span>
+            <span
+              class="h-tr-v-t-i-kho-n-apple-t-m-hi-u-th-m-v-ng-k-v-l-i-ch-c-a-t-i-kho-n-apple-t-m-hi-u-th-m-tr-ng-th-i-s-a-ch-a-apple-care-nh-n-th-ng-tin-nhanh-ch-ng-v-d-d-ng-v-tr-ng-th-i-c-a-m-t-ho-c-t-t-c-c-c-y-u-c-u-s-a-ch-a-c-a-b-n-t-m-hi-u-th-m-span"
+            >
+              Hỗ Trợ Về Tài Khoản Apple
+              <br />
+            </span>
+            <span
+              class="h-tr-v-t-i-kho-n-apple-t-m-hi-u-th-m-v-ng-k-v-l-i-ch-c-a-t-i-kho-n-apple-t-m-hi-u-th-m-tr-ng-th-i-s-a-ch-a-apple-care-nh-n-th-ng-tin-nhanh-ch-ng-v-d-d-ng-v-tr-ng-th-i-c-a-m-t-ho-c-t-t-c-c-c-y-u-c-u-s-a-ch-a-c-a-b-n-t-m-hi-u-th-m-span2"
+            >
+              Tìm hiểu thêm về đăng ký và lợi ích của Tài khoản Apple.
+              <br />
+            </span>
+            <span
+              class="h-tr-v-t-i-kho-n-apple-t-m-hi-u-th-m-v-ng-k-v-l-i-ch-c-a-t-i-kho-n-apple-t-m-hi-u-th-m-tr-ng-th-i-s-a-ch-a-apple-care-nh-n-th-ng-tin-nhanh-ch-ng-v-d-d-ng-v-tr-ng-th-i-c-a-m-t-ho-c-t-t-c-c-c-y-u-c-u-s-a-ch-a-c-a-b-n-t-m-hi-u-th-m-span3"
+            >
+              Tìm hiểu thêm
+              <br />
+            </span>
+            <span
+              class="h-tr-v-t-i-kho-n-apple-t-m-hi-u-th-m-v-ng-k-v-l-i-ch-c-a-t-i-kho-n-apple-t-m-hi-u-th-m-tr-ng-th-i-s-a-ch-a-apple-care-nh-n-th-ng-tin-nhanh-ch-ng-v-d-d-ng-v-tr-ng-th-i-c-a-m-t-ho-c-t-t-c-c-c-y-u-c-u-s-a-ch-a-c-a-b-n-t-m-hi-u-th-m-span"
+            >
+              <br />
+              Trạng Thái Sửa Chữa AppleCare
+              <br />
+            </span>
+            <span
+              class="h-tr-v-t-i-kho-n-apple-t-m-hi-u-th-m-v-ng-k-v-l-i-ch-c-a-t-i-kho-n-apple-t-m-hi-u-th-m-tr-ng-th-i-s-a-ch-a-apple-care-nh-n-th-ng-tin-nhanh-ch-ng-v-d-d-ng-v-tr-ng-th-i-c-a-m-t-ho-c-t-t-c-c-c-y-u-c-u-s-a-ch-a-c-a-b-n-t-m-hi-u-th-m-span2"
+            >
+              Nhận thông tin nhanh chóng và dễ dàng về trạng thái của một hoặc tất
+              cả các yêu cầu sửa chữa của bạn.
+              <br />
+            </span>
+            <span
+              class="h-tr-v-t-i-kho-n-apple-t-m-hi-u-th-m-v-ng-k-v-l-i-ch-c-a-t-i-kho-n-apple-t-m-hi-u-th-m-tr-ng-th-i-s-a-ch-a-apple-care-nh-n-th-ng-tin-nhanh-ch-ng-v-d-d-ng-v-tr-ng-th-i-c-a-m-t-ho-c-t-t-c-c-c-y-u-c-u-s-a-ch-a-c-a-b-n-t-m-hi-u-th-m-span3"
+            >
+              Tìm hiểu thêm
+              <br />
+            </span>
+            <span
+              class="h-tr-v-t-i-kho-n-apple-t-m-hi-u-th-m-v-ng-k-v-l-i-ch-c-a-t-i-kho-n-apple-t-m-hi-u-th-m-tr-ng-th-i-s-a-ch-a-apple-care-nh-n-th-ng-tin-nhanh-ch-ng-v-d-d-ng-v-tr-ng-th-i-c-a-m-t-ho-c-t-t-c-c-c-y-u-c-u-s-a-ch-a-c-a-b-n-t-m-hi-u-th-m-span3"
+            >
+              <br />
+            </span>
+            <span
+              class="h-tr-v-t-i-kho-n-apple-t-m-hi-u-th-m-v-ng-k-v-l-i-ch-c-a-t-i-kho-n-apple-t-m-hi-u-th-m-tr-ng-th-i-s-a-ch-a-apple-care-nh-n-th-ng-tin-nhanh-ch-ng-v-d-d-ng-v-tr-ng-th-i-c-a-m-t-ho-c-t-t-c-c-c-y-u-c-u-s-a-ch-a-c-a-b-n-t-m-hi-u-th-m-span"
+            >
+              <br />
+            </span>
+            <span
+              class="h-tr-v-t-i-kho-n-apple-t-m-hi-u-th-m-v-ng-k-v-l-i-ch-c-a-t-i-kho-n-apple-t-m-hi-u-th-m-tr-ng-th-i-s-a-ch-a-apple-care-nh-n-th-ng-tin-nhanh-ch-ng-v-d-d-ng-v-tr-ng-th-i-c-a-m-t-ho-c-t-t-c-c-c-y-u-c-u-s-a-ch-a-c-a-b-n-t-m-hi-u-th-m-span2"
+            >
+              <br />
+            </span>
+          </span>
+        </div>
+        <div
+          class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m"
+        >
+          <span>
+            <span
+              class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m-span"
+            >
+              Các Sản Phẩm AppleCare
+              <br />
+            </span>
+            <span
+              class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m-span2"
+            >
+              Tìm hiểu cách để nhận thêm hỗ trợ kỹ thuật và các tùy chọn về bảo
+              dưỡng phần cứng cho các sản phẩm Apple của bạn.
+              <br />
+            </span>
+            <span
+              class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m-span3"
+            >
+              Tìm hiểu thêm
+              <br />
+            </span>
+            <span
+              class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m-span3"
+            >
+              <br />
+            </span>
+            <span
+              class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m-span"
+            >
+              Cơ Hội Việc Làm
+              <br />
+            </span>
+            <span
+              class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m-span2"
+            >
+              Tìm cơ hội việc làm và công việc hiện có dành cho bậc đại học, thực
+              tập và hơn thế nữa.
+              <br />
+            </span>
+            <span
+              class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m-span3"
+            >
+              Tìm hiểu thêm
+              <br />
+            </span>
+            <span
+              class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m-span3"
+            >
+              <br />
+            </span>
+            <span
+              class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m-span"
+            >
+              <br />
+            </span>
+            <span
+              class="c-c-s-n-ph-m-apple-care-t-m-hi-u-c-ch-nh-n-th-m-h-tr-k-thu-t-v-c-c-t-y-ch-n-v-b-o-d-ng-ph-n-c-ng-cho-c-c-s-n-ph-m-apple-c-a-b-n-t-m-hi-u-th-m-c-h-i-vi-c-l-m-t-m-c-h-i-vi-c-l-m-v-c-ng-vi-c-hi-n-c-d-nh-cho-b-c-i-h-c-th-c-t-p-v-h-n-th-n-a-t-m-hi-u-th-m-span2"
+            >
+              <br />
+            </span>
+          </span>
+        </div>
+        <div
+          class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m"
+        >
+          <span>
+            <span
+              class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m-span"
+            >
+              Trao Đổi Về Apple
+              <br />
+            </span>
+            <span
+              class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m-span2"
+            >
+              Cho đi và nhận lại những sự trợ giúp cũng như lời khuyên từ hàng
+              nghìn khách hàng khác của Apple.
+              <br />
+            </span>
+            <span
+              class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m-span3"
+            >
+              Tìm hiểu thêm
+              <br />
+            </span>
+            <span
+              class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m-span3"
+            >
+              <br />
+            </span>
+            <span
+              class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m-span"
+            >
+              <br />
+              Nhóm Người Dùng
+              <br />
+            </span>
+            <span
+              class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m-span2"
+            >
+              Giao lưu và trao đổi với những người dùng Apple khác trong khu vực
+              của bạn.
+              <br />
+            </span>
+            <span
+              class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m-span3"
+            >
+              Tìm hiểu thêm
+              <br />
+            </span>
+            <span
+              class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m-span3"
+            >
+              <br />
+            </span>
+            <span
+              class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m-span"
+            >
+              <br />
+              <br />
+            </span>
+            <span
+              class="trao-i-v-apple-cho-i-v-nh-n-l-i-nh-ng-s-tr-gi-p-c-ng-nh-l-i-khuy-n-t-h-ng-ngh-n-kh-ch-h-ng-kh-c-c-a-apple-t-m-hi-u-th-m-nh-m-ng-i-d-ng-giao-l-u-v-trao-i-v-i-nh-ng-ng-i-d-ng-apple-kh-c-trong-khu-v-c-c-a-b-n-t-m-hi-u-th-m-span2"
+            >
+              <br />
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="lh11">
+      <div class="hoa-k-gi-i-thi-u-i-l-i-l-gi-ng-vi-n-t-v-n-vi-n-1-800-538-9696">
+        <span>
+          <span
+            class="hoa-k-gi-i-thi-u-i-l-i-l-gi-ng-vi-n-t-v-n-vi-n-1-800-538-9696-span"
+          >
+            Hoa Kỳ
+            <br />
+          </span>
+          <ul
+            class="hoa-k-gi-i-thi-u-i-l-i-l-gi-ng-vi-n-t-v-n-vi-n-1-800-538-9696-span2"
+          >
+            <li>
+              Giới thiệu đại lý (Đại lý, Giảng viên, Tư vấn viên) 1-800-538-9696
+            </li>
+          </ul>
+        </span>
+      </div>
+      <div
+        class="canada-c-a-h-ng-apple-d-nh-cho-ng-i-ti-u-d-ng-v-c-nh-n-trong-l-nh-v-c-gi-o-d-c-1-800-my-apple-1-800-692-7753-mexico-c-a-h-ng-apple-kh-ch-h-ng-c-nh-n-v-gi-o-d-c-001-800-my-apple-001-800-692-7753-c-a-h-ng-apple-doanh-nghi-p-nh-001-800-692-7753"
+      >
+        <span>
+          <span
+            class="canada-c-a-h-ng-apple-d-nh-cho-ng-i-ti-u-d-ng-v-c-nh-n-trong-l-nh-v-c-gi-o-d-c-1-800-my-apple-1-800-692-7753-mexico-c-a-h-ng-apple-kh-ch-h-ng-c-nh-n-v-gi-o-d-c-001-800-my-apple-001-800-692-7753-c-a-h-ng-apple-doanh-nghi-p-nh-001-800-692-7753-span"
+          >
+            Canada
+            <br />
+          </span>
+          <ul
+            class="canada-c-a-h-ng-apple-d-nh-cho-ng-i-ti-u-d-ng-v-c-nh-n-trong-l-nh-v-c-gi-o-d-c-1-800-my-apple-1-800-692-7753-mexico-c-a-h-ng-apple-kh-ch-h-ng-c-nh-n-v-gi-o-d-c-001-800-my-apple-001-800-692-7753-c-a-h-ng-apple-doanh-nghi-p-nh-001-800-692-7753-span2"
+          >
+            <li>
+              Cửa hàng Apple (Dành cho người tiêu dùng và cá nhân trong lĩnh vực
+              giáo dục) 1-800-MY-APPLE (1-800-692-7753)
+            </li>
+          </ul>
+          <span
+            class="canada-c-a-h-ng-apple-d-nh-cho-ng-i-ti-u-d-ng-v-c-nh-n-trong-l-nh-v-c-gi-o-d-c-1-800-my-apple-1-800-692-7753-mexico-c-a-h-ng-apple-kh-ch-h-ng-c-nh-n-v-gi-o-d-c-001-800-my-apple-001-800-692-7753-c-a-h-ng-apple-doanh-nghi-p-nh-001-800-692-7753-span"
+          >
+            Mexico
+            <br />
+          </span>
+          <ul
+            class="canada-c-a-h-ng-apple-d-nh-cho-ng-i-ti-u-d-ng-v-c-nh-n-trong-l-nh-v-c-gi-o-d-c-1-800-my-apple-1-800-692-7753-mexico-c-a-h-ng-apple-kh-ch-h-ng-c-nh-n-v-gi-o-d-c-001-800-my-apple-001-800-692-7753-c-a-h-ng-apple-doanh-nghi-p-nh-001-800-692-7753-span2"
+          >
+            <li>
+              Cửa hàng Apple (Khách hàng cá nhân và giáo dục) 001–800–MY–APPLE
+              (001–800–692–7753)
+            </li>
+            <li>Cửa hàng Apple (Doanh nghiệp nhỏ) 001–800–692–7753</li>
+          </ul>
+        </span>
+      </div>
+    </div>
+    <div class="lh12">
+      <div class="li-n-h-doanh-nghi-p-b-c-m">Liên hệ doanh nghiệp Bắc Mỹ</div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="navigation-breadcrumbs">
+          <div class="ordered-list-item">
+            <div class="image">
+              <div class="icon-large-svg-fill">
+                <div class="icon-large-svg">
+                  <img class="a" src="a0.svg" />
+                  <img class="a2" src="a1.svg" />
+                </div>
+              </div>
+            </div>
+            <div class="contacting-apple">Contacting Apple</div>
+          </div>
+          <div class="link">
+            <div class="image2">
+              <div class="icon-large-svg-fill2">
+                <div class="icon-large-svg2">
+                  <img class="a3" src="a2.svg" />
+                  <img class="a4" src="a3.svg" />
+                  <img class="a5" src="a4.svg" />
+                  <img class="a6" src="a5.svg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="horizontal-border">
+          <div class="more-ways-to-shop">More ways to shop:</div>
+          <div class="link2">
+            <div class="find-an-apple-store">Find an Apple Store</div>
+          </div>
+          <div class="or">or</div>
+          <div class="link3">
+            <div class="other-retailer">other retailer</div>
+          </div>
+          <div class="near-you-or-call">near you. Or call</div>
+          <div class="link4">
+            <div class="_1-800-my-apple">1-800-MY-APPLE</div>
+          </div>
+          <div class="div">.</div>
+        </div>
+        <div class="copyright-2025-apple-inc-all-rights-reserved">
+          Copyright © 2025 Apple Inc. All rights reserved.
+        </div>
+        <div class="list">
+          <div class="listitem">
+            <div class="link5">
+              <div class="privacy-policy">Privacy Policy</div>
+            </div>
+            <div class="vertical-divider"></div>
+          </div>
+          <div class="listitem2">
+            <div class="link6">
+              <div class="terms-of-use">Terms of Use</div>
+            </div>
+            <div class="vertical-divider2"></div>
+          </div>
+          <div class="listitem3">
+            <div class="link7">
+              <div class="sales-and-refunds">Sales and Refunds</div>
+            </div>
+            <div class="vertical-divider3"></div>
+          </div>
+          <div class="listitem4">
+            <div class="link8">
+              <div class="legal">Legal</div>
+            </div>
+            <div class="vertical-divider4"></div>
+          </div>
+          <div class="listitem-link">
+            <div class="site-map">Site Map</div>
+          </div>
+        </div>
+        <div class="link-united-states-choose-your-country-or-region">
+          <div class="united-states">United States</div>
+        </div>
+      </div>
+      <div class="naiv">
+        <div class="navigation-apple-directory">
+          <div class="heading-3-shop-and-learn">Shop and Learn</div>
+          <div class="list2">
+            <div class="listitem-link2">
+              <div class="store">Store</div>
+            </div>
+            <div class="listitem-link3">
+              <div class="mac">Mac</div>
+            </div>
+            <div class="listitem-link4">
+              <div class="i-pad">iPad</div>
+            </div>
+            <div class="listitem-link5">
+              <div class="i-phone">iPhone</div>
+            </div>
+            <div class="listitem-link6">
+              <div class="watch">Watch</div>
+            </div>
+            <div class="listitem-link7">
+              <div class="vision">Vision</div>
+            </div>
+            <div class="listitem-link8">
+              <div class="air-pods">AirPods</div>
+            </div>
+            <div class="listitem-link9">
+              <div class="tv-home">TV &amp; Home</div>
+            </div>
+            <div class="listitem-link10">
+              <div class="air-tag">AirTag</div>
+            </div>
+            <div class="listitem-link11">
+              <div class="accessories">Accessories</div>
+            </div>
+            <div class="listitem-link12">
+              <div class="gift-cards">Gift Cards</div>
+            </div>
+          </div>
+          <div class="heading-3-apple-wallet">Apple Wallet</div>
+          <div class="list3">
+            <div class="listitem-link13">
+              <div class="wallet">Wallet</div>
+            </div>
+            <div class="listitem-link14">
+              <div class="apple-card">Apple Card</div>
+            </div>
+            <div class="listitem-link15">
+              <div class="apple-pay">Apple Pay</div>
+            </div>
+            <div class="listitem-link16">
+              <div class="apple-cash">Apple Cash</div>
+            </div>
+          </div>
+          <div class="heading-3-account">Account</div>
+          <div class="list4">
+            <div class="listitem-link17">
+              <div class="manage-your-apple-account">
+                Manage Your Apple Account
+              </div>
+            </div>
+            <div class="listitem-link18">
+              <div class="apple-store-account">Apple Store Account</div>
+            </div>
+            <div class="listitem-link19">
+              <div class="i-cloud-com">iCloud.com</div>
+            </div>
+          </div>
+          <div class="heading-3-entertainment">Entertainment</div>
+          <div class="list5">
+            <div class="listitem-link20">
+              <div class="apple-one">Apple One</div>
+            </div>
+            <div class="listitem-link21">
+              <div class="apple-tv">Apple TV+</div>
+            </div>
+            <div class="listitem-link22">
+              <div class="apple-music">Apple Music</div>
+            </div>
+            <div class="listitem-link23">
+              <div class="apple-arcade">Apple Arcade</div>
+            </div>
+            <div class="listitem-link24">
+              <div class="apple-fitness">Apple Fitness+</div>
+            </div>
+            <div class="listitem-link25">
+              <div class="apple-news">Apple News+</div>
+            </div>
+            <div class="listitem-link26">
+              <div class="apple-podcasts">Apple Podcasts</div>
+            </div>
+            <div class="listitem-link27">
+              <div class="apple-books">Apple Books</div>
+            </div>
+            <div class="listitem-link28">
+              <div class="app-store">App Store</div>
+            </div>
+          </div>
+          <div class="heading-3-apple-store">Apple Store</div>
+          <div class="list6">
+            <div class="listitem-link29">
+              <div class="find-a-store">Find a Store</div>
+            </div>
+            <div class="listitem-link30">
+              <div class="genius-bar">Genius Bar</div>
+            </div>
+            <div class="listitem-link31">
+              <div class="today-at-apple">Today at Apple</div>
+            </div>
+            <div class="listitem-link32">
+              <div class="group-reservations">Group Reservations</div>
+            </div>
+            <div class="listitem-link33">
+              <div class="apple-camp">Apple Camp</div>
+            </div>
+            <div class="listitem-link34">
+              <div class="apple-store-app">Apple Store App</div>
+            </div>
+            <div class="listitem-link35">
+              <div class="certified-refurbished">Certified Refurbished</div>
+            </div>
+            <div class="listitem-link36">
+              <div class="apple-trade-in">Apple Trade In</div>
+            </div>
+            <div class="listitem-link37">
+              <div class="financing">Financing</div>
+            </div>
+            <div class="listitem-link38">
+              <div class="carrier-deals-at-apple">Carrier Deals at Apple</div>
+            </div>
+            <div class="listitem-link39">
+              <div class="order-status">Order Status</div>
+            </div>
+            <div class="listitem-link40">
+              <div class="shopping-help">Shopping Help</div>
+            </div>
+          </div>
+          <div class="heading-3-for-business">For Business</div>
+          <div class="list7">
+            <div class="listitem-link41">
+              <div class="apple-and-business">Apple and Business</div>
+            </div>
+            <div class="listitem-link42">
+              <div class="shop-for-business">Shop for Business</div>
+            </div>
+          </div>
+          <div class="heading-3-for-education">For Education</div>
+          <div class="list8">
+            <div class="listitem-link43">
+              <div class="apple-and-education">Apple and Education</div>
+            </div>
+            <div class="listitem-link44">
+              <div class="shop-for-k-12">Shop for K-12</div>
+            </div>
+            <div class="listitem-link45">
+              <div class="shop-for-college">Shop for College</div>
+            </div>
+          </div>
+          <div class="heading-3-for-healthcare">For Healthcare</div>
+          <div class="list9">
+            <div class="listitem-link46">
+              <div class="apple-in-healthcare">Apple in Healthcare</div>
+            </div>
+            <div class="listitem-link47">
+              <div class="mac-in-healthcare">Mac in Healthcare</div>
+            </div>
+            <div class="listitem-link48">
+              <div class="health-on-apple-watch">Health on Apple Watch</div>
+            </div>
+            <div class="listitem-link49">
+              <div class="health-records-on-i-phone-and-i-pad">
+                Health Records on iPhone and
+                <br />
+                iPad
+              </div>
+            </div>
+          </div>
+          <div class="heading-3-for-government">For Government</div>
+          <div class="list10">
+            <div class="listitem-link50">
+              <div class="shop-for-government">Shop for Government</div>
+            </div>
+            <div class="listitem-link51">
+              <div class="shop-for-veterans-and-military">
+                Shop for Veterans and Military
+              </div>
+            </div>
+          </div>
+          <div class="heading-3-apple-values">Apple Values</div>
+          <div class="list11">
+            <div class="listitem-link52">
+              <div class="accessibility">Accessibility</div>
+            </div>
+            <div class="listitem-link53">
+              <div class="education">Education</div>
+            </div>
+            <div class="listitem-link54">
+              <div class="environment">Environment</div>
+            </div>
+            <div class="listitem-link55">
+              <div class="inclusion-and-diversity">Inclusion and Diversity</div>
+            </div>
+            <div class="listitem-link56">
+              <div class="privacy">Privacy</div>
+            </div>
+            <div class="listitem-link57">
+              <div class="racial-equity-and-justice">
+                Racial Equity and Justice
+              </div>
+            </div>
+            <div class="listitem-link58">
+              <div class="supply-chain">Supply Chain</div>
+            </div>
+          </div>
+          <div class="heading-3-about-apple">About Apple</div>
+          <div class="list12">
+            <div class="listitem-link59">
+              <div class="newsroom">Newsroom</div>
+            </div>
+            <div class="listitem-link60">
+              <div class="apple-leadership">Apple Leadership</div>
+            </div>
+            <div class="listitem-link61">
+              <div class="career-opportunities">Career Opportunities</div>
+            </div>
+            <div class="listitem-link62">
+              <div class="investors">Investors</div>
+            </div>
+            <div class="listitem-link63">
+              <div class="ethics-compliance">Ethics &amp; Compliance</div>
+            </div>
+            <div class="listitem-link64">
+              <div class="events">Events</div>
+            </div>
+            <div class="listitem-link65">
+              <div class="contact-apple">Contact Apple</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="to-n-c-u"></div>
+    <div class="ul-globalnav-list">
+      <div class="component-20">
+        <div class="component-13">
+          <img class="component-6" src="component-60.svg" />
+        </div>
+      </div>
+      <div class="ul-globalnav-submenu-trigger-group">
+        <div class="component-7">
+          <div class="component-132">
+            <img class="component-62" src="component-61.svg" />
+          </div>
+        </div>
+        <div class="component-21">
+          <div class="span-globalnav-link-text-container">
+            <div class="component-133">
+              <img class="component-63" src="component-62.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ul-globalnav-submenu-trigger-group">
+        <div class="component-7">
+          <div class="component-132">
+            <img class="component-64" src="component-63.svg" />
+          </div>
+        </div>
+        <div class="component-21">
+          <div class="span-globalnav-link-text-container">
+            <div class="component-133">
+              <img class="component-65" src="component-64.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ul-globalnav-submenu-trigger-group">
+        <div class="component-7">
+          <div class="component-132">
+            <img class="component-66" src="component-65.svg" />
+          </div>
+        </div>
+        <div class="component-21">
+          <div class="span-globalnav-link-text-container">
+            <div class="component-133">
+              <img class="component-67" src="component-66.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ul-globalnav-submenu-trigger-group">
+        <div class="component-7">
+          <div class="component-132">
+            <img class="component-68" src="component-67.svg" />
+          </div>
+        </div>
+        <div class="component-21">
+          <div class="span-globalnav-link-text-container">
+            <div class="component-133">
+              <img class="component-69" src="component-68.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ul-globalnav-submenu-trigger-group">
+        <div class="component-7">
+          <div class="component-132">
+            <img class="component-610" src="component-69.svg" />
+          </div>
+        </div>
+        <div class="component-21">
+          <div class="span-globalnav-link-text-container">
+            <div class="component-133">
+              <img class="component-611" src="component-610.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ul-globalnav-submenu-trigger-group">
+        <div class="component-7">
+          <div class="component-132">
+            <img class="component-612" src="component-611.svg" />
+          </div>
+        </div>
+        <div class="component-21">
+          <div class="span-globalnav-link-text-container">
+            <div class="component-133">
+              <img class="component-613" src="component-612.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ul-globalnav-submenu-trigger-group">
+        <div class="component-7">
+          <div class="component-132">
+            <img class="component-614" src="component-613.svg" />
+          </div>
+        </div>
+        <div class="component-21">
+          <div class="span-globalnav-link-text-container">
+            <div class="component-133">
+              <img class="component-615" src="component-614.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ul-globalnav-submenu-trigger-group">
+        <div class="component-7">
+          <div class="component-132">
+            <img class="component-616" src="component-615.svg" />
+          </div>
+        </div>
+        <div class="component-21">
+          <div class="span-globalnav-link-text-container">
+            <div class="component-133">
+              <img class="component-617" src="component-616.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ul-globalnav-submenu-trigger-group">
+        <div class="component-7">
+          <div class="component-132">
+            <img class="component-618" src="component-617.svg" />
+          </div>
+        </div>
+        <div class="component-21">
+          <div class="span-globalnav-link-text-container">
+            <div class="component-133">
+              <img class="component-619" src="component-618.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ul-globalnav-submenu-trigger-group">
+        <div class="component-72">
+          <div class="component-132">
+            <img class="component-620" src="component-619.svg" />
+          </div>
+        </div>
+        <div class="component-21">
+          <div class="span-globalnav-link-text-container">
+            <div class="component-133">
+              <img class="component-621" src="component-620.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="component-20">
+        <div class="component-13">
+          <img class="component-622" src="component-621.svg" />
+        </div>
+      </div>
+      <div class="div-globalnav-bag-wrapper">
+        <div class="component-202">
+          <div class="component-13">
+            <img class="component-623" src="component-622.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

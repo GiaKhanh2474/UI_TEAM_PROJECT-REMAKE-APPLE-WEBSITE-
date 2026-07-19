@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch - Apple (VN)</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    <!-- Apple Navbar & Cart Dropdown (Đã đồng bộ ảnh logo và màu sắc hệ thống) -->
+<nav class="apple-nav">
+    <div class="nav-container">
+        <style>
+        /* Tối ưu định dạng cho hình ảnh logo mới trên thanh navbar */
+        .nav-logo-img {
+            height: 18px; /* Độ cao tiêu chuẩn của Apple trên thanh thực tế */
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: opacity 0.3s ease;
+        }
+        .nav-logo:hover .nav-logo-img {
+            opacity: 0.7; /* Hiệu ứng mờ nhẹ cao cấp khi di chuột qua */
+        }
+    </style>
+        <!-- Đường dẫn hình ảnh logo hình quả táo đồng bộ -->
+        <a href="../home.html" class="nav-logo">
+            <img src="img/icon_apple.png" alt="Apple" class="nav-logo-img">
+        </a>
+        <a href="../mac/index.html">Mac</a>
+        <a href="../index.html">iPad</a>
+        <a href="iphone.html">iPhone</a>
+        <a href="../watch/watch.html">Watch</a>
+        <a href="#" id="cart-icon">Giỏ hàng <span id="cart-count">0</span></a>
+    </div>
+    
+    <!-- Hộp nội dung giỏ hàng thả xuống nhanh trên thanh Menu -->
+    <div class="cart-dropdown" id="cart-dropdown-box">
+        <div class="cart-title">Giỏ hàng của bạn</div>
+        <div class="cart-items-wrapper" id="cart-items-wrapper"></div>
+        <div class="cart-summary">
+            <span>Tổng cộng:</span>
+            <span id="cart-total-amount">0đ</span>
+        </div>
+        <!-- Điều hướng người dùng thẳng tiến vào trang quản lý giỏ hàng lớn -->
+        <button class="cta-button checkout-btn" onclick="location.href='cart.html'">Xem giỏ hàng</button>
+    </div>
+</nav>
+
+    <header style="text-align:center; padding: 40px 20px; background:#fff;">
+        <h1 style="font-size:48px; font-weight:600;">Apple Watch</h1>
+        <p style="font-size:20px; color:var(--text-gray);">Thiết bị tối thượng cho một cuộc sống lành mạnh.</p>
+    </header>
+
+    <section class="hero-showcase" style="height:70vh; background-color:#fbfbfd;">
+        <h2 class="hero-title">Apple Watch Series 10</h2>
+        <p class="hero-subtitle">Màn hình rộng nhất. Độ mỏng kỷ lục.</p>
+        <p class="hero-description">Giá từ 10.999.000đ</p>
+        <button class="cta-button" onclick="addToCart('Apple Watch Series 10', 10999000)">Thêm vào giỏ hàng</button>
+        <div class="product-mockup" style="margin-top:20px; height:240px; background:radial-gradient(circle, #ddd, #aaa); color:#333;">Jet Black Aluminum / Polished Titanium</div>
+    </section>
+
+    <section class="grid-showcase" style="margin-top:20px;">
+        <div class="grid-card" style="background-color:#000; color:#fff;">
+            <h2 style="color:#fff;">Apple Watch Ultra 2</h2>
+            <p style="color:#86868b;">Đỉnh cao thể thao chuyên nghiệp và thám hiểm.</p>
+            <p class="subtext" style="color:#fff;">Giá từ 21.999.000đ</p>
+            <button class="cta-button" style="margin-top:10px;" onclick="addToCart('Apple Watch Ultra 2', 21999000)">Mua ngay</button>
+            <div class="product-mockup-small" style="background:#111; color:#555;">Satin Black Titanium Case</div>
+        </div>
+        <div class="grid-card">
+            <h2>Apple Watch SE</h2>
+            <p>Tất cả tính năng cốt lõi. Giá cực kỳ hợp lý.</p>
+            <p class="subtext">Giá từ 6.299.000đ</p>
+            <button class="cta-button" style="margin-top:10px;" onclick="addToCart('Apple Watch SE', 6299000)">Mua ngay</button>
+            <div class="product-mockup-small">Apple Watch SE Everyday Comfort</div>
+        </div>
+    </section>
+
+    <!-- Apple Footer -->
+    <footer class="apple-footer">
+        <div class="footer-content">
+            <p>Xem thêm các cách để mua sắm: Tìm một <span style="color:var(--link-color); cursor:pointer;">Apple Store</span> hoặc <span style="color:var(--link-color); cursor:pointer;">nhà bán lẻ</span> gần bạn. Hoặc gọi 1800-1192.</p>
+            <div class="footer-links">
+                <p>Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.</p>
+                <a href="#">Chính sách bảo mật</a> | 
+                <a href="#">Điều khoản sử dụng</a> | 
+                <a href="#">Bản đồ trang web</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+</body>
+</html>

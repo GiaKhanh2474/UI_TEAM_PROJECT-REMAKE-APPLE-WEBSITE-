@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac - Apple (VN)</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    <!-- Apple Navbar & Cart Dropdown (Đã đồng bộ ảnh logo và màu sắc hệ thống) -->
+<nav class="apple-nav">
+    <div class="nav-container">
+        <style>
+        /* Tối ưu định dạng cho hình ảnh logo mới trên thanh navbar */
+        .nav-logo-img {
+            height: 18px; /* Độ cao tiêu chuẩn của Apple trên thanh thực tế */
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: opacity 0.3s ease;
+        }
+        .nav-logo:hover .nav-logo-img {
+            opacity: 0.7; /* Hiệu ứng mờ nhẹ cao cấp khi di chuột qua */
+        }
+    </style>
+        <!-- Đường dẫn hình ảnh logo hình quả táo đồng bộ -->
+        <a href="../home.html" class="nav-logo">
+            <img src="img/icon_apple.png" alt="Apple" class="nav-logo-img">
+        </a>
+        <a href="../mac/index.html">Mac</a>
+        <a href="../index.html">iPad</a>
+        <a href="iphone.html">iPhone</a>
+        <a href="../watch/watch.html">Watch</a>
+        <a href="#" id="cart-icon">Giỏ hàng <span id="cart-count">0</span></a>
+    </div>
+    
+    <!-- Hộp nội dung giỏ hàng thả xuống nhanh trên thanh Menu -->
+    <div class="cart-dropdown" id="cart-dropdown-box">
+        <div class="cart-title">Giỏ hàng của bạn</div>
+        <div class="cart-items-wrapper" id="cart-items-wrapper"></div>
+        <div class="cart-summary">
+            <span>Tổng cộng:</span>
+            <span id="cart-total-amount">0đ</span>
+        </div>
+        <!-- Điều hướng người dùng thẳng tiến vào trang quản lý giỏ hàng lớn -->
+        <button class="cta-button checkout-btn" onclick="location.href='cart.html'">Xem giỏ hàng</button>
+    </div>
+</nav>
+
+    <header style="text-align:center; padding: 40px 20px; background:#fff;">
+        <h1 style="font-size:48px; font-weight:600;">Macbook & Mac</h1>
+        <p style="font-size:20px; color:var(--text-gray);">Trạm sức mạnh tối thượng cho công việc Pro.</p>
+    </header>
+
+    <section class="hero-showcase hero-dark" style="height:72vh; background:#000;">
+        <h2 class="hero-title" style="color:#fff;">MacBook Pro M3 Max</h2>
+        <p class="hero-subtitle" style="color:#86868b;">Quái vật đồ họa. Thời lượng pin lên đến 22 giờ.</p>
+        <p class="hero-description">Giá từ 39.999.000đ</p>
+        <button class="cta-button" onclick="addToCart('MacBook Pro M3 Max', 39999000)">Thêm vào giỏ hàng</button>
+        <div class="product-mockup" style="margin-top:20px; height:240px; background:#222;">Space Black Aluminium Architecture</div>
+    </section>
+
+    <section class="grid-showcase" style="margin-top:20px;">
+        <div class="grid-card">
+            <h2>MacBook Air M3</h2>
+            <p>Siêu mỏng nhẹ, xử lý mượt mà mọi tác vụ AI.</p>
+            <p class="subtext">Giá từ 27.999.000đ</p>
+            <button class="cta-button" style="margin-top:10px;" onclick="addToCart('MacBook Air M3', 27999000)">Mua ngay</button>
+            <div class="product-mockup-small">MacBook Air Liquid Retina</div>
+        </div>
+        <div class="grid-card">
+            <h2>iMac 24"</h2>
+            <p>Bừng sáng không gian của bạn với chip M3.</p>
+            <p class="subtext">Giá từ 36.999.000đ</p>
+            <button class="cta-button" style="margin-top:10px;" onclick="addToCart('iMac 24 M3', 36999000)">Mua ngay</button>
+            <div class="product-mockup-small">iMac Multi Colors</div>
+        </div>
+    </section>
+
+    <!-- Apple Footer -->
+    <footer class="apple-footer">
+        <div class="footer-content">
+            <p>Xem thêm các cách để mua sắm: Tìm một <span style="color:var(--link-color); cursor:pointer;">Apple Store</span> hoặc <span style="color:var(--link-color); cursor:pointer;">nhà bán lẻ</span> gần bạn. Hoặc gọi 1800-1192.</p>
+            <div class="footer-links">
+                <p>Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.</p>
+                <a href="#">Chính sách bảo mật</a> | 
+                <a href="#">Điều khoản sử dụng</a> | 
+                <a href="#">Bản đồ trang web</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+</body>
+</html>

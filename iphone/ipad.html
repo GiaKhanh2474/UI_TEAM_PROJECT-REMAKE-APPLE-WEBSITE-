@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPad - Apple (VN)</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+    <!-- Apple Navbar & Cart Dropdown (Đã đồng bộ ảnh logo và màu sắc hệ thống) -->
+<nav class="apple-nav">
+    <div class="nav-container">
+        <style>
+        /* Tối ưu định dạng cho hình ảnh logo mới trên thanh navbar */
+        .nav-logo-img {
+            height: 18px; /* Độ cao tiêu chuẩn của Apple trên thanh thực tế */
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: opacity 0.3s ease;
+        }
+        .nav-logo:hover .nav-logo-img {
+            opacity: 0.7; /* Hiệu ứng mờ nhẹ cao cấp khi di chuột qua */
+        }
+    </style>
+        <!-- Đường dẫn hình ảnh logo hình quả táo đồng bộ -->
+        <a href="../home.html" class="nav-logo">
+            <img src="img/icon_apple.png" alt="Apple" class="nav-logo-img">
+        </a>
+        <a href="../mac/index.html">Mac</a>
+        <a href="../index.html">iPad</a>
+        <a href="iphone.html">iPhone</a>
+        <a href="../watch/watch.html">Watch</a>
+        <a href="#" id="cart-icon">Giỏ hàng <span id="cart-count">0</span></a>
+    </div>
+    
+    <!-- Hộp nội dung giỏ hàng thả xuống nhanh trên thanh Menu -->
+    <div class="cart-dropdown" id="cart-dropdown-box">
+        <div class="cart-title">Giỏ hàng của bạn</div>
+        <div class="cart-items-wrapper" id="cart-items-wrapper"></div>
+        <div class="cart-summary">
+            <span>Tổng cộng:</span>
+            <span id="cart-total-amount">0đ</span>
+        </div>
+        <!-- Điều hướng người dùng thẳng tiến vào trang quản lý giỏ hàng lớn -->
+        <button class="cta-button checkout-btn" onclick="location.href='cart.html'">Xem giỏ hàng</button>
+    </div>
+</nav>
+
+    <header style="text-align:center; padding: 40px 20px; background:#faf8f5;">
+        <h1 style="font-size:48px; font-weight:600;">iPad</h1>
+        <p style="font-size:20px; color:var(--text-gray);">Làm việc, học tập, sáng tạo mọi lúc mọi nơi.</p>
+    </header>
+
+    <section class="hero-showcase" style="height:70vh; background-color:#fff;">
+        <h2 class="hero-title">iPad Pro M4</h2>
+        <p class="hero-subtitle" style="color:var(--text-dark);">Màn hình Ultra Retina XDR đột phá OLED hai lớp.</p>
+        <p class="hero-description">Giá từ 28.999.000đ</p>
+        <button class="cta-button" onclick="addToCart('iPad Pro M4', 28999000)">Thêm vào giỏ hàng</button>
+        <div class="product-mockup" style="margin-top:20px; height:240px; background:linear-gradient(45deg, #111, #444);">Tandem OLED Display Mockup</div>
+    </section>
+
+    <section class="grid-showcase" style="margin-top:20px;">
+        <div class="grid-card" style="background:#f5f5f7;">
+            <h2>iPad Air M2</h2>
+            <p>Mạnh mẽ với chip M2. Hai kích cỡ màn hình.</p>
+            <p class="subtext">Giá từ 16.999.000đ</p>
+            <button class="cta-button" style="margin-top:10px;" onclick="addToCart('iPad Air M2', 16999000)">Mua ngay</button>
+            <div class="product-mockup-small">iPad Air 11" & 13"</div>
+        </div>
+        <div class="grid-card" style="background:#f5f5f7;">
+            <h2>iPad Gen 10</h2>
+            <p>Đầy màu sắc. Dễ dàng yêu thích.</p>
+            <p class="subtext">Giá cực tốt: 9.999.000đ</p>
+            <button class="cta-button" style="margin-top:10px;" onclick="addToCart('iPad Gen 10', 9999000)">Mua ngay</button>
+            <div class="product-mockup-small">iPad Gen 10 Colorful Design</div>
+        </div>
+    </section>
+
+    <!-- Apple Footer -->
+    <footer class="apple-footer">
+        <div class="footer-content">
+            <p>Xem thêm các cách để mua sắm: Tìm một <span style="color:var(--link-color); cursor:pointer;">Apple Store</span> hoặc <span style="color:var(--link-color); cursor:pointer;">nhà bán lẻ</span> gần bạn. Hoặc gọi 1800-1192.</p>
+            <div class="footer-links">
+                <p>Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.</p>
+                <a href="#">Chính sách bảo mật</a> | 
+                <a href="#">Điều khoản sử dụng</a> | 
+                <a href="#">Bản đồ trang web</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+</body>
+</html>
