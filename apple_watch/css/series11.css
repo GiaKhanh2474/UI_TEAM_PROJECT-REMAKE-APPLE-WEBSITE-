@@ -1,0 +1,395 @@
+/* ================================================================
+   Apple Watch Series 11
+================================================================ */
+
+.page-shell{
+    max-width:1200px;
+    margin:auto;
+    padding:0 30px 80px;
+}
+
+/*======================
+    HERO
+=======================*/
+
+.viewer-section{
+    padding:60px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:44px;
+    font-weight:700;
+    margin-bottom:50px;
+}
+
+.product-viewer{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+/* Khung ảnh */
+
+.viewer-stage{
+
+    flex:1;
+    min-width:420px;
+    min-height:650px;
+
+    background:#f5f5f7;
+
+    border-radius:35px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+    overflow:hidden;
+
+}
+
+/* Ảnh đồng hồ */
+
+.viewer-stage img{
+
+    width:100%;
+    max-width:500px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    transition:.4s;
+
+}
+
+.viewer-stage:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/*======================
+    CONTROL
+=======================*/
+
+.viewer-controls{
+
+    width:300px;
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+
+}
+
+.control-item{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 18px;
+
+    border-radius:15px;
+
+    border:1px solid #ddd;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.control-item:hover{
+
+    border-color:#0071e3;
+
+}
+
+.control-item.active{
+
+    border-color:#0071e3;
+
+    background:#eef6ff;
+
+}
+
+.swatch{
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(0,0,0,.15);
+
+}
+
+.rose{
+    background:#efcfd5;
+}
+
+.silver{
+    background:#e9e9ea;
+}
+
+.space-gray{
+    background:#34363b;
+}
+
+.viewer-buy-btn{
+
+    margin-top:20px;
+
+    width:100%;
+
+}
+
+.viewer-controls .global-link{
+
+    text-align:center;
+
+    font-size:15px;
+
+}
+
+/*======================
+      FEATURE
+=======================*/
+
+.feature-block{
+
+    display:flex;
+
+    gap:70px;
+
+    align-items:center;
+
+    padding:90px 0;
+
+    border-top:1px solid #ececec;
+
+}
+
+.copy-col{
+
+    flex:1;
+
+}
+
+.media-col{
+
+    flex:1;
+
+}
+
+.eyebrow{
+
+    color:#86868b;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+}
+
+.copy-col h3{
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+}
+
+.copy-col p{
+
+    color:#6e6e73;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/*======================
+    IMAGE PLACEHOLDER
+=======================*/
+
+.media-placeholder{
+
+    background:#f5f5f7;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    min-height:450px;
+
+}
+
+.media-placeholder img{
+
+    width:100%;
+
+    max-width:380px;
+
+    object-fit:contain;
+
+}
+
+.split-media{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.icon-row{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.icon-card{
+
+    flex:1;
+
+    background:#f5f5f7;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.icon-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.icon-placeholder{
+
+    font-size:34px;
+
+    display:block;
+
+    margin-bottom:12px;
+
+}
+
+/*======================
+    SAFETY
+=======================*/
+
+.safety-feature{
+
+    flex-direction:column;
+
+}
+
+.safety-icons{
+
+    display:flex;
+
+    gap:20px;
+
+    width:100%;
+
+    margin-top:35px;
+
+}
+
+.safety-icons .icon-card{
+
+    flex:1;
+
+}
+
+/*======================
+    RESPONSIVE
+=======================*/
+
+@media(max-width:900px){
+
+    .product-viewer{
+
+        flex-direction:column;
+
+    }
+
+    .viewer-stage{
+
+        min-width:100%;
+
+        min-height:420px;
+
+    }
+
+    .feature-block{
+
+        flex-direction:column;
+
+        gap:40px;
+
+    }
+
+    .copy-col h3{
+
+        font-size:32px;
+
+    }
+
+    .copy-col p{
+
+        font-size:16px;
+
+    }
+
+    .icon-row{
+
+        flex-direction:column;
+
+    }
+
+    .safety-icons{
+
+        flex-direction:column;
+
+    }
+
+}

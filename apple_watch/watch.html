@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch - Mua Apple Watch Series 11, Ultra 2 và SE - Apple (VN)</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+
+    <!-- Apple Navbar & Cart Dropdown -->
+    <nav class="apple-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="asset/icon/icon_apple.png" alt="Apple" class="nav-logo-img">
+            </a>
+            <a href="mac.html">Mac</a>
+            <a href="ipad.html">iPad</a>
+            <a href="iphone.html">iPhone</a>
+            <a href="watch.html">Watch</a>
+            <a href="#" id="cart-icon">Giỏ hàng <span id="cart-count">0</span></a>
+        </div>
+
+        <div class="cart-dropdown" id="cart-dropdown-box">
+            <div class="cart-title">Giỏ hàng của bạn</div>
+            <div class="cart-items-wrapper" id="cart-items-wrapper"></div>
+            <div class="cart-summary">
+                <span>Tổng cộng:</span>
+                <span id="cart-total-amount">0đ</span>
+            </div>
+            <button class="cta-button checkout-btn" onclick="location.href='cart.html'">Xem giỏ hàng</button>
+        </div>
+    </nav>
+
+    <!-- 1. Ribbon thông báo -->
+    <div class="promo-banner">
+        <div class="promo-container">
+            <span>Giờ đây bạn có thể mua Apple Watch cùng ưu đãi dành cho giáo dục.</span>
+            <a href="#" class="promo-link">Mua sắm ngay &gt;</a>
+        </div>
+    </div>
+
+    <main class="iphone-main">
+        <div class="page-header">
+            <h1 class="main-title">Apple Watch</h1>
+            <div class="subnav-scroll">
+                <div class="subnav-container">
+                    <a href="#explore-products" data-target="explore-products" class="subnav-item"><span class="subnav-icon">S11</span><span>Apple Watch Series 11</span></a>
+                    <a href="#explore-products" data-target="explore-products" class="subnav-item"><span class="subnav-icon">U2</span><span>Apple Watch Ultra 2</span></a>
+                    <a href="#explore-products" data-target="explore-products" class="subnav-item"><span class="subnav-icon">SE</span><span>Apple Watch SE</span></a>
+                    <a href="#explore-products" data-target="explore-products" class="subnav-item"><span class="subnav-icon">&#8644;</span><span>So sánh</span></a>
+                    <a href="#accessories" data-target="accessories" class="subnav-item"><span class="subnav-icon">&#10133;</span><span>Dây đeo &amp; Phụ kiện</span></a>
+                    <a href="#why-buy" data-target="why-buy" class="subnav-item"><span class="subnav-icon">&#128722;</span><span>Mua sắm Apple Watch</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Khám phá dòng sản phẩm -->
+        <section class="section-padding" id="explore-products">
+            <div class="section-header-flex">
+                <h2 class="section-title">Khám phá dòng sản phẩm.</h2>
+                <a href="#" class="global-link font-medium">So sánh tất cả phiên bản &gt;</a>
+            </div>
+
+            <div class="carousel-container-relative">
+                <div class="carousel-wrapper" id="watch-carousel">
+                    <article class="product-card">
+                      <div class="card-image-bg">
+                         <img src="asset/img/11.png" alt="Apple Watch Series 11">
+                    </div>
+                        <div class="card-info">
+                            <div class="color-dots">
+                                <span class="dot" style="background:#e3ddd7;"></span>
+                                <span class="dot" style="background:#1d1d1f;"></span>
+                                <span class="dot" style="background:#f6d9cd;"></span>
+                            </div>
+                            <h3>Apple Watch Series 11</h3>
+                            <p class="desc">Màn hình rộng nhất. Độ mỏng kỷ lục.</p>
+                            <p class="price">Từ 10.999.000đ hoặc 916.000đ/th. trong 12 tháng</p>
+                            <div class="card-actions">
+                                <button class="cta-button" onclick="addToCart('Apple Watch Series 11', 10999000)">Thêm vào giỏ hàng</button>
+                                <a href="series11.html" class="global-link">Tìm hiểu thêm &gt;</a>
+                                <a href="buy-series11.html" class="global-link">Mua &gt;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                      <div class="card-image-bg">
+                        <img src="asset/img/ultra2.png" alt="Apple Watch Ultra 2">
+                        </div>
+                        <div class="card-info">
+                            <div class="color-dots">
+                                <span class="dot" style="background:#e3ddd7;"></span>
+                                <span class="dot" style="background:#1d1d1f;"></span>
+                            </div>
+                            <h3>Apple Watch Ultra 2</h3>
+                            <p class="desc">Đỉnh cao thể thao chuyên nghiệp và thám hiểm.</p>
+                            <p class="price">Từ 21.999.000đ hoặc 1.833.000đ/th. trong 12 tháng</p>
+                            <div class="card-actions">
+                                <button class="cta-button" onclick="addToCart('Apple Watch Ultra 2', 21999000)">Thêm vào giỏ hàng</button>
+                                <a href="#" class="global-link">Tìm hiểu thêm &gt;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="card-image-bg">
+                             <img src="asset/img/se.png" alt="Apple Watch SE">
+                        </div>
+                        <div class="card-info">
+                            <div class="color-dots">
+                                <span class="dot" style="background:#1a2530;"></span>
+                                <span class="dot" style="background:#ded6d1;"></span>
+                            </div>
+                            <h3>Apple Watch SE</h3>
+                            <p class="desc">Tất cả tính năng cốt lõi. Giá cực kỳ hợp lý.</p>
+                            <p class="price">Từ 6.299.000đ hoặc 525.000đ/th. trong 12 tháng</p>
+                            <div class="card-actions">
+                                <button class="cta-button" onclick="addToCart('Apple Watch SE', 6299000)">Thêm vào giỏ hàng</button>
+                                <a href="#" class="global-link">Tìm hiểu thêm &gt;</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="slider-nav-control">
+                    <button class="nav-arrow-btn" id="btn-slide-prev" disabled aria-label="Sản phẩm trước">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15.5 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="nav-arrow-btn" id="btn-slide-next" aria-label="Sản phẩm tiếp theo">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M8.5 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Ngắm nhìn cận cảnh -->
+        <section class="section-padding">
+            <h2 class="section-title mb-40">Ngắm nhìn cận cảnh.</h2>
+            <div class="video-banner">
+                <span>10:09</span>
+            </div>
+        </section>
+
+        <!-- 4. Vì sao Apple là nơi tốt nhất để mua Apple Watch -->
+        <section class="section-padding" id="why-buy">
+            <div class="section-header-flex">
+                <h2 class="section-title">Vì sao Apple là nơi tốt nhất để mua Apple Watch.</h2>
+                <a href="#" class="global-link font-medium">Mua sắm Apple Watch &gt;</a>
+            </div>
+            <div class="grid-scroll">
+                <div class="feature-tile">
+                    <span class="eyebrow">Tài chính</span>
+                    <h4>Trả góp, lãi suất 0%.</h4>
+                    <p>Khi bạn chọn thanh toán trả góp qua thẻ tín dụng liên kết tại Apple.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="eyebrow">Thu cũ đổi mới</span>
+                    <h4>Tiết kiệm khi đổi máy cũ.</h4>
+                    <p>Nhận thêm giá trị quy đổi khi thu cũ đổi mới sang Apple Watch đời mới.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="eyebrow">Giáo dục</span>
+                    <h4>Ưu đãi dành cho giáo dục.</h4>
+                    <p>Sinh viên và giáo viên được giảm giá đặc biệt.</p>
+                </div>
+                <div class="feature-tile">
+                    <span class="eyebrow">Giao hàng &amp; Nhận tại cửa hàng</span>
+                    <h4>Nhận hàng nhanh chóng, dễ dàng.</h4>
+                    <p>Chọn giao hàng nhanh, giao hàng miễn phí, hoặc nhận tại cửa hàng.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Tìm hiểu Apple Watch -->
+        <section class="section-padding">
+            <h2 class="section-title mb-40">Tìm hiểu Apple Watch.</h2>
+            <div class="grid-scroll">
+                <div class="feature-tile-large feature-tile-large--dark">
+                    <span class="eyebrow">Sức khỏe</span>
+                    <h4>Hiểu bạn, từ trong ra ngoài.</h4>
+                </div>
+                <div class="feature-tile-large feature-tile-large--olive">
+                    <span class="eyebrow">Thể thao</span>
+                    <h4>Từng bước, thêm động lực.</h4>
+                </div>
+                <div class="feature-tile-large feature-tile-large--sage">
+                    <span class="eyebrow">An toàn</span>
+                    <h4>Trợ giúp luôn ở bên bạn.</h4>
+                </div>
+                <div class="feature-tile-large feature-tile-large--steel">
+                    <span class="eyebrow">Apple Watch Ultra 2</span>
+                    <h4>Đỉnh cao thể thao và phiêu lưu.</h4>
+                </div>
+                <div class="feature-tile-large feature-tile-large--navy">
+                    <span class="eyebrow">Kết nối</span>
+                    <h4>Luôn giữ liên lạc mọi lúc.</h4>
+                </div>
+                <div class="feature-tile-large feature-tile-large--gold">
+                    <span class="eyebrow">Cá nhân hóa</span>
+                    <h4>Là chính bạn, theo cách riêng.</h4>
+                </div>
+                <div class="feature-tile-large feature-tile-large--dark2">
+                    <span class="eyebrow">Apple Watch dành cho trẻ em</span>
+                    <h4>Tự lập cho con. An tâm cho bạn.</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Phụ kiện thiết yếu -->
+        <section class="section-padding" id="accessories">
+            <div class="section-header-flex">
+                <h2 class="section-title">Phụ kiện thiết yếu cho Apple Watch.</h2>
+                <a href="#" class="global-link font-medium">Tất cả phụ kiện Apple Watch &gt;</a>
+            </div>
+            <div class="dual-grid">
+                <div class="dual-grid-card">
+                    <h4>Dây đeo mới, sắc màu mới.</h4>
+                    <p>Khám phá các chất liệu và màu sắc dây đeo mới nhất.</p>
+                </div>
+                <div class="dual-grid-card">
+                    <h4>Đế sạc nhanh MagSafe.</h4>
+                    <p>Sạc nhanh, gọn nhẹ, mang theo mọi nơi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Nửa kia hoàn hảo -->
+        <section class="section-padding">
+            <h2 class="section-title mb-40">Nửa kia hoàn hảo.</h2>
+            <div class="ecosystem-banner">
+                <h4>Apple Watch và iPhone, AirPods, Apple Fitness+</h4>
+                <p>Kết hợp cùng nhau để mang lại trải nghiệm liền mạch hơn.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chân trang -->
+    <footer class="apple-footer">
+        <div class="footer-content">
+            <p>Xem thêm các cách để mua sắm: Tìm một <span class="global-link">Apple Store</span> hoặc <span class="global-link">nhà bán lẻ</span> gần bạn. Hoặc gọi 1800-1192.</p>
+            <div class="footer-links">
+                <p>Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.</p>
+                <a href="#">Chính sách bảo mật</a> | <a href="#">Điều khoản sử dụng</a> | <a href="#">Bản đồ trang web</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/watch.js"></script>
+    <script src="js/series11.js"></script>
+    <script src="js/buy-series11.js"></script>
+</body>
+</html>

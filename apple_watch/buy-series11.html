@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mua Apple Watch Series 11 - Apple (VN)</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/buy-series11.css">
+</head>
+<body>
+
+    <!-- Apple Navbar & Cart Dropdown -->
+    <nav class="apple-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="asset/icon/icon_apple.png" alt="Apple" class="nav-logo-img">
+            </a>
+            <a href="mac.html">Mac</a>
+            <a href="ipad.html">iPad</a>
+            <a href="iphone.html">iPhone</a>
+            <a href="watch.html">Watch</a>
+            <a href="#" id="cart-icon">Giỏ hàng <span id="cart-count">0</span></a>
+        </div>
+
+        <div class="cart-dropdown" id="cart-dropdown-box">
+            <div class="cart-title">Giỏ hàng của bạn</div>
+            <div class="cart-items-wrapper" id="cart-items-wrapper"></div>
+            <div class="cart-summary">
+                <span>Tổng cộng:</span>
+                <span id="cart-total-amount">0đ</span>
+            </div>
+            <button class="cta-button checkout-btn" onclick="location.href='cart.html'">Xem giỏ hàng</button>
+        </div>
+    </nav>
+
+    <!-- Sticky Top Bar: giá cập nhật theo cấu hình -->
+    <div class="sticky-product-bar">
+        <div class="bar-container">
+            <h2 id="sticky-title">Apple Watch Series 11</h2>
+            <div class="bar-right">
+                <div class="price-display">
+                    <span id="dynamic-price">Từ 10.999.000đ</span>
+                    <small id="dynamic-installment">hoặc 916.000đ/tháng trong 12 th.<sup>∆</sup></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="store-container">
+
+        <!-- Cột trái: khung xem trước (Sticky) -->
+        <div class="gallery-column">
+            <div class="gallery-sticky-wrapper">
+                <div class="carousel-container">
+                    <div class="product-view" id="product-view">
+                        <img id="watch-image" src="asset/img/11.png" alt="Apple Watch Series 11">
+                    </div>
+                </div>
+                <div class="gallery-controls">
+                    <button class="gallery-btn" onclick="changeImage(-1)">❮</button>
+                    <span id="gallery-index">1 / 3</span>
+                    <button class="gallery-btn" onclick="changeImage(1)">❯</button>
+                </div>
+
+                <div class="promo-box-intelligence">
+                    <span class="promo-badge">❤</span>
+                    <p>Theo dõi sức khỏe toàn diện với ECG, đo oxy trong máu và nhiều tính năng khác.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cột phải: cấu hình sản phẩm -->
+        <div class="options-column">
+
+            <!-- 1. Chất liệu vỏ -->
+            <div class="option-group">
+                <h3 class="group-title">Chất liệu vỏ. <span class="text-gray">Bắt đầu với chất liệu và lớp hoàn thiện.</span></h3>
+                <div class="selector-cards">
+                    <div class="selector-card active" onclick="selectMaterial('Nhôm', 0)">
+                        <div class="card-left">
+                            <strong>Nhôm</strong>
+                            <span class="sub-detail">Tùy chọn GPS hoặc GPS + Di động</span>
+                        </div>
+                        <div class="card-right">
+                            <span class="card-price">Từ 10.999.000đ</span>
+                            <span class="card-installment">916.000đ/th.</span>
+                        </div>
+                    </div>
+                    <div class="selector-card" onclick="selectMaterial('Titanium', 8000000)">
+                        <div class="card-left">
+                            <strong>Titanium</strong>
+                            <span class="sub-detail">Đi kèm GPS + Di động</span>
+                        </div>
+                        <div class="card-right">
+                            <span class="card-price">Từ 18.999.000đ</span>
+                            <span class="card-installment">1.583.000đ/th.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Kích thước vỏ -->
+            <div class="option-group">
+                <h3 class="group-title">Kích thước vỏ. <span class="text-gray">Chọn kích thước phù hợp với bạn.</span></h3>
+                <div class="selector-cards grid-2-col">
+                    <div class="selector-card active" onclick="selectSize('42mm', 0)">
+                        <strong>42mm</strong>
+                        <span class="sub-detail text-center">Bao gồm trong giá cơ bản</span>
+                    </div>
+                    <div class="selector-card" onclick="selectSize('46mm', 1000000)">
+                        <strong>46mm</strong>
+                        <span class="sub-detail text-center">+ 1.000.000đ</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Màu sắc -->
+            <div class="option-group">
+                <h3 class="group-title">Màu. <span class="text-gray">Chọn màu bạn yêu thích.</span></h3>
+                <p class="selected-label">Màu sắc: <span id="color-label" style="font-weight:600;">Vàng hồng</span></p>
+                <div class="color-swatches">
+                    <span class="swatch-dot active" style="background:#f0d4d5;" onclick="selectColor('Vàng hồng', 'linear-gradient(135deg, #f0d4d5, #ffeff1)')"></span>
+                    <span class="swatch-dot" style="background:#cfd4da;" onclick="selectColor('Bạc', 'linear-gradient(135deg, #cfd4da, #f7f8fb)')"></span>
+                    <span class="swatch-dot" style="background:#4f5666;" onclick="selectColor('Xám không gian', 'linear-gradient(135deg, #22242a, #4f5666)')"></span>
+                </div>
+            </div>
+
+            <!-- 4. Dây đeo -->
+            <div class="option-group">
+                <h3 class="group-title">Dây đeo. <span class="text-gray">Hoàn thiện phong cách của bạn.</span></h3>
+                <div class="selector-cards grid-2-col">
+                    <div class="selector-card active" onclick="selectBand('Sport Band', 0)">
+                        <strong>Sport Band</strong>
+                        <span class="sub-detail text-center">Bao gồm trong giá cơ bản</span>
+                    </div>
+                    <div class="selector-card" onclick="selectBand('Milanese Loop', 2500000)">
+                        <strong>Milanese Loop</strong>
+                        <span class="sub-detail text-center">+ 2.500.000đ</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. AppleCare+ -->
+            <div class="option-group">
+                <h3 class="group-title">Gói bảo hành AppleCare+. <span class="text-gray">Bảo vệ Apple Watch mới của bạn.</span></h3>
+                <div class="selector-cards">
+                    <div class="selector-card" onclick="selectCare('Có AppleCare+', 1999000)">
+                        <div class="card-left">
+                            <strong>Thêm gói AppleCare+</strong>
+                            <span class="sub-detail">Sửa chữa không giới hạn sự cố bất ngờ<sup>※</sup></span>
+                        </div>
+                        <div class="card-right">
+                            <span>+ 1.999.000đ</span>
+                        </div>
+                    </div>
+                    <div class="selector-card active" onclick="selectCare('Không có AppleCare+', 0)">
+                        <div class="card-left">
+                            <strong>Không bổ sung bảo hành</strong>
+                            <span class="sub-detail">Chỉ sử dụng bảo hành mặc định 1 năm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Tổng kết & Thêm vào giỏ hàng -->
+            <div class="summary-action-box">
+                <div class="summary-title-section">
+                    <h4 id="summary-product-name">Apple Watch Series 11 · Nhôm 42mm · Vàng hồng · Sport Band</h4>
+                    <p id="summary-total-price">10.999.000đ</p>
+                </div>
+                <div class="shipping-info">
+                    <span class="shipping-icon">🚚</span>
+                    <p>Vận chuyển miễn phí • Chi tiết giao hàng hiển thị khi thanh toán.</p>
+                </div>
+                <button class="action-buy-btn" onclick="executePurchase()">Tiếp tục (Thêm vào giỏ hàng)</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Trong hộp có gì -->
+    <section class="box-content-section">
+        <h2>Trong hộp có gì</h2>
+        <div class="box-grid">
+            <div class="box-item">
+                <div class="box-img-wrapper box-icon">⌚</div>
+                <p>Apple Watch Series 11</p>
+            </div>
+            <div class="box-item">
+                <div class="box-img-wrapper box-icon">🔌</div>
+                <p>Cáp sạc từ tính</p>
+            </div>
+        </div>
+        <p class="env-note">Là một phần trong nỗ lực của chúng tôi nhằm đạt đến <a href="#">trạng thái trung hòa carbon vào năm 2030</a>, sản phẩm không đi kèm bộ tiếp hợp nguồn.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <h2>Câu Hỏi Thường Gặp</h2>
+        <div class="faq-accordion">
+            <details class="faq-item">
+                <summary>Apple Watch Series 11 có tương thích với iPhone cũ không? <span>+</span></summary>
+                <div class="faq-content"><p>Apple Watch Series 11 yêu cầu iPhone 11 trở lên chạy hệ điều hành mới nhất để hoạt động đầy đủ tính năng.</p></div>
+            </details>
+            <details class="faq-item">
+                <summary>Tôi có thể đổi dây đeo sau khi mua không? <span>+</span></summary>
+                <div class="faq-content"><p>Có. Dây đeo Apple Watch có thể tháo rời và thay thế dễ dàng bất cứ lúc nào, bạn có thể mua thêm dây đeo khác sau.</p></div>
+            </details>
+            <details class="faq-item">
+                <summary>Bản GPS + Di động có cần gói cước riêng không? <span>+</span></summary>
+                <div class="faq-content"><p>Có, bạn cần đăng ký gói cước di động từ nhà mạng hỗ trợ để sử dụng tính năng kết nối độc lập không cần iPhone ở gần.</p></div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="apple-footer">
+        <div class="footer-content">
+            <p class="legal-text">∆ Trả góp 0% lãi suất áp dụng khi thanh toán qua thẻ tín dụng liên kết tại Apple, tùy theo thời hạn trả góp đã chọn.</p>
+            <p class="legal-text">※ Gói AppleCare+ bao gồm tối đa hai lần sửa chữa hư hỏng do vô ý mỗi 12 tháng, áp dụng phí dịch vụ theo từng trường hợp.</p>
+            <div class="footer-links">
+                <p>Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.</p>
+                <div class="legal-nav">
+                    <a href="#">Chính Sách Quyền Riêng Tư</a> | <a href="#">Điều Khoản Sử Dụng</a> | <a href="#">Bán Hàng và Hoàn Tiền</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script>
+        // Trạng thái cấu hình sản phẩm
+        let currentMaterial = "Nhôm";
+        let materialUpgradePrice = 0;
+        let currentSize = "42mm";
+        let sizeUpgradePrice = 0;
+        let currentColor = "Vàng hồng";
+        let currentBand = "Sport Band";
+        let bandUpgradePrice = 0;
+        let currentCare = "Không có AppleCare+";
+        let careUpgradePrice = 0;
+        const basePrice = 10999000;
+
+        // Khung xem trước: đổi màu nền thay cho đổi ảnh
+        let galleryGradients = [
+            "linear-gradient(135deg, #f0d4d5, #ffeff1)",
+            "linear-gradient(135deg, #cfd4da, #f7f8fb)",
+            "linear-gradient(135deg, #22242a, #4f5666)"
+        ];
+        let currentImgIndex = 0;
+
+        function changeImage(dir) {
+            currentImgIndex = (currentImgIndex + dir + galleryGradients.length) % galleryGradients.length;
+            document.getElementById('product-view').style.background = galleryGradients[currentImgIndex];
+            document.getElementById('gallery-index').innerText = `${currentImgIndex + 1} / ${galleryGradients.length}`;
+        }
+
+        function updateDynamicPrice() {
+            const total = basePrice + materialUpgradePrice + sizeUpgradePrice + bandUpgradePrice + careUpgradePrice;
+            const installment = Math.round(total / 12);
+
+            document.getElementById('dynamic-price').innerText = total.toLocaleString('vi-VN') + 'đ';
+            document.getElementById('dynamic-installment').innerText = `hoặc ${installment.toLocaleString('vi-VN')}đ/tháng trong 12 tháng`;
+            document.getElementById('summary-total-price').innerText = total.toLocaleString('vi-VN') + 'đ';
+            document.getElementById('summary-product-name').innerText =
+                `Apple Watch Series 11 · ${currentMaterial} ${currentSize} · ${currentColor} · ${currentBand}`;
+        }
+
+        function selectMaterial(name, extraPrice) {
+            currentMaterial = name;
+            materialUpgradePrice = extraPrice;
+            const cards = event.currentTarget.parentNode.children;
+            for (const c of cards) c.classList.remove('active');
+            event.currentTarget.classList.add('active');
+            updateDynamicPrice();
+        }
+
+        function selectSize(size, extraPrice) {
+            currentSize = size;
+            sizeUpgradePrice = extraPrice;
+            const cards = event.currentTarget.parentNode.children;
+            for (const c of cards) c.classList.remove('active');
+            event.currentTarget.classList.add('active');
+            updateDynamicPrice();
+        }
+
+        function selectColor(colorName, gradient) {
+            currentColor = colorName;
+            document.getElementById('color-label').innerText = colorName;
+            document.getElementById('product-view').style.background = gradient;
+            const dots = event.currentTarget.parentNode.children;
+            for (const d of dots) d.classList.remove('active');
+            event.currentTarget.classList.add('active');
+            updateDynamicPrice();
+        }
+
+        function selectBand(name, extraPrice) {
+            currentBand = name;
+            bandUpgradePrice = extraPrice;
+            const cards = event.currentTarget.parentNode.children;
+            for (const c of cards) c.classList.remove('active');
+            event.currentTarget.classList.add('active');
+            updateDynamicPrice();
+        }
+
+        function selectCare(careName, extraPrice) {
+            currentCare = careName;
+            careUpgradePrice = extraPrice;
+            const cards = event.currentTarget.parentNode.children;
+            for (const c of cards) c.classList.remove('active');
+            event.currentTarget.classList.add('active');
+            updateDynamicPrice();
+        }
+
+        function executePurchase() {
+            const finalName = `Apple Watch Series 11 (${currentMaterial}, ${currentSize}, ${currentColor}, ${currentBand})`;
+            const finalPrice = basePrice + materialUpgradePrice + sizeUpgradePrice + bandUpgradePrice + careUpgradePrice;
+            addToCart(finalName, finalPrice);
+            window.location.href = 'cart.html';
+        }
+    </script>
+</body>
+</html>
